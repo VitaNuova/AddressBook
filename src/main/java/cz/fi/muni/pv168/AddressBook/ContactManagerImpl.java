@@ -33,32 +33,32 @@ public class ContactManagerImpl implements ContactManager {
     }
 
     @Override
-    public Contact findContactByName(String name) {
+    public Collection<Contact> findContactByName(String name) {
         return null;
     }
 
     @Override
-    public Contact findContactByPhone(String phone) {
+    public Collection<Contact> findContactByPhone(String phone) {
         return null;
     }
 
     @Override
-    public Contact findContactByFax(String fax) {
+    public Collection<Contact> findContactByFax(String fax) {
         return null;
     }
 
     @Override
-    public Contact findContactByEmail(String email) {
+    public Collection<Contact> findContactByEmail(String email) {
         return null;
     }
 
     @Override
-    public Contact findContactByAddress(String address) {
+    public Collection<Contact> findContactByAddress(String address) {
         return null;
     }
 
     @Override
-    public Contact findContactByOtherContactType(String contactType, String contact) {
+    public Collection<Contact> findContactByOtherContactType(String contactType, String contact) {
         return null;
     }
 }
