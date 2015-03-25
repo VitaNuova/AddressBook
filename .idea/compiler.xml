@@ -26,5 +26,8 @@
         <module name="AddressBook" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="AddressBook" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

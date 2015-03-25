@@ -8,7 +8,20 @@ public class Group {
 
     private Long groupID;
     private String groupName;
-    List<Contact> groupMemberList;
+    List<Long> groupMemberList;
+
+    public Group() {}
+
+    public Group(String groupName, List<Long> groupMemberList) {
+        this.groupName = groupName;
+        this.groupMemberList = groupMemberList;
+    }
+
+    public Group(Long groupID, String groupName, List<Long> groupMemberList) {
+        this.groupID = groupID;
+        this.groupName = groupName;
+        this.groupMemberList = groupMemberList;
+    }
 
     public String getGroupName() {
         return groupName;
@@ -26,11 +39,11 @@ public class Group {
         this.groupID = groupID;
     }
 
-    public List<Contact> getGroupMemberList() {
+    public List<Long> getGroupMemberList() {
         return groupMemberList;
     }
 
-    public void setGroupMemberList(List<Contact> groupMemberList) {
+    public void setGroupMemberList(List<Long> groupMemberList) {
         this.groupMemberList = groupMemberList;
     }
 

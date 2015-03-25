@@ -1,7 +1,5 @@
 package cz.fi.muni.pv168.AddressBook;
 
-import oracle.jrockit.jfr.StringConstantPool;
-
 import java.util.*;
 
 /**
@@ -27,13 +25,15 @@ public class Contact {
 
     public Contact(String name, String phone) {
         this(name);
-        this.phone = new HashSet<>();
+        //this.phone = new HashSet<>();
+        this.phone = new ArrayList<>();
         this.phone.add(phone);
     }
 
     public Contact(String name, String phone, String email) {
         this(name, phone);
-        this.email = new HashSet<>();
+        //this.email = new HashSet<>();
+        this.email = new ArrayList<>();
         this.email.add(email);
     }
 
@@ -64,21 +64,24 @@ public class Contact {
 
     public void setNewPhone(String phone) {
         if(this.phone == null) {
-            this.phone = new HashSet<>();
+            //this.phone = new HashSet<>();
+            this.phone = new ArrayList<>();
         }
         this.phone.add(phone);
     }
 
     public void setNewFax(String fax) {
         if(this.fax == null) {
-            this.fax = new HashSet<>();
+            //this.fax = new HashSet<>();
+            this.fax = new ArrayList<>();
         }
         this.fax.add(fax);
     }
 
     public void setNewEmail(String email) {
         if(this.email == null) {
-            this.email = new HashSet<>();
+            //this.email = new HashSet<>();
+            this.email = new ArrayList<>();
         }
         this.email.add(email);
     }
@@ -133,6 +136,8 @@ public class Contact {
     public Map<String, String> getOtherContacts() {
         return Collections.unmodifiableMap(otherContacts);
     }
+
+    // TODO add toString() method
 
     @Override
     public boolean equals(Object o) {

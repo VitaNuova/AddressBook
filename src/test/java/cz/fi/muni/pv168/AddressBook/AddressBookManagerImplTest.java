@@ -1,5 +1,6 @@
 package cz.fi.muni.pv168.AddressBook;
 
+import org.apache.commons.dbcp2.BasicDataSource;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -16,9 +17,13 @@ public class AddressBookManagerImplTest {
 
     @Before
     public void setUp() throws SQLException {
-        addressBookManager = new AddressBookManagerImpl();
-        contactManager = new ContactManagerImpl();
-        groupManager = new GroupManagerImpl();
+        BasicDataSource ds = new BasicDataSource();
+        ds.setUrl("jdbc:derby://localhost:1527/Databases/AddressBookDB;user=app;password=passwd");
+        ds.setUsername("app");
+        ds.setPassword("passwd");
+        addressBookManager = new AddressBookManagerImpl(ds);
+        contactManager = new ContactManagerImpl(ds);
+        groupManager = new GroupManagerImpl(ds);
     }
 
 
@@ -51,20 +56,16 @@ public class AddressBookManagerImplTest {
 
     @Test
     public void testListGroupsByPerson() {
-        List<Group> groupList = addressBookManager.listGroupsByPerson();
+        List<String> groupList = addressBookManager.listGroupsByPerson();
         assertNull(groupList);
 
-        List<Contact> memberList1 = new ArrayList<Contact>();
-        Contact contact1 = newContact(1l);
-        Contact contact2 = newContact(2l);
-        memberList1.add(contact1);
-        memberList1.add(contact2);
+        List<Long> memberList1 = new ArrayList<>();
+        memberList1.add(1l);
+        memberList1.add(2l);
 
-        List<Contact> memberList2 = new ArrayList<Contact>();
-        Contact contact3 = newContact(3l);
-        Contact contact4 = newContact(4l);
-        memberList2.add(contact3);
-        memberList2.add(contact4);
+        List<Long> memberList2 = new ArrayList<>();
+        memberList2.add(3l);
+        memberList2.add(4l);
 
         Group group1 = newGroup("Family", memberList1);
         Group group2 = newGroup("Friends", memberList2);
@@ -73,10 +74,9 @@ public class AddressBookManagerImplTest {
 
         groupList = addressBookManager.listGroupsByPerson();
         assertNotNull(groupList);
-        assertDeepEquals(group1, groupList.get(0));
-        assertEquals(group1, groupList.get(0));
-        assertTrue(groupList.contains(group1));
-        assertFalse(groupList.contains(group2));
+        assertEquals("Family", groupList.get(0));
+        assertTrue(groupList.contains("Family"));
+        assertFalse(groupList.contains("Friends"));
 
         try {
             groupList.get(1);
@@ -89,22 +89,24 @@ public class AddressBookManagerImplTest {
 
     @Test
     public void testListContactsByGroup() {
-        List<Contact> contacts = new ArrayList<Contact>();
-        Contact contact1 = newContact(1l);
-        Contact contact2 = newContact(2l);
-        contacts.add(contact1);
-
-        List<Contact> retrievedContacts = addressBookManager.listContactsByGroup("Family");
-        assertNull(retrievedContacts);
+        List<Long> contacts = new ArrayList<>();
+        contacts.add(1l);
 
         Group group = newGroup("Family", contacts);
+        List<Contact> retrievedContacts = addressBookManager.listContactsByGroup(group);
+        assertNull(retrievedContacts);
+
         groupManager.createGroup(group);
 
-        retrievedContacts = addressBookManager.listContactsByGroup(group.getGroupName());
+        retrievedContacts = addressBookManager.listContactsByGroup(group);
+        List<Long> retrievedContactsID = new ArrayList<>();
+        for(Contact contact : retrievedContacts) {
+            retrievedContactsID.add(contact.getContactID());
+        }
         assertNotNull(retrievedContacts);
-        assertEquals(retrievedContacts, contacts);
-        assertTrue(retrievedContacts.contains(contact1));
-        assertFalse(retrievedContacts.contains(contact2));
+        assertEquals(retrievedContactsID, contacts);
+        assertTrue(retrievedContactsID.contains(1l));
+        assertFalse(retrievedContactsID.contains(2l));
 
         try {
             retrievedContacts.get(1);
@@ -129,7 +131,7 @@ public class AddressBookManagerImplTest {
         return contact;
     }
 
-    private static Group newGroup(String name, List<Contact> memberList) {
+    private static Group newGroup(String name, List<Long> memberList) {
         Group group = new Group();
         group.setGroupName(name);
         group.setGroupMemberList(memberList);

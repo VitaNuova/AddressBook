@@ -57,15 +57,5 @@ public interface GroupManager {
      */
     Group findGroupByName(String name) throws ServiceFailureException;
 
-    /**
-     * Returns list of groups to which a given contact belongs.
-     *
-     * @param contact contact to be found in groups.
-     * @return list of groups including given contact or null if the contact does not belong to any group.
-     * @throws IllegalArgumentException when given contact is null.
-     * @throws  ServiceFailureException when db operation fails.
-     */
-    List<Group> findGroupByMember(Contact contact) throws ServiceFailureException;
-
 
 }

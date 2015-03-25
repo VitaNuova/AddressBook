@@ -1,5 +1,6 @@
 package cz.fi.muni.pv168.AddressBook;
 
+import org.apache.commons.dbcp2.BasicDataSource;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,12 +16,16 @@ public class GroupManagerImplTest {
 
     @Before
     public void setUp() throws SQLException {
-        manager = new GroupManagerImpl();
+        BasicDataSource ds = new BasicDataSource();
+        ds.setUrl("jdbc:derby://localhost:1527/Databases/AddressBookDB;user=app;password=passwd");
+        ds.setUsername("app");
+        ds.setPassword("passwd");
+        manager = new GroupManagerImpl(ds);
     }
 
     @Test
     public void testCreateGroup() {
-        List<Contact> contacts = new ArrayList<Contact>();
+        List<Long> contacts = new ArrayList<>();
         Group group = newGroup("Family", contacts);
         manager.createGroup(group);
         assertNotNull(group.getGroupID());
@@ -43,9 +48,8 @@ public class GroupManagerImplTest {
             //OK
         }
 
-        List<Contact> contacts = new ArrayList<Contact>();
-        Contact contact1 = newContact(1l);
-        contacts.add(contact1);
+        List<Long> contacts = new ArrayList<>();
+        contacts.add(1l);
         Group group = newGroup("Family", contacts);
         group.setGroupID(1l);
         try {
@@ -77,9 +81,8 @@ public class GroupManagerImplTest {
         Group result = manager.findGroupByID(group.getGroupID());
         assertNotNull(result);
 
-        List<Contact> contacts2 = new ArrayList<Contact>();
-        Contact contact2 = newContact(2l);
-        contacts2.add(contact2);
+        List<Long> contacts2 = new ArrayList<>();
+        contacts2.add(2l);
         group = newGroup("Friends", contacts2);
         manager.createGroup(group);
         result = manager.findGroupByID(group.getGroupID());
@@ -89,12 +92,10 @@ public class GroupManagerImplTest {
 
     @Test
     public void testUpdateGroup() {
-        List<Contact> contacts1 = new ArrayList<Contact>();
-        Contact contact1 = newContact(1l);
-        contacts1.add(contact1);
-        List<Contact> contacts2 = new ArrayList<Contact>();
-        Contact contact2 = newContact(2l);
-        contacts2.add(contact2);
+        List<Long> contacts1 = new ArrayList<>();
+        contacts1.add(1l);
+        List<Long> contacts2 = new ArrayList<>();
+        contacts2.add(2l);
         Group group1 = newGroup("Family", contacts1);
         Group group2 = newGroup("Friends", contacts2);
         manager.createGroup(group1);
@@ -109,10 +110,9 @@ public class GroupManagerImplTest {
         assertEquals(group1.getGroupMemberList(), contacts1);
 
 
-        Contact contact4 = newContact(4l);
         group1 = manager.findGroupByID(id);
-        List<Contact> memberList = group1.getGroupMemberList();
-        memberList.add(contact4);
+        List<Long> memberList = group1.getGroupMemberList();
+        memberList.add(3l);
         group1.setGroupMemberList(memberList);
         manager.updateGroup(group1);
         assertEquals(group1.getGroupName(), "Work");
@@ -141,9 +141,8 @@ public class GroupManagerImplTest {
     public void testUpdateGroupWithWrongAttributes() {
 
 
-        List<Contact> contacts = new ArrayList<Contact>();
-        Contact contact = newContact(1l);
-        contacts.add(contact);
+        List<Long> contacts = new ArrayList<>();
+        contacts.add(1l);
         Group group = newGroup("Friends", contacts);
         manager.createGroup(group);
 
@@ -206,12 +205,10 @@ public class GroupManagerImplTest {
     @Test
     public void testDeleteGroup() {
 
-        List<Contact> contacts1 = new ArrayList<Contact>();
-        Contact contact1 = newContact(1l);
-        contacts1.add(contact1);
-        List<Contact> contacts2 = new ArrayList<Contact>();
-        Contact contact2 = newContact(2l);
-        contacts2.add(contact2);
+        List<Long> contacts1 = new ArrayList<>();
+        contacts1.add(1l);
+        List<Long> contacts2 = new ArrayList<>();
+        contacts2.add(2l);
         Group group1 = newGroup("Family", contacts1);
         Group group2 = newGroup("Friends", contacts2);
 
@@ -231,9 +228,8 @@ public class GroupManagerImplTest {
     @Test
     public void testDeleteGroupWithWrongAttributes() {
 
-        List<Contact> contacts = new ArrayList<Contact>();
-        Contact contact1 = newContact(1l);
-        contacts.add(contact1);
+        List<Long> contacts = new ArrayList<>();
+        contacts.add(1l);
         Group group = newGroup("Family", contacts);
 
         try {
@@ -266,7 +262,7 @@ public class GroupManagerImplTest {
 
         assertNull(manager.findGroupByID(1l));
 
-        List<Contact> contacts = new ArrayList<Contact>();
+        List<Long> contacts = new ArrayList<>();
         Group group = newGroup("Family", contacts);
         manager.createGroup(group);
 
@@ -281,7 +277,7 @@ public class GroupManagerImplTest {
 
         assertNull(manager.findGroupByName("Family"));
 
-        List<Contact> contacts = new ArrayList<Contact>();
+        List<Long> contacts = new ArrayList<>();
         Group group = newGroup("Friends", contacts);
         manager.createGroup(group);
 
@@ -290,23 +286,7 @@ public class GroupManagerImplTest {
         assertDeepEquals(group, result);
     }
 
-    @Test
-    public void testFindGroupByMember() throws Exception {
-
-        assertNull(manager.findGroupByMember(newContact(1l)));
-
-        List<Contact> contacts = new ArrayList<Contact>();
-        Contact contact = newContact(2l);
-        contacts.add(contact);
-        Group group = newGroup("Friends", contacts);
-        manager.createGroup(group);
-
-        List<Group> result = manager.findGroupByMember(contact);
-        assertNotNull(result.contains(contact));
-
-    }
-
-    private static Group newGroup(String name, List<Contact> memberList) {
+    private static Group newGroup(String name, List<Long> memberList) {
         Group group = new Group();
         group.setGroupName(name);
         group.setGroupMemberList(memberList);

@@ -1,5 +1,6 @@
 package cz.fi.muni.pv168.AddressBook;
 
+import javax.sql.DataSource;
 import java.util.Collection;
 
 /**
@@ -7,57 +8,53 @@ import java.util.Collection;
  */
 public class ContactManagerImpl implements ContactManager {
 
-    @Override
+    private final DataSource dataSource;
+
+    public ContactManagerImpl(DataSource dataSource) {
+        this.dataSource = dataSource;
+    }
+
     public void createContact(Contact contact) {
 
     }
 
-    @Override
     public void updateContact(Contact contact) {
 
     }
 
-    @Override
     public void deleteContact(Contact contact) {
 
     }
 
-    @Override
     public Contact findContactById(Long id) {
         return null;
     }
 
-    @Override
+
     public Collection<Contact> findAllContacts() {
         return null;
     }
 
-    @Override
     public Collection<Contact> findContactByName(String name) {
         return null;
     }
 
-    @Override
     public Collection<Contact> findContactByPhone(String phone) {
         return null;
     }
 
-    @Override
     public Collection<Contact> findContactByFax(String fax) {
         return null;
     }
 
-    @Override
     public Collection<Contact> findContactByEmail(String email) {
         return null;
     }
 
-    @Override
     public Collection<Contact> findContactByAddress(String address) {
         return null;
     }
 
-    @Override
     public Collection<Contact> findContactByOtherContactType(String contactType, String contact) {
         return null;
     }

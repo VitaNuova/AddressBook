@@ -1,10 +1,11 @@
 package cz.fi.muni.pv168.AddressBook;
 
+import org.apache.commons.dbcp2.BasicDataSource;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashSet;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.assertThat;
@@ -15,7 +16,11 @@ public class ContactManagerImplTest {
 
     @Before
     public void setUp() throws Exception {
-        contactManager = new ContactManagerImpl();
+        BasicDataSource ds = new BasicDataSource();
+        ds.setUrl("jdbc:derby://localhost:1527/Databases/AddressBookDB;user=app;password=passwd");
+        ds.setUsername("app");
+        ds.setPassword("passwd");
+        contactManager = new ContactManagerImpl(ds);
     }
 
     @Test
@@ -119,7 +124,7 @@ public class ContactManagerImplTest {
         contactManager.createContact(contact1);
         contactManager.createContact(contact2);
         contactManager.createContact(contact3);
-        Collection<Contact> contactList = new HashSet<>();
+        Collection<Contact> contactList = new ArrayList<>();
         contactList.add(contact1);
         contactList.add(contact2);
         contactList.add(contact3);
@@ -311,7 +316,7 @@ public class ContactManagerImplTest {
         contact.setNewOtherContact("Skype", "JohnnyD");
         contactManager.createContact(contact);
         Collection<Contact> result1 = contactManager.findContactByOtherContactType("ICQ", "342576841");
-        contact.setNewOtherContact("ICQ", "342576841");;
+        contact.setNewOtherContact("ICQ", "342576841");
         contactManager.updateContact(contact);
         Collection<Contact> result2 = contactManager.findContactByOtherContactType("ICQ", "342576841");
         assertThat(result1, not(hasItem(contact)));
