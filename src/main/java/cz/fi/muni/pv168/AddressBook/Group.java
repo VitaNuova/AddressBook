@@ -31,7 +31,7 @@ public class Group {
         this.groupName = groupName;
     }
 
-    public long getGroupID() {
+    public Long getGroupID() {
         return groupID;
     }
 

@@ -1,5 +1,8 @@
 package cz.fi.muni.pv168.AddressBook;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -16,6 +19,8 @@ public class AddressBookManagerImpl implements AddressBookManager {
 
     private final DataSource dataSource;
 
+    final static Logger log = LoggerFactory.getLogger(AddressBookManagerImpl.class);
+
     public AddressBookManagerImpl(DataSource dataSource) {
         this.dataSource = dataSource;
     }
@@ -29,21 +34,20 @@ public class AddressBookManagerImpl implements AddressBookManager {
     }
 
     public List<String> listGroupsByPerson() throws ServiceFailureException {
-
+        log.debug("listGroupsByPerson()");
         try(Connection con = dataSource.getConnection()) {
-            System.out.println("Connection ok");
             try(PreparedStatement st = con.prepareStatement("select groupName from groups")) {
-                System.out.println("Statement prep ok");
                 try(ResultSet rs = st.executeQuery()) {
                     List<String> groupList = new ArrayList<>();
                     while(rs.next()) {
-                        String res = rs.getString("name");
+                        String res = rs.getString("groupName");
                         groupList.add(res);
                     }
                     return groupList;
                 }
             }
         } catch (SQLException ex) {
+            log.error("Database select failed", ex);
             throw new ServiceFailureException("Database select failed", ex);
         }
 
@@ -52,6 +56,7 @@ public class AddressBookManagerImpl implements AddressBookManager {
 
 
     public List<Contact> listContactsByGroup(Group group) throws ServiceFailureException {
+        log.debug("listContactsByGroup({})", group);
         try(Connection con = dataSource.getConnection()) {
             try(PreparedStatement st = con.prepareStatement("select GROUPMEMBERLIST from GROUPS where id = ?")) {
                 st.setLong(1, group.getGroupID());
@@ -72,6 +77,7 @@ public class AddressBookManagerImpl implements AddressBookManager {
                 }
             }
         } catch(SQLException ex) {
+            log.error("Database select failed", ex);
             throw new ServiceFailureException("Unable to execute select query", ex);
         }
     }
