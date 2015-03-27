@@ -711,7 +711,7 @@
       <workItem from="1427316090496" duration="6437000" />
       <workItem from="1427370377264" duration="7096000" />
       <workItem from="1427389498844" duration="203000" />
-      <workItem from="1427440293592" duration="183000" />
+      <workItem from="1427440293592" duration="196000" />
     </task>
     <task id="LOCAL-00001" summary="First batch of ContactManager unit tests.">
       <created>1426209796347</created>
@@ -743,11 +743,17 @@
       <option name="project" value="LOCAL" />
       <updated>1427440426068</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Database operations for Group - with logging">
+      <created>1427440480989</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1427440480989</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69682000" />
+    <option name="totallyTimeSpent" value="69695000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
