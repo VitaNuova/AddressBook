@@ -336,4 +336,6 @@ public class ContactManagerImplTest {
         assertThat(result1, hasItem(contact));
         assertThat(result2, not(hasItem(contact)));
     }
+
+    //TODO add groupIds tests
 }
