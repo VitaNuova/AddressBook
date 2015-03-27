@@ -2,12 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78d19bfd-05c5-4da7-9199-b62aef3f8e48" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cz/fi/muni/pv168/AddressBook/Group.class" afterPath="$PROJECT_DIR$/target/classes/cz/fi/muni/pv168/AddressBook/Group.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cz/fi/muni/pv168/AddressBook/GroupManagerImpl.class" afterPath="$PROJECT_DIR$/target/classes/cz/fi/muni/pv168/AddressBook/GroupManagerImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.class" afterPath="$PROJECT_DIR$/target/test-classes/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Group.java" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Group.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/GroupManagerImpl.java" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/GroupManagerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AddressBook.iws" />
@@ -764,7 +758,7 @@
       <workItem from="1427370377264" duration="7096000" />
       <workItem from="1427389498844" duration="203000" />
       <workItem from="1427440293592" duration="5584000" />
-      <workItem from="1427447029929" duration="2176000" />
+      <workItem from="1427447029929" duration="2489000" />
     </task>
     <task id="LOCAL-00001" summary="First batch of ContactManager unit tests.">
       <created>1426209796347</created>
@@ -808,11 +802,17 @@
       <option name="project" value="LOCAL" />
       <updated>1427440494707</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Database operations for Group - with logging">
+      <created>1427449238727</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1427449238727</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77259000" />
+    <option name="totallyTimeSpent" value="77572000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
