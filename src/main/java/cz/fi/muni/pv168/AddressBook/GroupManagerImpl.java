@@ -37,6 +37,9 @@ public class GroupManagerImpl implements GroupManager {
         if(group.getGroupName() == null) {
             throw new IllegalArgumentException("group name cannot be null");
         }
+        if(group.getGroupName().equals("")) {
+            throw new IllegalArgumentException("group name cannot be empty");
+        }
         if(group.getGroupMemberList() == null) {
             throw new IllegalArgumentException("group member list cannot be null");
         }
@@ -74,8 +77,14 @@ public class GroupManagerImpl implements GroupManager {
         if(group.getGroupID() == null) {
             throw new IllegalArgumentException("group with null id cannot be updated");
         }
+        if(group.getGroupID() < 0) {
+            throw new IllegalArgumentException("group is cannot be less than zero");
+        }
         if(group.getGroupName() == null) {
             throw new IllegalArgumentException("group name cannot be null");
+        }
+        if(group.getGroupName().isEmpty()) {
+            throw new IllegalArgumentException("group name cannot be empty");
         }
         if(group.getGroupMemberList() == null) {
             throw new IllegalArgumentException("group member list cannot be null");
@@ -100,12 +109,23 @@ public class GroupManagerImpl implements GroupManager {
 
     public void deleteGroup(Group group) throws ServiceFailureException {
         log.debug("delete group({})", group);
+
+        if(group == null) {
+            throw new IllegalArgumentException("Cannot delete group which is null");
+        }
+        if(group.getGroupID() == null) {
+            throw new IllegalArgumentException("Cannot delete group with null id");
+        }
+        if(group.getGroupID() < 0) {
+            throw new IllegalArgumentException("Cannot delete group with negative id");
+        }
+
         try(Connection con = dataSource.getConnection()) {
             try(PreparedStatement st = con.prepareStatement("delete from groups where id = ?")) {
                 st.setLong(1, group.getGroupID());
                 int n = st.executeUpdate();
                 if(n != 1) {
-                    throw new ServiceFailureException("Unable to delete group with id" + group.getGroupID(), null);
+                    throw new ServiceFailureException("Unable to delete group with id " + group.getGroupID(), null);
                 }
             }
         } catch(SQLException ex) {

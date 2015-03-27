@@ -59,18 +59,16 @@ public class Group {
 
         Group group = (Group) o;
 
-        if (groupID != group.groupID) return false;
-        if (groupMemberList != null ? !groupMemberList.equals(group.groupMemberList) : group.groupMemberList != null)
-            return false;
-        if (!groupName.equals(group.groupName)) return false;
+        if (groupID != null ? !groupID.equals(group.groupID) : group.groupID != null) return false;
+        if (groupName != null ? !groupName.equals(group.groupName) : group.groupName != null) return false;
+        return !(groupMemberList != null ? !groupMemberList.equals(group.groupMemberList) : group.groupMemberList != null);
 
-        return true;
     }
 
     @Override
     public int hashCode() {
-        int result = (int) (groupID ^ (groupID >>> 32));
-        result = 31 * result + groupName.hashCode();
+        int result = groupID != null ? groupID.hashCode() : 0;
+        result = 31 * result + (groupName != null ? groupName.hashCode() : 0);
         result = 31 * result + (groupMemberList != null ? groupMemberList.hashCode() : 0);
         return result;
     }

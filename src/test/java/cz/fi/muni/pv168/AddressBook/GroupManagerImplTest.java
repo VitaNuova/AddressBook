@@ -26,7 +26,7 @@ public class GroupManagerImplTest {
     @Test
     public void testCreateGroup() {
         List<Long> contacts = new ArrayList<>();
-        Group group = newGroup("Family", contacts);
+        Group group = newGroup("School", contacts);
         manager.createGroup(group);
         assertNotNull(group.getGroupID());
 
@@ -76,14 +76,14 @@ public class GroupManagerImplTest {
         }
 
         // these variants should be ok
-        group = newGroup("Family", contacts);
+        group = newGroup("Friends", contacts);
         manager.createGroup(group);
         Group result = manager.findGroupByID(group.getGroupID());
         assertNotNull(result);
 
         List<Long> contacts2 = new ArrayList<>();
         contacts2.add(2l);
-        group = newGroup("Friends", contacts2);
+        group = newGroup("Collegues", contacts2);
         manager.createGroup(group);
         result = manager.findGroupByID(group.getGroupID());
         assertNotNull(result);
@@ -96,8 +96,8 @@ public class GroupManagerImplTest {
         contacts1.add(1l);
         List<Long> contacts2 = new ArrayList<>();
         contacts2.add(2l);
-        Group group1 = newGroup("Family", contacts1);
-        Group group2 = newGroup("Friends", contacts2);
+        Group group1 = newGroup("Uni", contacts1);
+        Group group2 = newGroup("Traveling", contacts2);
         manager.createGroup(group1);
         manager.createGroup(group2);
 
@@ -129,7 +129,13 @@ public class GroupManagerImplTest {
         group1 = manager.findGroupByID(id);
         group1.setGroupName(null);
         group1.setGroupMemberList(null);
-        manager.updateGroup(group1);
+        try {
+             manager.updateGroup(group1);
+             fail();
+        }
+        catch(IllegalArgumentException ex) {
+            //OK
+        }
         assertNull(group1.getGroupName());
         assertNull(group1.getGroupMemberList());
 
@@ -143,7 +149,7 @@ public class GroupManagerImplTest {
 
         List<Long> contacts = new ArrayList<>();
         contacts.add(1l);
-        Group group = newGroup("Friends", contacts);
+        Group group = newGroup("Holiday", contacts);
         manager.createGroup(group);
 
         Long id = group.getGroupID();
@@ -164,9 +170,11 @@ public class GroupManagerImplTest {
             //OK
         }
 
+        //TODO rewrite in a way where the test runs on an empty database and tries to update group that is not there
         try {
             group = manager.findGroupByID(id);
-            group.setGroupID(id - 1);
+            //group.setGroupID(1l);
+            group.setGroupID(-1l);
             manager.updateGroup(group);
             fail();
         } catch (IllegalArgumentException ex) {
@@ -209,8 +217,8 @@ public class GroupManagerImplTest {
         contacts1.add(1l);
         List<Long> contacts2 = new ArrayList<>();
         contacts2.add(2l);
-        Group group1 = newGroup("Family", contacts1);
-        Group group2 = newGroup("Friends", contacts2);
+        Group group1 = newGroup("Germany", contacts1);
+        Group group2 = newGroup("USA", contacts2);
 
         manager.createGroup(group1);
         manager.createGroup(group2);
@@ -230,7 +238,7 @@ public class GroupManagerImplTest {
 
         List<Long> contacts = new ArrayList<>();
         contacts.add(1l);
-        Group group = newGroup("Family", contacts);
+        Group group = newGroup("Vacation", contacts);
 
         try {
             manager.deleteGroup(null);
@@ -248,7 +256,9 @@ public class GroupManagerImplTest {
         }
 
         try {
-            group.setGroupID(1l);
+            //TODO try to rewrite test in a way where it runs on an empty database and tries to delete id that is not there
+            //group.setGroupID(1l);
+            group.setGroupID(-1l);
             manager.deleteGroup(group);
             fail();
         } catch (IllegalArgumentException ex) {
@@ -260,13 +270,26 @@ public class GroupManagerImplTest {
     @Test
     public void testFindGroupByID() {
 
-        assertNull(manager.findGroupByID(1l));
+        assertNull(manager.findGroupByID(-1l));
 
         List<Long> contacts = new ArrayList<>();
-        Group group = newGroup("Family", contacts);
+        Group group = newGroup("Partners", contacts);
         manager.createGroup(group);
 
         Group result = manager.findGroupByID(group.getGroupID());
+        if(group.toString().equals(result.toString())) {
+            System.out.println("toString OK");
+        }
+        if(group.getGroupID().equals(result.getGroupID())) {
+            System.out.println("ID OK");
+        }
+        if(group.getGroupMemberList().equals(result.getGroupMemberList())) {
+            System.out.println("Members OK");
+        }
+        else {
+            System.out.println("Members not OK");
+        }
+
         assertEquals(group, result);
         assertDeepEquals(group, result);
 
@@ -278,10 +301,10 @@ public class GroupManagerImplTest {
         assertNull(manager.findGroupByName("Family"));
 
         List<Long> contacts = new ArrayList<>();
-        Group group = newGroup("Friends", contacts);
+        Group group = newGroup("Parents", contacts);
         manager.createGroup(group);
 
-        Group result = manager.findGroupByName("Friends");
+        Group result = manager.findGroupByName("Parents");
         assertEquals(group, result);
         assertDeepEquals(group, result);
     }
