@@ -13,6 +13,7 @@ public class Contact {
     private Collection<String> fax;
     private Collection<String> email;
     private Map<String, String> otherContacts;  // Map allows only one contact for each other contact type (e.g. only one Skype etc.). Is it correct?
+    private Set<Long> groupIds;
 
     public Contact() {
         // TODO proper ID setup
@@ -41,7 +42,6 @@ public class Contact {
         return id;
     }
 
-    // TODO should be probably erased
     public void setContactID(Long id) {
         this.id = id;
     }
@@ -93,6 +93,13 @@ public class Contact {
         this.otherContacts.put(contactType, contact);
     }
 
+    public void setNewGroupId(Long id) {
+        if(this.groupIds == null) {
+            this.groupIds = new HashSet<>();
+        }
+        this.groupIds.add(id);
+    }
+
     public void deletePhone(String phone) {
         this.phone.remove(phone);
         if(this.phone.isEmpty()) {
@@ -121,6 +128,13 @@ public class Contact {
         }
     }
 
+    public void deleteGroupId(Long id) {
+        this.groupIds.remove(id);
+        if(this.groupIds.isEmpty()) {
+            this.groupIds = null;
+        }
+    }
+
     public Collection<String> getPhone() {
         return Collections.unmodifiableCollection(phone);
     }
@@ -137,7 +151,23 @@ public class Contact {
         return Collections.unmodifiableMap(otherContacts);
     }
 
-    // TODO add toString() method
+    public Collection<Long> getGroupIds() {
+        return Collections.unmodifiableCollection(groupIds);
+    }
+
+    // TODO make correct collection printing
+    @Override
+    public String toString() {
+        return "Contact{" +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", phone=" + phone +
+                ", fax=" + fax +
+                ", email=" + email +
+                ", otherContacts=" + otherContacts +
+                ", groupIds=" + groupIds +
+                '}';
+    }
 
     @Override
     public boolean equals(Object o) {
