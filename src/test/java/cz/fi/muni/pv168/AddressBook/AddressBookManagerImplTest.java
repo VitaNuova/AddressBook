@@ -1,12 +1,18 @@
 package cz.fi.muni.pv168.AddressBook;
 
 import org.apache.commons.dbcp2.BasicDataSource;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import sun.tools.jar.Main;
 
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 import static org.junit.Assert.*;
 
@@ -16,11 +22,13 @@ public class AddressBookManagerImplTest {
     private GroupManagerImpl groupManager;
 
     @Before
-    public void setUp() throws SQLException {
+    public void setUp() throws SQLException, IOException {
+        Properties config = new Properties();
+        config.load(Main.class.getResourceAsStream("/config.properties"));
         BasicDataSource ds = new BasicDataSource();
-        ds.setUrl("jdbc:derby://localhost:1527/Databases/AddressBookDB;user=app;password=passwd");
-        ds.setUsername("app");
-        ds.setPassword("passwd");
+        ds.setUrl(config.getProperty("jdbc.url"));
+        ds.setUsername(config.getProperty("jdbc.user"));
+        ds.setPassword(config.getProperty("jdbc.password"));
         addressBookManager = new AddressBookManagerImpl(ds);
         contactManager = new ContactManagerImpl(ds);
         groupManager = new GroupManagerImpl(ds);
@@ -33,9 +41,9 @@ public class AddressBookManagerImplTest {
         List<Contact> retrievedContacts = addressBookManager.listContactsByPerson();
         assertNull(retrievedContacts);
 
-        Contact contact1 = newContact(1l);
-        Contact contact2 = newContact(2l);
-        Contact contact3 = newContact(3l);
+        Contact contact1 = newContact("Mary");
+        Contact contact2 = newContact("John");
+        Contact contact3 = newContact("Paul");
         contactManager.createContact(contact1);
         contactManager.createContact(contact2);
 
@@ -71,7 +79,6 @@ public class AddressBookManagerImplTest {
         Group group2 = newGroup("Friends", memberList2);
 
         groupManager.createGroup(group1);
-
         groupList = addressBookManager.listGroupsByPerson();
         assertNotNull(groupList);
         assertEquals("Family", groupList.get(0));
@@ -82,7 +89,7 @@ public class AddressBookManagerImplTest {
             groupList.get(1);
             fail();
         }
-        catch (ArrayIndexOutOfBoundsException ex) {
+        catch (IndexOutOfBoundsException ex) {
             //OK
         }
     }
@@ -90,23 +97,24 @@ public class AddressBookManagerImplTest {
     @Test
     public void testListContactsByGroup() {
         List<Long> contacts = new ArrayList<>();
-        contacts.add(1l);
-
+        Contact contact = newContact("John");
+        contactManager.createContact(contact);
+        contacts.add(contact.getContactID());
         Group group = newGroup("Family", contacts);
+        groupManager.createGroup(group);
+
+        Contact contactNotInGroup = newContact("Susane");
+        contactManager.createContact(contactNotInGroup);
+
         List<Contact> retrievedContacts = addressBookManager.listContactsByGroup(group);
         assertNull(retrievedContacts);
 
-        groupManager.createGroup(group);
-
         retrievedContacts = addressBookManager.listContactsByGroup(group);
-        List<Long> retrievedContactsID = new ArrayList<>();
-        for(Contact contact : retrievedContacts) {
-            retrievedContactsID.add(contact.getContactID());
-        }
+
         assertNotNull(retrievedContacts);
-        assertEquals(retrievedContactsID, contacts);
-        assertTrue(retrievedContactsID.contains(1l));
-        assertFalse(retrievedContactsID.contains(2l));
+        assertEquals(retrievedContacts, contacts);
+        assertTrue(retrievedContacts.contains(contact));
+        assertFalse(retrievedContacts.contains(contactNotInGroup));
 
         try {
             retrievedContacts.get(1);
@@ -124,10 +132,27 @@ public class AddressBookManagerImplTest {
             //OK
         }
     }
+    //TODO add 'delete from contact' statement
+    @After
+    public void deleteDataFromDB() throws IOException {
+        Properties config = new Properties();
+        config.load(Main.class.getResourceAsStream("/config.properties"));
+        BasicDataSource ds = new BasicDataSource();
+        ds.setUrl(config.getProperty("jdbc.url"));
+        ds.setUsername(config.getProperty("jdbc.user"));
+        ds.setPassword(config.getProperty("jdbc.password"));
+        try (Connection con = ds.getConnection()) {
+            try (PreparedStatement st = con.prepareStatement("delete from groups")) {
+                st.executeUpdate();
+            }
+        } catch (SQLException ex) {
+            throw new ServiceFailureException("Database delete failed", ex);
+        }
+    }
 
-    private static Contact newContact(Long id) {
+    private static Contact newContact(String name) {
         Contact contact = new Contact();
-        contact.setContactID(id);
+        contact.setName(name);
         return contact;
     }
 

@@ -1,12 +1,19 @@
 package cz.fi.muni.pv168.AddressBook;
 
 import org.apache.commons.dbcp2.BasicDataSource;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import sun.tools.jar.Main;
 
+import javax.sql.DataSource;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 import static org.junit.Assert.*;
 
@@ -15,11 +22,13 @@ public class GroupManagerImplTest {
     private GroupManagerImpl manager;
 
     @Before
-    public void setUp() throws SQLException {
+    public void setUp() throws SQLException, IOException {
+        Properties config = new Properties();
+        config.load(Main.class.getResourceAsStream("/config.properties"));
         BasicDataSource ds = new BasicDataSource();
-        ds.setUrl("jdbc:derby://localhost:1527/Databases/AddressBookDB;user=app;password=passwd");
-        ds.setUsername("app");
-        ds.setPassword("passwd");
+        ds.setUrl(config.getProperty("jdbc.url"));
+        ds.setUsername(config.getProperty("jdbc.user"));
+        ds.setPassword(config.getProperty("jdbc.password"));
         manager = new GroupManagerImpl(ds);
     }
 
@@ -170,14 +179,12 @@ public class GroupManagerImplTest {
             //OK
         }
 
-        //TODO rewrite in a way where the test runs on an empty database and tries to update group that is not there
         try {
             group = manager.findGroupByID(id);
-            //group.setGroupID(1l);
-            group.setGroupID(-1l);
+            group.setGroupID(1l);
             manager.updateGroup(group);
             fail();
-        } catch (IllegalArgumentException ex) {
+        } catch (ServiceFailureException ex) {
             //OK
         }
 
@@ -256,12 +263,10 @@ public class GroupManagerImplTest {
         }
 
         try {
-            //TODO try to rewrite test in a way where it runs on an empty database and tries to delete id that is not there
-            //group.setGroupID(1l);
-            group.setGroupID(-1l);
+            group.setGroupID(1l);
             manager.deleteGroup(group);
             fail();
-        } catch (IllegalArgumentException ex) {
+        } catch (ServiceFailureException ex) {
             //OK
         }
 
@@ -285,8 +290,7 @@ public class GroupManagerImplTest {
         }
         if(group.getGroupMemberList().equals(result.getGroupMemberList())) {
             System.out.println("Members OK");
-        }
-        else {
+        } else {
             System.out.println("Members not OK");
         }
 
@@ -309,6 +313,23 @@ public class GroupManagerImplTest {
         assertDeepEquals(group, result);
     }
 
+    @After
+    public void deleteDataFromDB() throws IOException {
+        Properties config = new Properties();
+        config.load(Main.class.getResourceAsStream("/config.properties"));
+        BasicDataSource ds = new BasicDataSource();
+        ds.setUrl(config.getProperty("jdbc.url"));
+        ds.setUsername(config.getProperty("jdbc.user"));
+        ds.setPassword(config.getProperty("jdbc.password"));
+        try (Connection con = ds.getConnection()) {
+            try (PreparedStatement st = con.prepareStatement("delete from groups")) {
+                st.executeUpdate();
+            }
+        } catch (SQLException ex) {
+            throw new ServiceFailureException("Database delete failed", ex);
+        }
+    }
+
     private static Group newGroup(String name, List<Long> memberList) {
         Group group = new Group();
         group.setGroupName(name);
@@ -328,6 +349,5 @@ public class GroupManagerImplTest {
         assertEquals(expected.getGroupName(), actual.getGroupName());
         assertEquals(expected.getGroupMemberList(), actual.getGroupMemberList());
     }
-
 
 }

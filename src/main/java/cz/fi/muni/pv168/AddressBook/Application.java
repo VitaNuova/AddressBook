@@ -19,7 +19,6 @@ public class Application {
 
         Properties config = new Properties();
         config.load(Main.class.getResourceAsStream("/config.properties"));
-
         BasicDataSource ds = new BasicDataSource();
         ds.setUrl(config.getProperty("jdbc.url"));
         ds.setUsername(config.getProperty("jdbc.user"));

@@ -35,12 +35,18 @@ public class AddressBookManagerImpl implements AddressBookManager {
 
     public List<String> listGroupsByPerson() throws ServiceFailureException {
         log.debug("listGroupsByPerson()");
+        List<String> groupList = null;
+        String res = null;
         try(Connection con = dataSource.getConnection()) {
             try(PreparedStatement st = con.prepareStatement("select groupName from groups")) {
                 try(ResultSet rs = st.executeQuery()) {
-                    List<String> groupList = new ArrayList<>();
+                    if(rs.next()) {
+                        groupList = new ArrayList<>();
+                        res = rs.getString("groupName");
+                        groupList.add(res);
+                    }
                     while(rs.next()) {
-                        String res = rs.getString("groupName");
+                        res = rs.getString("groupName");
                         groupList.add(res);
                     }
                     return groupList;
@@ -50,7 +56,6 @@ public class AddressBookManagerImpl implements AddressBookManager {
             log.error("Database select failed", ex);
             throw new ServiceFailureException("Database select failed", ex);
         }
-
 
     }
 
