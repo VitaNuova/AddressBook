@@ -41,9 +41,9 @@ public class AddressBookManagerImplTest {
         List<Contact> retrievedContacts = addressBookManager.listContactsByPerson();
         assertNull(retrievedContacts);
 
-        Contact contact1 = newContact("Mary");
-        Contact contact2 = newContact("John");
-        Contact contact3 = newContact("Paul");
+        Contact contact1 = newContact("Mary", "London");
+        Contact contact2 = newContact("John", "Paris");
+        Contact contact3 = newContact("Paul", "Vienna");
         contactManager.createContact(contact1);
         contactManager.createContact(contact2);
 
@@ -97,22 +97,31 @@ public class AddressBookManagerImplTest {
     @Test
     public void testListContactsByGroup() {
         List<Long> contacts = new ArrayList<>();
-        Contact contact = newContact("John");
+        Contact contact = newContact("John", "Prague");
         contactManager.createContact(contact);
         contacts.add(contact.getContactID());
         Group group = newGroup("Family", contacts);
         groupManager.createGroup(group);
 
-        Contact contactNotInGroup = newContact("Susane");
+        Contact contactNotInGroup = newContact("Susane", "Munchen");
         contactManager.createContact(contactNotInGroup);
 
-        List<Contact> retrievedContacts = addressBookManager.listContactsByGroup(group);
+        List<Long> contacts2 = new ArrayList<>();
+        Group group2 = newGroup("Friends", contacts2);
+        groupManager.createGroup(group2);
+
+        List<Contact> retrievedContacts = addressBookManager.listContactsByGroup(group2);
         assertNull(retrievedContacts);
 
         retrievedContacts = addressBookManager.listContactsByGroup(group);
+        
+        List<Long> retrievedContactsID = new ArrayList<>();
+        for(Contact cont : retrievedContacts) {
+            retrievedContactsID.add(cont.getContactID());
+        }
 
         assertNotNull(retrievedContacts);
-        assertEquals(retrievedContacts, contacts);
+        assertEquals(retrievedContactsID, contacts);
         assertTrue(retrievedContacts.contains(contact));
         assertFalse(retrievedContacts.contains(contactNotInGroup));
 
@@ -120,7 +129,7 @@ public class AddressBookManagerImplTest {
             retrievedContacts.get(1);
             fail();
         }
-        catch(ArrayIndexOutOfBoundsException ex) {
+        catch(IndexOutOfBoundsException ex) {
             //OK
         }
 
@@ -132,7 +141,7 @@ public class AddressBookManagerImplTest {
             //OK
         }
     }
-    //TODO add 'delete from contact' statement
+
     @After
     public void deleteDataFromDB() throws IOException {
         Properties config = new Properties();
@@ -145,14 +154,38 @@ public class AddressBookManagerImplTest {
             try (PreparedStatement st = con.prepareStatement("delete from groups")) {
                 st.executeUpdate();
             }
+            try (PreparedStatement st1 = con.prepareStatement("delete from phone")) {
+                st1.executeUpdate();
+            }
+            try (PreparedStatement st1 = con.prepareStatement("delete from fax")) {
+                st1.executeUpdate();
+            }
+            try (PreparedStatement st1 = con.prepareStatement("delete from email")) {
+                st1.executeUpdate();
+            }
+            try (PreparedStatement st1 = con.prepareStatement("delete from other_contact")) {
+                st1.executeUpdate();
+            }
+            try (PreparedStatement st1 = con.prepareStatement("delete from group_id")) {
+                st1.executeUpdate();
+            }
+            try (PreparedStatement st1 = con.prepareStatement("delete from contact")) {
+                st1.executeUpdate();
+            }
         } catch (SQLException ex) {
             throw new ServiceFailureException("Database delete failed", ex);
         }
     }
 
-    private static Contact newContact(String name) {
-        Contact contact = new Contact();
+    private static Contact newContact(String name, String address) {
+        Contact contact = new Contact(name);
         contact.setName(name);
+        contact.setAddress(address);
+        contact.setNewPhone("774889809");
+        contact.setNewEmail("me@this.cz");
+        contact.setNewFax("773449809");
+        contact.setNewOtherContact("Skype", "Mommy");
+        contact.setNewGroupId(1l);
         return contact;
     }
 

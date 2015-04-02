@@ -61,7 +61,11 @@ public class AddressBookManagerImpl implements AddressBookManager {
 
 
     public List<Contact> listContactsByGroup(Group group) throws ServiceFailureException {
-        log.debug("listContactsByGroup({})", group);
+
+        List<Long> contacts = new ArrayList<>();
+        if(group == null) {
+            throw new IllegalArgumentException("Group is null");
+        }
         try(Connection con = dataSource.getConnection()) {
             try(PreparedStatement st = con.prepareStatement("select GROUPMEMBERLIST from GROUPS where id = ?")) {
                 st.setLong(1, group.getGroupID());
@@ -69,10 +73,13 @@ public class AddressBookManagerImpl implements AddressBookManager {
                     if(rs.next()) {
                         String members = rs.getString(1);
                         List<Long> memberList = parseString(members);
-                        List<Contact> contactsInGroup = new ArrayList<>();
-                        ContactManager contactManager = new ContactManagerImpl(dataSource);
-                        for(Long member : memberList) {
-                            contactsInGroup.add(contactManager.findContactById(member));
+                        List<Contact> contactsInGroup = null;
+                        if(memberList.size() > 0) {
+                            contactsInGroup = new ArrayList<>();
+                            ContactManager contactManager = new ContactManagerImpl(dataSource);
+                            for (Long member : memberList) {
+                                contactsInGroup.add(contactManager.findContactById(member));
+                            }
                         }
                         return contactsInGroup;
                     }
