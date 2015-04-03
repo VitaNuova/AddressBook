@@ -24,7 +24,7 @@ public class GroupManagerImplTest {
     @Before
     public void setUp() throws SQLException, IOException {
         Properties config = new Properties();
-        config.load(Main.class.getResourceAsStream("/config.properties"));
+        config.load(Main.class.getResourceAsStream("/dbSetup.properties"));
         BasicDataSource ds = new BasicDataSource();
         ds.setUrl(config.getProperty("jdbc.url"));
         ds.setUsername(config.getProperty("jdbc.user"));
@@ -316,7 +316,7 @@ public class GroupManagerImplTest {
     @After
     public void deleteDataFromDB() throws IOException {
         Properties config = new Properties();
-        config.load(Main.class.getResourceAsStream("/config.properties"));
+        config.load(Main.class.getResourceAsStream("/dbSetup.properties"));
         BasicDataSource ds = new BasicDataSource();
         ds.setUrl(config.getProperty("jdbc.url"));
         ds.setUsername(config.getProperty("jdbc.user"));

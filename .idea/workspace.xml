@@ -1,14 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78d19bfd-05c5-4da7-9199-b62aef3f8e48" name="Default" comment="">
+    <list default="true" id="78d19bfd-05c5-4da7-9199-b62aef3f8e48" name="Default" comment="Version passing all tests.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_0_5_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_0_5_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_0_5_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_0_5_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_0_5_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_0_5_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_0_5_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_1_6.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_4_1_6_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_4_0_5_RELEASE.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/afterTestRun.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/beforeTestRun.sql" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/dbSetup.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cz/fi/muni/pv168/AddressBook/AddressBookManagerImpl.class" afterPath="$PROJECT_DIR$/target/classes/cz/fi/muni/pv168/AddressBook/AddressBookManagerImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/cz/fi/muni/pv168/AddressBook/AddressBookManagerImplTest.class" afterPath="$PROJECT_DIR$/target/test-classes/cz/fi/muni/pv168/AddressBook/AddressBookManagerImplTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cz/fi/muni/pv168/AddressBook/Contact.class" afterPath="$PROJECT_DIR$/target/classes/cz/fi/muni/pv168/AddressBook/Contact.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cz/fi/muni/pv168/AddressBook/ContactManagerImpl.class" afterPath="$PROJECT_DIR$/target/classes/cz/fi/muni/pv168/AddressBook/ContactManagerImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.class" afterPath="$PROJECT_DIR$/target/test-classes/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AddressBook.iml" afterPath="$PROJECT_DIR$/AddressBook.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImpl.java" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImplTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Contact.java" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Contact.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManagerImpl.java" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManagerImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/ContactManagerImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/ContactManagerImplTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/MANIFEST.MF" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AddressBook.iws" />
@@ -27,6 +49,9 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
   <component name="DatabaseView">
     <option name="FLATTEN" value="false" />
     <option name="GROUP_BY_TYPE" value="true" />
@@ -38,25 +63,7 @@
         <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
       </PATH_ELEMENT>
       <PATH_ELEMENT>
-        <option name="myItemId" value="Derby - AddressBookDB@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="Derby - AddressBookDB@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="APP" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="GROUPS" />
+        <option name="myItemId" value="Derby - myDB@localhost" />
         <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
       </PATH_ELEMENT>
     </PATH>
@@ -67,29 +74,67 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/605cb6ce-d251-42d4-a21f-6c34583af988/console.sql">
+      <file leaf-file-name="ContactManagerImplTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/ContactManagerImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.8">
-              <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="5376" max-vertical-offset="6749">
+              <caret line="388" column="5" selection-start-line="388" selection-start-column="5" selection-end-line="388" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1428017526127" expanded="true" signature="16705:16722" placeholder="DELETE FROM ..." />
+                <marker date="1428017526127" expanded="true" signature="16841:16856" placeholder="DELETE FROM ..." />
+                <marker date="1428017526127" expanded="true" signature="16975:16992" placeholder="DELETE FROM ..." />
+                <marker date="1428017526127" expanded="true" signature="17111:17136" placeholder="DELETE FROM ..." />
+                <marker date="1428017526127" expanded="true" signature="17255:17275" placeholder="DELETE FROM ..." />
+                <marker date="1428017526127" expanded="true" signature="17394:17413" placeholder="DELETE FROM ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="afterTestRun.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/afterTestRun.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
+              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddressBookManagerImplTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImplTest.java">
+      <file leaf-file-name="beforeTestRun.sql" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/beforeTestRun.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.8305085">
-              <caret line="116" column="8" selection-start-line="116" selection-start-column="8" selection-end-line="116" selection-end-column="8" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+              <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddressBookManagerImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="2227">
+              <caret line="61" column="46" selection-start-line="61" selection-start-column="46" selection-end-line="61" selection-end-column="46" />
               <folding>
-                <marker date="1427986225697" expanded="true" signature="5247:5265" placeholder="delete from ..." />
-                <marker date="1427986225697" expanded="true" signature="5384:5401" placeholder="delete from ..." />
-                <marker date="1427986225697" expanded="true" signature="5521:5536" placeholder="delete from ..." />
-                <marker date="1427986225697" expanded="true" signature="5656:5673" placeholder="delete from ..." />
-                <marker date="1427986225697" expanded="true" signature="5793:5818" placeholder="delete from ..." />
-                <marker date="1427986225697" expanded="true" signature="5938:5958" placeholder="delete from ..." />
-                <marker date="1427986225697" expanded="true" signature="6078:6097" placeholder="delete from ..." />
+                <marker date="1428020044861" expanded="true" signature="1414:1460" placeholder="SELECT group..GROUP_ID..." />
+                <marker date="1428020044861" expanded="true" signature="1765:1804" placeholder="SELECT group..GROUPS..." />
+                <marker date="1428020044861" expanded="true" signature="2859:2887" placeholder="select group..groups..." />
+                <marker date="1428020044861" expanded="true" signature="3944:3991" placeholder="select GROUP..GROUPS..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GroupManagerImplTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="4713" max-vertical-offset="6086">
+              <caret line="330" column="5" selection-start-line="315" selection-start-column="4" selection-end-line="330" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1428007467260" expanded="true" signature="9306:9324" placeholder="delete from ..." />
               </folding>
             </state>
           </provider>
@@ -98,65 +143,36 @@
       <file leaf-file-name="Contact.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Contact.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="2312">
+              <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="APP.GROUPS" pinned="false" current-in-tab="false">
-        <entry file="dbDummy://dbtable:/1c407013/605cb6ce-d251-42d4-a21f-6c34583af988/.APP.GROUPS">
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+      <file leaf-file-name="Derby - myDB@localhost" pinned="false" current-in-tab="false">
+        <entry file="dbDummy://db-console:/5ed2af46/1cde4029-f084-4c5f-adfe-aa669e7b8a6c/">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.733334" vertical-offset="255" max-vertical-offset="850">
+              <caret line="41" column="7" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
               <folding />
             </state>
           </provider>
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
         </entry>
       </file>
-      <file leaf-file-name="GroupManagerImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/GroupManagerImpl.java">
+      <file leaf-file-name="AddressBookManagerImplTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="129" column="13" selection-start-line="129" selection-start-column="13" selection-end-line="129" selection-end-column="13" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="257" max-vertical-offset="3332">
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1427449193330" expanded="true" signature="1519:1579" placeholder="insert into ..." />
-                <marker date="1427449193330" expanded="true" signature="3536:3601" placeholder="update GROUP..." />
-                <marker date="1427449193330" expanded="true" signature="4900:4931" placeholder="delete from ..." />
-                <marker date="1427449193330" expanded="true" signature="5633:5666" placeholder="select * fro..GROUPS..." />
-                <marker date="1427449193330" expanded="true" signature="6591:6631" placeholder="select * fro..GROUPS..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Application.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Application.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="60" selection-start-line="19" selection-start-column="7" selection-end-line="24" selection-end-column="60" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AddressBookManagerImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="64" column="48" selection-start-line="64" selection-start-column="48" selection-end-line="64" selection-end-column="48" />
-              <folding>
-                <marker date="1427986003209" expanded="true" signature="1316:1344" placeholder="select group..groups..." />
-                <marker date="1427986003209" expanded="true" signature="2401:2448" placeholder="select GROUP..GROUPS..." />
+                <marker date="1428018552199" expanded="true" signature="5223:5241" placeholder="delete from ..." />
+                <marker date="1428018552199" expanded="true" signature="5360:5377" placeholder="delete from ..." />
+                <marker date="1428018552199" expanded="true" signature="5497:5512" placeholder="delete from ..." />
+                <marker date="1428018552199" expanded="true" signature="5632:5649" placeholder="delete from ..." />
+                <marker date="1428018552199" expanded="true" signature="5769:5794" placeholder="delete from ..." />
+                <marker date="1428018552199" expanded="true" signature="5914:5934" placeholder="delete from ..." />
+                <marker date="1428018552199" expanded="true" signature="6054:6073" placeholder="delete from ..." />
               </folding>
             </state>
           </provider>
@@ -165,44 +181,62 @@
       <file leaf-file-name="ContactManagerImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManagerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="6171" max-vertical-offset="10047">
+              <caret line="388" column="21" selection-start-line="386" selection-start-column="20" selection-end-line="388" selection-end-column="21" />
               <folding>
-                <marker date="1427972475986" expanded="true" signature="1476:1525" placeholder="INSERT INTO ..." />
-                <marker date="1427972475986" expanded="true" signature="2116:2166" placeholder="INSERT INTO ..." />
-                <marker date="1427972475986" expanded="true" signature="2783:2829" placeholder="INSERT INTO ..." />
-                <marker date="1427972475986" expanded="true" signature="3440:3490" placeholder="INSERT INTO ..." />
-                <marker date="1427972475986" expanded="true" signature="4117:4193" placeholder="INSERT INTO ..." />
-                <marker date="1427972475986" expanded="true" signature="4934:4989" placeholder="INSERT INTO ..." />
-                <marker date="1427972475986" expanded="true" signature="6876:6906" placeholder="DELETE FROM ..." />
-                <marker date="1427972475986" expanded="true" signature="7032:7067" placeholder="DELETE FROM ..." />
-                <marker date="1427972475986" expanded="true" signature="7508:7541" placeholder="DELETE FROM ..." />
-                <marker date="1427972475986" expanded="true" signature="7981:8016" placeholder="DELETE FROM ..." />
-                <marker date="1427972475986" expanded="true" signature="8467:8510" placeholder="DELETE FROM ..." />
-                <marker date="1427972475986" expanded="true" signature="8972:9010" placeholder="DELETE FROM ..." />
-                <marker date="1427972475986" expanded="true" signature="10016:10064" placeholder="SELECT id, n..CONTACT..." />
-                <marker date="1427972475986" expanded="true" signature="11098:11135" placeholder="SELECT id, n..CONTACT..." />
-                <marker date="1427972475986" expanded="true" signature="11850:11900" placeholder="SELECT id, n..CONTACT..." />
-                <marker date="1427972475986" expanded="true" signature="12658:12699" placeholder="SELECT conta..PHONE..." />
-                <marker date="1427972475986" expanded="true" signature="13462:13499" placeholder="SELECT conta..FAX..." />
-                <marker date="1427972475986" expanded="true" signature="14268:14309" placeholder="SELECT conta..EMAIL..." />
-                <marker date="1427972475986" expanded="true" signature="15088:15141" placeholder="SELECT id, n..CONTACT..." />
-                <marker date="1427972475986" expanded="true" signature="15970:16039" placeholder="SELECT conta..OTHER_CONTACT..." />
-                <marker date="1427972475986" expanded="true" signature="16954:16995" placeholder="SELECT phone..PHONE..." />
-                <marker date="1427972475986" expanded="true" signature="17279:17316" placeholder="SELECT fax F..FAX..." />
-                <marker date="1427972475986" expanded="true" signature="17596:17637" placeholder="SELECT email..EMAIL..." />
-                <marker date="1427972475986" expanded="true" signature="17921:17985" placeholder="SELECT conta..OTHER_CONTACT..." />
-                <marker date="1427972475986" expanded="true" signature="18308:18354" placeholder="SELECT group..GROUP_ID..." />
+                <element signature="imports" expanded="true" />
+                <marker date="1428012339481" expanded="true" signature="1438:1487" placeholder="INSERT INTO ..." />
+                <marker date="1428012339481" expanded="true" signature="2078:2128" placeholder="INSERT INTO ..." />
+                <marker date="1428012339481" expanded="true" signature="2745:2791" placeholder="INSERT INTO ..." />
+                <marker date="1428012339481" expanded="true" signature="3402:3452" placeholder="INSERT INTO ..." />
+                <marker date="1428012339481" expanded="true" signature="4079:4155" placeholder="INSERT INTO ..." />
+                <marker date="1428012339481" expanded="true" signature="4896:4951" placeholder="INSERT INTO ..." />
+                <marker date="1428012339481" expanded="true" signature="7353:7400" placeholder="UPDATE CONTA..." />
+                <marker date="1428012339481" expanded="true" signature="7883:7924" placeholder="SELECT phone..PHONE..." />
+                <marker date="1428012339481" expanded="true" signature="8635:8670" placeholder="DELETE FROM ..." />
+                <marker date="1428012339481" expanded="true" signature="8635:8682" placeholder="DELETE FROM ..." />
+                <marker date="1428012339481" expanded="true" signature="9180:9230" placeholder="INSERT INTO ..." />
+                <marker date="1428012339481" expanded="true" signature="9904:9941" placeholder="SELECT fax F..FAX..." />
+                <marker date="1428012339481" expanded="true" signature="10629:10672" placeholder="DELETE FROM ..." />
+                <marker date="1428012339481" expanded="true" signature="11156:11202" placeholder="INSERT INTO ..." />
+                <marker date="1428012339481" expanded="true" signature="11871:11912" placeholder="SELECT email..EMAIL..." />
+                <marker date="1428012339481" expanded="true" signature="12617:12664" placeholder="DELETE FROM ..." />
+                <marker date="1428012339481" expanded="true" signature="13156:13206" placeholder="INSERT INTO ..." />
+                <marker date="1428012339481" expanded="true" signature="13889:13953" placeholder="SELECT conta..OTHER_CONTACT..." />
+                <marker date="1428012339481" expanded="true" signature="14814:14889" placeholder="DELETE FROM ..." />
+                <marker date="1428012339481" expanded="true" signature="15509:15585" placeholder="INSERT INTO ..." />
+                <marker date="1428012339481" expanded="true" signature="16385:16431" placeholder="SELECT group..GROUP_ID..." />
+                <marker date="1428012339481" expanded="true" signature="17152:17204" placeholder="DELETE FROM ..." />
+                <marker date="1428012339481" expanded="true" signature="17700:17755" placeholder="INSERT INTO ..." />
+                <marker date="1428012339481" expanded="true" signature="18712:18742" placeholder="DELETE FROM ..." />
+                <marker date="1428012339481" expanded="true" signature="18868:18903" placeholder="DELETE FROM ..." />
+                <marker date="1428012339481" expanded="true" signature="19344:19377" placeholder="DELETE FROM ..." />
+                <marker date="1428012339481" expanded="true" signature="19817:19852" placeholder="DELETE FROM ..." />
+                <marker date="1428012339481" expanded="true" signature="20303:20346" placeholder="DELETE FROM ..." />
+                <marker date="1428012339481" expanded="true" signature="20808:20846" placeholder="DELETE FROM ..." />
+                <marker date="1428012339481" expanded="true" signature="21964:22012" placeholder="SELECT id, n..CONTACT..." />
+                <marker date="1428012339481" expanded="true" signature="23046:23083" placeholder="SELECT id, n..CONTACT..." />
+                <marker date="1428012339481" expanded="true" signature="23914:23964" placeholder="SELECT id, n..CONTACT..." />
+                <marker date="1428012339481" expanded="true" signature="24840:24881" placeholder="SELECT conta..PHONE..." />
+                <marker date="1428012339481" expanded="true" signature="25758:25795" placeholder="SELECT conta..FAX..." />
+                <marker date="1428012339481" expanded="true" signature="26682:26723" placeholder="SELECT conta..EMAIL..." />
+                <marker date="1428012339481" expanded="true" signature="27624:27677" placeholder="SELECT id, n..CONTACT..." />
+                <marker date="1428012339481" expanded="true" signature="28662:28731" placeholder="SELECT conta..OTHER_CONTACT..." />
+                <marker date="1428012339481" expanded="true" signature="29619:29660" placeholder="SELECT phone..PHONE..." />
+                <marker date="1428012339481" expanded="true" signature="29944:29981" placeholder="SELECT fax F..FAX..." />
+                <marker date="1428012339481" expanded="true" signature="30261:30302" placeholder="SELECT email..EMAIL..." />
+                <marker date="1428012339481" expanded="true" signature="30586:30650" placeholder="SELECT conta..OTHER_CONTACT..." />
+                <marker date="1428012339481" expanded="true" signature="30973:31019" placeholder="SELECT group..GROUP_ID..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContactManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManager.java">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="46" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.9424342" vertical-offset="702" max-vertical-offset="1445">
+              <caret line="75" column="44" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -220,33 +254,31 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManager.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/605cb6ce-d251-42d4-a21f-6c34583af988/console_1.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/605cb6ce-d251-42d4-a21f-6c34583af988/console_3.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/605cb6ce-d251-42d4-a21f-6c34583af988/console_4.sql" />
         <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/GroupManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManagerImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/ContactManagerImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/AddressBookManager.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Contact.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config.properties" />
         <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Group.java" />
         <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/GroupManagerImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Application.java" />
-        <option value="$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/605cb6ce-d251-42d4-a21f-6c34583af988/console.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Contact.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManagerImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/beforeTestRun.sql" />
+        <option value="$PROJECT_DIR$/src/main/resources/afterTestRun.sql" />
+        <option value="$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/ContactManagerImplTest.java" />
+        <option value="db-console:/5ed2af46/1cde4029-f084-4c5f-adfe-aa669e7b8a6c/" />
         <option value="$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImpl.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -266,14 +298,11 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="NamedScopeManager">
-    <order />
-  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="65" />
-    <option name="y" value="24" />
-    <option name="width" value="1301" />
-    <option name="height" value="744" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -300,7 +329,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -308,15 +337,9 @@
               <option name="myItemId" value="AddressBook" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AddressBook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AddressBook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -325,15 +348,151 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="AddressBook" />
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: org.springframework:spring-test:4.1.6.RELEASE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring-test-4.1.6.RELEASE.jar" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="springframework" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AddressBook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: org.springframework:spring-test:4.1.6.RELEASE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring-test-4.1.6.RELEASE.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="springframework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="context" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AddressBook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: org.springframework:spring-test:4.1.6.RELEASE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring-test-4.1.6.RELEASE.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="springframework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="context" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="jdbc" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AddressBook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: org.springframework:spring-test:4.1.6.RELEASE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring-test-4.1.6.RELEASE.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="springframework" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AddressBook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Maven: org.springframework:spring-test:4.1.6.RELEASE" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="spring-test-4.1.6.RELEASE.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AddressBook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AddressBook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AddressBook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AddressBook" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="target" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -360,24 +519,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="AddressBook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AddressBook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="AddressBook" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -431,8 +572,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -471,7 +612,223 @@
       <recent name="cz.fi.muni.pv168.AddressBook" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AddressBookManagerImplTest">
+  <component name="RestoreUpdateTree">
+    <UpdateInfo date="Moments ago" ActionInfo="_Update">
+      <UpdatedFiles>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated from server" />
+          <option name="myStatusName" value="Changed on server" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CHANGED_ON_SERVER" />
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Updated" />
+            <option name="myStatusName" value="Changed" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="UPDATED" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImpl.java</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Group.java</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/GroupManagerImpl.java</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImplTest.java</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.java</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/cz/fi/muni/pv168/AddressBook/AddressBookManager.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/cz/fi/muni/pv168/AddressBook/AddressBookManagerImpl.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/cz/fi/muni/pv168/AddressBook/Contact.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/cz/fi/muni/pv168/AddressBook/ContactManagerImpl.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/cz/fi/muni/pv168/AddressBook/Group.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/classes/cz/fi/muni/pv168/AddressBook/GroupManagerImpl.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/test-classes/cz/fi/muni/pv168/AddressBook/AddressBookManagerImplTest.class</PATH>
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/target/test-classes/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.class</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Created" />
+            <option name="myStatusName" value="Created" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="CREATED" />
+            <PATH vcs="Git" revision="">$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Application.java</PATH>
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Deleted" />
+            <option name="myStatusName" value="Deleted" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="true" />
+            <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" value="Restored" />
+            <option name="myStatusName" value="Will be restored" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" value="RESTORED" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Modified" />
+          <option name="myStatusName" value="Modified" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MODIFIED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Skipped" />
+          <option name="myStatusName" value="Skipped" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SKIPPED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with conflicts" />
+          <option name="myStatusName" value="Will be merged with conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with tree conflicts" />
+          <option name="myStatusName" value="Merged with tree conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged with property conflicts" />
+          <option name="myStatusName" value="Will be merged with property conflicts" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Merged" />
+          <option name="myStatusName" value="Will be merged" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="MERGED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Not in repository" />
+          <option name="myStatusName" value="Not in repository" />
+          <option name="mySupportsDeletion" value="true" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UNKNOWN" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally added" />
+          <option name="myStatusName" value="Locally added" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_ADDED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Locally removed" />
+          <option name="myStatusName" value="Locally removed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="LOCALLY_REMOVED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Switched" />
+          <option name="myStatusName" value="Switched" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="SWITCHED" />
+        </FILE-GROUP>
+      </UpdatedFiles>
+    </UpdateInfo>
+  </component>
+  <component name="RunManager" selected="JUnit.cz.fi.muni.pv168.AddressBook in AddressBook">
+    <configuration default="false" name="ContactManagerImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="cz.fi.muni.pv168.AddressBook.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="AddressBook" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="cz.fi.muni.pv168.AddressBook" />
+      <option name="MAIN_CLASS_NAME" value="cz.fi.muni.pv168.AddressBook.ContactManagerImplTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ContactManagerImplTest.testDeletePhone" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="cz.fi.muni.pv168.AddressBook.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="AddressBook" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="cz.fi.muni.pv168.AddressBook" />
+      <option name="MAIN_CLASS_NAME" value="cz.fi.muni.pv168.AddressBook.ContactManagerImplTest" />
+      <option name="METHOD_NAME" value="testDeletePhone" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ContactManagerImplTest.testFindAllContacts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="cz.fi.muni.pv168.AddressBook.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="AddressBook" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="cz.fi.muni.pv168.AddressBook" />
+      <option name="MAIN_CLASS_NAME" value="cz.fi.muni.pv168.AddressBook.ContactManagerImplTest" />
+      <option name="METHOD_NAME" value="testFindAllContacts" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="false" name="cz.fi.muni.pv168.AddressBook in AddressBook" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -500,32 +857,6 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="GroupManagerImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="cz.fi.muni.pv168.AddressBook.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="AddressBook" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="cz.fi.muni.pv168.AddressBook" />
-      <option name="MAIN_CLASS_NAME" value="cz.fi.muni.pv168.AddressBook.GroupManagerImplTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
     <configuration default="false" name="AddressBookManagerImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -550,64 +881,37 @@
       </option>
       <envs />
       <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="AddressBookManagerImplTest.testListGroupsByPerson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="cz.fi.muni.pv168.AddressBook.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="AddressBook" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="cz.fi.muni.pv168.AddressBook" />
-      <option name="MAIN_CLASS_NAME" value="cz.fi.muni.pv168.AddressBook.AddressBookManagerImplTest" />
-      <option name="METHOD_NAME" value="testListGroupsByPerson" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="AddressBookManagerImplTest.testListContactsByGroup" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="cz.fi.muni.pv168.AddressBook.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="AddressBook" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="cz.fi.muni.pv168.AddressBook" />
-      <option name="MAIN_CLASS_NAME" value="cz.fi.muni.pv168.AddressBook.AddressBookManagerImplTest" />
-      <option name="METHOD_NAME" value="testListContactsByGroup" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
-      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -630,6 +934,93 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <pass-parent-envs>true</pass-parent-envs>
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="FlashPlayerDebugger.exe" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -649,49 +1040,6 @@
       <option name="CLEAR_LOGCAT" value="false" />
       <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="myFilePath" />
-      <option name="GLUE" />
-      <option name="myNameFilter" />
-      <option name="myGeneratedName" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
@@ -729,20 +1077,6 @@
       <option name="usbDebugPort" value="7936" />
       <method />
     </configuration>
-    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
-      <option name="BCName" value="" />
-      <option name="launcherParameters">
-        <LauncherParameters>
-          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
-          <option name="launcherType" value="OSDefault" />
-          <option name="newPlayerInstance" value="false" />
-          <option name="playerPath" value="FlashPlayerDebugger.exe" />
-        </LauncherParameters>
-      </option>
-      <option name="moduleName" value="" />
-      <option name="trusted" value="true" />
-      <method />
-    </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -759,117 +1093,70 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
-    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
-      <module name="" />
-      <setting name="vmparams" value="" />
-      <setting name="cmdLine" value="run-app" />
-      <setting name="depsClasspath" value="false" />
-      <setting name="passParentEnv" value="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <setting name="launchBrowser" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="JarApplication" factoryName="JAR Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <envs />
-      <method />
-    </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
-    </configuration>
-    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
       <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
+      <module name="" />
       <envs />
-      <properties />
-      <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Unknown" factoryName="Unknown">
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <pass-parent-envs>true</pass-parent-envs>
-      <envs />
+    <configuration default="true" type="com.intellij.database.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.cz.fi.muni.pv168.AddressBook in AddressBook" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.GroupManagerImplTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.AddressBookManagerImplTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.AddressBookManagerImplTest.testListGroupsByPerson" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.AddressBookManagerImplTest.testListContactsByGroup" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.ContactManagerImplTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ContactManagerImplTest.testDeletePhone" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ContactManagerImplTest.testFindAllContacts" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.cz.fi.muni.pv168.AddressBook in AddressBook" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.AddressBookManagerImplTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.AddressBookManagerImplTest" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.AddressBookManagerImplTest.testListContactsByGroup" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.GroupManagerImplTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.AddressBookManagerImplTest.testListGroupsByPerson" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.cz.fi.muni.pv168.AddressBook in AddressBook" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.cz.fi.muni.pv168.AddressBook in AddressBook" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.AddressBookManagerImplTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ContactManagerImplTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ContactManagerImplTest.testFindAllContacts" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ContactManagerImplTest.testDeletePhone" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SliceManager">
+    <option name="analysisUIOptions">
+      <AnalysisUIOptions />
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -958,7 +1245,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90699000" />
+    <option name="totallyTimeSpent" value="104284000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -970,70 +1257,39 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3117284" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3148148" sideWeight="0.5059761" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22530864" sideWeight="0.49402392" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.34876543" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2733068" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24701196" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24874792" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39969134" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" x="92" y="91" width="1736" height="856" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-    </layout>
-    <layout-to-restore>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946146" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946146" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3284055" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30551416" sideWeight="0.50269026" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.0" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284055" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20591341" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284055" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946146" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24322917" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15989584" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3271605" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="92" y="91" width="1736" height="856" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39915523" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="92" y="91" width="1736" height="856" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946146" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22067901" sideWeight="0.49730977" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20833333" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26533866" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-    </layout-to-restore>
+    </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1047,12 +1303,16 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
     <MESSAGE value="First batch of ContactManager unit tests." />
     <MESSAGE value="Second batch of ContactManager unit tests." />
     <MESSAGE value="Database operations for Group - first rough version" />
     <MESSAGE value="Database operations for Group - with logging" />
     <MESSAGE value="Current version - still just 1 of 3 tests for AddressBookManagerImpl run successfully" />
-    <option name="LAST_COMMIT_MESSAGE" value="Current version - still just 1 of 3 tests for AddressBookManagerImpl run successfully" />
+    <MESSAGE value="Version passing all tests." />
+    <option name="LAST_COMMIT_MESSAGE" value="Version passing all tests." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1067,7 +1327,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="17" />
+      <option name="time" value="18" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1076,240 +1336,144 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="61" selection-start-line="76" selection-start-column="51" selection-end-line="76" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/ContactManagerImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="46" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6018">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1428017526127" expanded="true" signature="16705:16722" placeholder="DELETE FROM ..." />
+            <marker date="1428017526127" expanded="true" signature="16841:16856" placeholder="DELETE FROM ..." />
+            <marker date="1428017526127" expanded="true" signature="16975:16992" placeholder="DELETE FROM ..." />
+            <marker date="1428017526127" expanded="true" signature="17111:17136" placeholder="DELETE FROM ..." />
+            <marker date="1428017526127" expanded="true" signature="17255:17275" placeholder="DELETE FROM ..." />
+            <marker date="1428017526127" expanded="true" signature="17394:17413" placeholder="DELETE FROM ..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Contact.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="92" column="61" selection-start-line="92" selection-start-column="61" selection-end-line="92" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2159" max-vertical-offset="3587">
+          <caret line="169" column="20" selection-start-line="169" selection-start-column="20" selection-end-line="169" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.java">
+    <entry file="dbDummy://db-console:/5ed2af46/1cde4029-f084-4c5f-adfe-aa669e7b8a6c/">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="61" selection-start-line="76" selection-start-column="51" selection-end-line="76" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/ContactManagerImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="46" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Contact.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="61" selection-start-line="76" selection-start-column="51" selection-end-line="76" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/ContactManagerImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="46" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Contact.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="115" column="39" selection-start-line="115" selection-start-column="39" selection-end-line="115" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="61" selection-start-line="76" selection-start-column="51" selection-end-line="76" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="748">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/AddressBookManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="374" max-vertical-offset="1700">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#631#632#0" expanded="false" />
+            <element signature="e#675#676#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/GroupManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="327" column="0" selection-start-line="327" selection-start-column="0" selection-end-line="327" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/605cb6ce-d251-42d4-a21f-6c34583af988/console_2.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/605cb6ce-d251-42d4-a21f-6c34583af988/console_1.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.029459901">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/605cb6ce-d251-42d4-a21f-6c34583af988/console_3.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6">
-          <caret line="1" column="27" selection-start-line="1" selection-start-column="27" selection-end-line="1" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/605cb6ce-d251-42d4-a21f-6c34583af988/console_4.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="5032" max-vertical-offset="8483">
+          <caret line="315" column="49" selection-start-line="315" selection-start-column="31" selection-end-line="315" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1428012339481" expanded="true" signature="1438:1487" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="2078:2128" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="2745:2791" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="3402:3452" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="4079:4155" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="4896:4951" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="7353:7400" placeholder="UPDATE CONTA..." />
+            <marker date="1428012339481" expanded="true" signature="7883:7924" placeholder="SELECT phone..PHONE..." />
+            <marker date="1428012339481" expanded="true" signature="8635:8670" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="8635:8682" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="9180:9230" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="9904:9941" placeholder="SELECT fax F..FAX..." />
+            <marker date="1428012339481" expanded="true" signature="10629:10672" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="11156:11202" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="11871:11912" placeholder="SELECT email..EMAIL..." />
+            <marker date="1428012339481" expanded="true" signature="12617:12664" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="13156:13206" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="13889:13953" placeholder="SELECT conta..OTHER_CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="14814:14889" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="15509:15585" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="16385:16431" placeholder="SELECT group..GROUP_ID..." />
+            <marker date="1428012339481" expanded="true" signature="17152:17204" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="17700:17755" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="18712:18742" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="18868:18903" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="19344:19377" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="19817:19852" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="20303:20346" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="20808:20846" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="21964:22012" placeholder="SELECT id, n..CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="23046:23083" placeholder="SELECT id, n..CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="23914:23964" placeholder="SELECT id, n..CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="24840:24881" placeholder="SELECT conta..PHONE..." />
+            <marker date="1428012339481" expanded="true" signature="25758:25795" placeholder="SELECT conta..FAX..." />
+            <marker date="1428012339481" expanded="true" signature="26682:26723" placeholder="SELECT conta..EMAIL..." />
+            <marker date="1428012339481" expanded="true" signature="27624:27677" placeholder="SELECT id, n..CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="28662:28731" placeholder="SELECT conta..OTHER_CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="29619:29660" placeholder="SELECT phone..PHONE..." />
+            <marker date="1428012339481" expanded="true" signature="29944:29981" placeholder="SELECT fax F..FAX..." />
+            <marker date="1428012339481" expanded="true" signature="30261:30302" placeholder="SELECT email..EMAIL..." />
+            <marker date="1428012339481" expanded="true" signature="30586:30650" placeholder="SELECT conta..OTHER_CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="30973:31019" placeholder="SELECT group..GROUP_ID..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="31" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="510" max-vertical-offset="1190">
+          <caret line="37" column="36" selection-start-line="37" selection-start-column="36" selection-end-line="37" selection-end-column="36" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/AddressBookManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="850">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ServiceFailureException.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/GroupManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/GroupManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1682" max-vertical-offset="3009">
+          <caret line="172" column="1" selection-start-line="172" selection-start-column="1" selection-end-line="172" selection-end-column="1" />
+          <folding>
+            <element signature="e#601#602#0" expanded="false" />
+            <element signature="e#645#646#0" expanded="false" />
+            <marker date="1428005835469" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Group.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="55" column="37" selection-start-line="55" selection-start-column="37" selection-end-line="55" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="1173">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="e#633#634#0" expanded="false" />
             <element signature="e#665#666#0" expanded="false" />
+            <element signature="e#715#716#0" expanded="false" />
+            <element signature="e#757#758#0" expanded="false" />
+            <element signature="e#789#790#0" expanded="false" />
+            <element signature="e#819#820#0" expanded="false" />
+            <element signature="e#863#864#0" expanded="false" />
+            <element signature="e#901#902#0" expanded="false" />
+            <element signature="e#947#948#0" expanded="false" />
+            <element signature="e#985#986#0" expanded="false" />
             <element signature="e#1051#1052#0" expanded="false" />
             <element signature="e#1105#1106#0" expanded="false" />
             <element signature="e#1151#1152#0" expanded="false" />
@@ -1318,204 +1482,628 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="60" selection-start-line="1" selection-start-column="60" selection-end-line="1" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/concurrent/CopyOnWriteArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="160" column="0" selection-start-line="160" selection-start-column="0" selection-end-line="160" selection-end-column="0" />
-          <folding>
-            <element signature="e#3391#3392#0" expanded="false" />
-            <element signature="e#3419#3420#0" expanded="false" />
-            <element signature="e#5039#5040#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.1.2/logback-classic-1.1.2.jar!/ch/qos/logback/classic/LoggerContext.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.44">
-          <caret line="195" column="0" selection-start-line="195" selection-start-column="0" selection-end-line="195" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/ch/qos/logback/logback-classic/1.1.2/logback-classic-1.1.2.jar!/ch/qos/logback/classic/Logger.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33233532">
-          <caret line="244" column="0" selection-start-line="244" selection-start-column="0" selection-end-line="244" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="56" selection-start-line="24" selection-start-column="56" selection-end-line="24" selection-end-column="56" />
-          <folding>
-            <marker date="1427977487530" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/ContactManagerImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="128" column="34" selection-start-line="128" selection-start-column="34" selection-end-line="128" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/main.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.11.jar!/org/junit/internal/runners/statements/RunAfters.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.44">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="60" selection-start-line="19" selection-start-column="7" selection-end-line="24" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="5848">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <marker date="1428017526127" expanded="true" signature="16705:16722" placeholder="DELETE FROM ..." />
+            <marker date="1428017526127" expanded="true" signature="16841:16856" placeholder="DELETE FROM ..." />
+            <marker date="1428017526127" expanded="true" signature="16975:16992" placeholder="DELETE FROM ..." />
+            <marker date="1428017526127" expanded="true" signature="17111:17136" placeholder="DELETE FROM ..." />
+            <marker date="1428017526127" expanded="true" signature="17255:17275" placeholder="DELETE FROM ..." />
+            <marker date="1428017526127" expanded="true" signature="17394:17413" placeholder="DELETE FROM ..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/1c407013/605cb6ce-d251-42d4-a21f-6c34583af988/.APP.GROUPS">
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ServiceFailureException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="340">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/605cb6ce-d251-42d4-a21f-6c34583af988/console.sql">
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.8">
-          <caret line="3" column="22" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#631#632#0" expanded="false" />
+            <element signature="e#675#676#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="816">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1428012339481" expanded="true" signature="1438:1487" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="2078:2128" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="2745:2791" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="3402:3452" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="4079:4155" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="4896:4951" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="7353:7400" placeholder="UPDATE CONTA..." />
+            <marker date="1428012339481" expanded="true" signature="7883:7924" placeholder="SELECT phone..PHONE..." />
+            <marker date="1428012339481" expanded="true" signature="8635:8670" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="8635:8682" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="9180:9230" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="9904:9941" placeholder="SELECT fax F..FAX..." />
+            <marker date="1428012339481" expanded="true" signature="10629:10672" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="11156:11202" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="11871:11912" placeholder="SELECT email..EMAIL..." />
+            <marker date="1428012339481" expanded="true" signature="12617:12664" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="13156:13206" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="13889:13953" placeholder="SELECT conta..OTHER_CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="14814:14889" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="15509:15585" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="16385:16431" placeholder="SELECT group..GROUP_ID..." />
+            <marker date="1428012339481" expanded="true" signature="17152:17204" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="17700:17755" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="18712:18742" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="18868:18903" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="19344:19377" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="19817:19852" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="20303:20346" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="20808:20846" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="21964:22012" placeholder="SELECT id, n..CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="23046:23083" placeholder="SELECT id, n..CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="23914:23964" placeholder="SELECT id, n..CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="24840:24881" placeholder="SELECT conta..PHONE..." />
+            <marker date="1428012339481" expanded="true" signature="25758:25795" placeholder="SELECT conta..FAX..." />
+            <marker date="1428012339481" expanded="true" signature="26682:26723" placeholder="SELECT conta..EMAIL..." />
+            <marker date="1428012339481" expanded="true" signature="27624:27677" placeholder="SELECT id, n..CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="28662:28731" placeholder="SELECT conta..OTHER_CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="29619:29660" placeholder="SELECT phone..PHONE..." />
+            <marker date="1428012339481" expanded="true" signature="29944:29981" placeholder="SELECT fax F..FAX..." />
+            <marker date="1428012339481" expanded="true" signature="30261:30302" placeholder="SELECT email..EMAIL..." />
+            <marker date="1428012339481" expanded="true" signature="30586:30650" placeholder="SELECT conta..OTHER_CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="30973:31019" placeholder="SELECT group..GROUP_ID..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="459">
           <caret line="13" column="46" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.11.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35329342">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Contact.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="2686">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1156" max-vertical-offset="5219">
+          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/ContactManagerImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5848">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1428017526127" expanded="true" signature="16705:16722" placeholder="DELETE FROM ..." />
+            <marker date="1428017526127" expanded="true" signature="16841:16856" placeholder="DELETE FROM ..." />
+            <marker date="1428017526127" expanded="true" signature="16975:16992" placeholder="DELETE FROM ..." />
+            <marker date="1428017526127" expanded="true" signature="17111:17136" placeholder="DELETE FROM ..." />
+            <marker date="1428017526127" expanded="true" signature="17255:17275" placeholder="DELETE FROM ..." />
+            <marker date="1428017526127" expanded="true" signature="17394:17413" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="816">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1428012339481" expanded="true" signature="1438:1487" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="2078:2128" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="2745:2791" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="3402:3452" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="4079:4155" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="4896:4951" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="7353:7400" placeholder="UPDATE CONTA..." />
+            <marker date="1428012339481" expanded="true" signature="7883:7924" placeholder="SELECT phone..PHONE..." />
+            <marker date="1428012339481" expanded="true" signature="8635:8670" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="8635:8682" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="9180:9230" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="9904:9941" placeholder="SELECT fax F..FAX..." />
+            <marker date="1428012339481" expanded="true" signature="10629:10672" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="11156:11202" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="11871:11912" placeholder="SELECT email..EMAIL..." />
+            <marker date="1428012339481" expanded="true" signature="12617:12664" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="13156:13206" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="13889:13953" placeholder="SELECT conta..OTHER_CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="14814:14889" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="15509:15585" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="16385:16431" placeholder="SELECT group..GROUP_ID..." />
+            <marker date="1428012339481" expanded="true" signature="17152:17204" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="17700:17755" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="18712:18742" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="18868:18903" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="19344:19377" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="19817:19852" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="20303:20346" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="20808:20846" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="21964:22012" placeholder="SELECT id, n..CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="23046:23083" placeholder="SELECT id, n..CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="23914:23964" placeholder="SELECT id, n..CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="24840:24881" placeholder="SELECT conta..PHONE..." />
+            <marker date="1428012339481" expanded="true" signature="25758:25795" placeholder="SELECT conta..FAX..." />
+            <marker date="1428012339481" expanded="true" signature="26682:26723" placeholder="SELECT conta..EMAIL..." />
+            <marker date="1428012339481" expanded="true" signature="27624:27677" placeholder="SELECT id, n..CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="28662:28731" placeholder="SELECT conta..OTHER_CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="29619:29660" placeholder="SELECT phone..PHONE..." />
+            <marker date="1428012339481" expanded="true" signature="29944:29981" placeholder="SELECT fax F..FAX..." />
+            <marker date="1428012339481" expanded="true" signature="30261:30302" placeholder="SELECT email..EMAIL..." />
+            <marker date="1428012339481" expanded="true" signature="30586:30650" placeholder="SELECT conta..OTHER_CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="30973:31019" placeholder="SELECT group..GROUP_ID..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="459">
+          <caret line="13" column="46" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Contact.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="2686">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1156" max-vertical-offset="5219">
+          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/ContactManagerImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2346">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1428017526127" expanded="true" signature="16705:16722" placeholder="DELETE FROM ..." />
+            <marker date="1428017526127" expanded="true" signature="16841:16856" placeholder="DELETE FROM ..." />
+            <marker date="1428017526127" expanded="true" signature="16975:16992" placeholder="DELETE FROM ..." />
+            <marker date="1428017526127" expanded="true" signature="17111:17136" placeholder="DELETE FROM ..." />
+            <marker date="1428017526127" expanded="true" signature="17255:17275" placeholder="DELETE FROM ..." />
+            <marker date="1428017526127" expanded="true" signature="17394:17413" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="918">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1428012339481" expanded="true" signature="1438:1487" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="2078:2128" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="2745:2791" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="3402:3452" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="4079:4155" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="4896:4951" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="7353:7400" placeholder="UPDATE CONTA..." />
+            <marker date="1428012339481" expanded="true" signature="7883:7924" placeholder="SELECT phone..PHONE..." />
+            <marker date="1428012339481" expanded="true" signature="8635:8670" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="8635:8682" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="9180:9230" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="9904:9941" placeholder="SELECT fax F..FAX..." />
+            <marker date="1428012339481" expanded="true" signature="10629:10672" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="11156:11202" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="11871:11912" placeholder="SELECT email..EMAIL..." />
+            <marker date="1428012339481" expanded="true" signature="12617:12664" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="13156:13206" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="13889:13953" placeholder="SELECT conta..OTHER_CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="14814:14889" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="15509:15585" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="16385:16431" placeholder="SELECT group..GROUP_ID..." />
+            <marker date="1428012339481" expanded="true" signature="17152:17204" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="17700:17755" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="18712:18742" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="18868:18903" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="19344:19377" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="19817:19852" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="20303:20346" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="20808:20846" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="21964:22012" placeholder="SELECT id, n..CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="23046:23083" placeholder="SELECT id, n..CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="23914:23964" placeholder="SELECT id, n..CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="24840:24881" placeholder="SELECT conta..PHONE..." />
+            <marker date="1428012339481" expanded="true" signature="25758:25795" placeholder="SELECT conta..FAX..." />
+            <marker date="1428012339481" expanded="true" signature="26682:26723" placeholder="SELECT conta..EMAIL..." />
+            <marker date="1428012339481" expanded="true" signature="27624:27677" placeholder="SELECT id, n..CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="28662:28731" placeholder="SELECT conta..OTHER_CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="29619:29660" placeholder="SELECT phone..PHONE..." />
+            <marker date="1428012339481" expanded="true" signature="29944:29981" placeholder="SELECT fax F..FAX..." />
+            <marker date="1428012339481" expanded="true" signature="30261:30302" placeholder="SELECT email..EMAIL..." />
+            <marker date="1428012339481" expanded="true" signature="30586:30650" placeholder="SELECT conta..OTHER_CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="30973:31019" placeholder="SELECT group..GROUP_ID..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="459">
+          <caret line="13" column="46" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Contact.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="322" max-vertical-offset="2941">
+          <caret line="115" column="39" selection-start-line="115" selection-start-column="39" selection-end-line="115" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3162" max-vertical-offset="5576">
+          <caret line="76" column="61" selection-start-line="76" selection-start-column="51" selection-end-line="76" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="289">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="289">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <marker date="1427972475986" expanded="true" signature="1476:1525" placeholder="INSERT INTO ..." />
-            <marker date="1427972475986" expanded="true" signature="2116:2166" placeholder="INSERT INTO ..." />
-            <marker date="1427972475986" expanded="true" signature="2783:2829" placeholder="INSERT INTO ..." />
-            <marker date="1427972475986" expanded="true" signature="3440:3490" placeholder="INSERT INTO ..." />
-            <marker date="1427972475986" expanded="true" signature="4117:4193" placeholder="INSERT INTO ..." />
-            <marker date="1427972475986" expanded="true" signature="4934:4989" placeholder="INSERT INTO ..." />
-            <marker date="1427972475986" expanded="true" signature="6876:6906" placeholder="DELETE FROM ..." />
-            <marker date="1427972475986" expanded="true" signature="7032:7067" placeholder="DELETE FROM ..." />
-            <marker date="1427972475986" expanded="true" signature="7508:7541" placeholder="DELETE FROM ..." />
-            <marker date="1427972475986" expanded="true" signature="7981:8016" placeholder="DELETE FROM ..." />
-            <marker date="1427972475986" expanded="true" signature="8467:8510" placeholder="DELETE FROM ..." />
-            <marker date="1427972475986" expanded="true" signature="8972:9010" placeholder="DELETE FROM ..." />
-            <marker date="1427972475986" expanded="true" signature="10016:10064" placeholder="SELECT id, n..CONTACT..." />
-            <marker date="1427972475986" expanded="true" signature="11098:11135" placeholder="SELECT id, n..CONTACT..." />
-            <marker date="1427972475986" expanded="true" signature="11850:11900" placeholder="SELECT id, n..CONTACT..." />
-            <marker date="1427972475986" expanded="true" signature="12658:12699" placeholder="SELECT conta..PHONE..." />
-            <marker date="1427972475986" expanded="true" signature="13462:13499" placeholder="SELECT conta..FAX..." />
-            <marker date="1427972475986" expanded="true" signature="14268:14309" placeholder="SELECT conta..EMAIL..." />
-            <marker date="1427972475986" expanded="true" signature="15088:15141" placeholder="SELECT id, n..CONTACT..." />
-            <marker date="1427972475986" expanded="true" signature="15970:16039" placeholder="SELECT conta..OTHER_CONTACT..." />
-            <marker date="1427972475986" expanded="true" signature="16954:16995" placeholder="SELECT phone..PHONE..." />
-            <marker date="1427972475986" expanded="true" signature="17279:17316" placeholder="SELECT fax F..FAX..." />
-            <marker date="1427972475986" expanded="true" signature="17596:17637" placeholder="SELECT email..EMAIL..." />
-            <marker date="1427972475986" expanded="true" signature="17921:17985" placeholder="SELECT conta..OTHER_CONTACT..." />
-            <marker date="1427972475986" expanded="true" signature="18308:18354" placeholder="SELECT group..GROUP_ID..." />
+            <element signature="imports" expanded="true" />
+            <marker date="1428012339481" expanded="true" signature="1438:1487" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="2078:2128" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="2745:2791" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="3402:3452" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="4079:4155" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="4896:4951" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="7353:7400" placeholder="UPDATE CONTA..." />
+            <marker date="1428012339481" expanded="true" signature="7883:7924" placeholder="SELECT phone..PHONE..." />
+            <marker date="1428012339481" expanded="true" signature="8635:8670" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="8635:8682" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="9180:9230" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="9904:9941" placeholder="SELECT fax F..FAX..." />
+            <marker date="1428012339481" expanded="true" signature="10629:10672" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="11156:11202" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="11871:11912" placeholder="SELECT email..EMAIL..." />
+            <marker date="1428012339481" expanded="true" signature="12617:12664" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="13156:13206" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="13889:13953" placeholder="SELECT conta..OTHER_CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="14814:14889" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="15509:15585" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="16385:16431" placeholder="SELECT group..GROUP_ID..." />
+            <marker date="1428012339481" expanded="true" signature="17152:17204" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="17700:17755" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="18712:18742" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="18868:18903" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="19344:19377" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="19817:19852" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="20303:20346" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="20808:20846" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="21964:22012" placeholder="SELECT id, n..CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="23046:23083" placeholder="SELECT id, n..CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="23914:23964" placeholder="SELECT id, n..CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="24840:24881" placeholder="SELECT conta..PHONE..." />
+            <marker date="1428012339481" expanded="true" signature="25758:25795" placeholder="SELECT conta..FAX..." />
+            <marker date="1428012339481" expanded="true" signature="26682:26723" placeholder="SELECT conta..EMAIL..." />
+            <marker date="1428012339481" expanded="true" signature="27624:27677" placeholder="SELECT id, n..CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="28662:28731" placeholder="SELECT conta..OTHER_CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="29619:29660" placeholder="SELECT phone..PHONE..." />
+            <marker date="1428012339481" expanded="true" signature="29944:29981" placeholder="SELECT fax F..FAX..." />
+            <marker date="1428012339481" expanded="true" signature="30261:30302" placeholder="SELECT email..EMAIL..." />
+            <marker date="1428012339481" expanded="true" signature="30586:30650" placeholder="SELECT conta..OTHER_CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="30973:31019" placeholder="SELECT group..GROUP_ID..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/AddressBookManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="680">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="527">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2550">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/GroupManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="129" column="13" selection-start-line="129" selection-start-column="13" selection-end-line="129" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="119" max-vertical-offset="748">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5087" max-vertical-offset="5695">
+          <caret line="327" column="0" selection-start-line="327" selection-start-column="0" selection-end-line="327" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ServiceFailureException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+          <caret line="13" column="46" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Group.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="1139">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding>
+            <element signature="e#633#634#0" expanded="false" />
+            <element signature="e#665#666#0" expanded="false" />
+            <element signature="e#715#716#0" expanded="false" />
+            <element signature="e#757#758#0" expanded="false" />
+            <element signature="e#789#790#0" expanded="false" />
+            <element signature="e#819#820#0" expanded="false" />
+            <element signature="e#863#864#0" expanded="false" />
+            <element signature="e#901#902#0" expanded="false" />
+            <element signature="e#947#948#0" expanded="false" />
+            <element signature="e#985#986#0" expanded="false" />
+            <element signature="e#1051#1052#0" expanded="false" />
+            <element signature="e#1105#1106#0" expanded="false" />
+            <element signature="e#1151#1152#0" expanded="false" />
+            <element signature="e#1233#1234#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/GroupManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2022" max-vertical-offset="3349">
+          <caret line="192" column="1" selection-start-line="192" selection-start-column="1" selection-end-line="192" selection-end-column="1" />
+          <folding>
+            <element signature="e#601#602#0" expanded="false" />
+            <element signature="e#645#646#0" expanded="false" />
+            <marker date="1428005835469" expanded="true" signature="-1:-1" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/AddressBookManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="850">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/dbSetup.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="153">
+          <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/4.0.5.RELEASE/spring-test-4.0.5.RELEASE.jar!/org/springframework/test/jdbc/JdbcTestUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17926186" vertical-offset="0" max-vertical-offset="2040">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/4.1.6.RELEASE/spring-test-4.1.6.RELEASE.jar!/org/springframework/test/context/jdbc/Sql.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.48" vertical-offset="0" max-vertical-offset="578">
+          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/beforeTestRun.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <caret line="30" column="2" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/afterTestRun.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Contact.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="189" max-vertical-offset="2788">
+          <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://db-console:/5ed2af46/1cde4029-f084-4c5f-adfe-aa669e7b8a6c/">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.733334" vertical-offset="255" max-vertical-offset="850">
+          <caret line="41" column="7" selection-start-line="41" selection-start-column="7" selection-end-line="41" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6171" max-vertical-offset="10047">
+          <caret line="388" column="21" selection-start-line="386" selection-start-column="20" selection-end-line="388" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1427449193330" expanded="true" signature="1519:1579" placeholder="insert into ..." />
-            <marker date="1427449193330" expanded="true" signature="3536:3601" placeholder="update GROUP..." />
-            <marker date="1427449193330" expanded="true" signature="4900:4931" placeholder="delete from ..." />
-            <marker date="1427449193330" expanded="true" signature="5633:5666" placeholder="select * fro..GROUPS..." />
-            <marker date="1427449193330" expanded="true" signature="6591:6631" placeholder="select * fro..GROUPS..." />
+            <marker date="1428012339481" expanded="true" signature="1438:1487" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="2078:2128" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="2745:2791" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="3402:3452" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="4079:4155" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="4896:4951" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="7353:7400" placeholder="UPDATE CONTA..." />
+            <marker date="1428012339481" expanded="true" signature="7883:7924" placeholder="SELECT phone..PHONE..." />
+            <marker date="1428012339481" expanded="true" signature="8635:8670" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="8635:8682" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="9180:9230" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="9904:9941" placeholder="SELECT fax F..FAX..." />
+            <marker date="1428012339481" expanded="true" signature="10629:10672" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="11156:11202" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="11871:11912" placeholder="SELECT email..EMAIL..." />
+            <marker date="1428012339481" expanded="true" signature="12617:12664" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="13156:13206" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="13889:13953" placeholder="SELECT conta..OTHER_CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="14814:14889" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="15509:15585" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="16385:16431" placeholder="SELECT group..GROUP_ID..." />
+            <marker date="1428012339481" expanded="true" signature="17152:17204" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="17700:17755" placeholder="INSERT INTO ..." />
+            <marker date="1428012339481" expanded="true" signature="18712:18742" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="18868:18903" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="19344:19377" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="19817:19852" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="20303:20346" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="20808:20846" placeholder="DELETE FROM ..." />
+            <marker date="1428012339481" expanded="true" signature="21964:22012" placeholder="SELECT id, n..CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="23046:23083" placeholder="SELECT id, n..CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="23914:23964" placeholder="SELECT id, n..CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="24840:24881" placeholder="SELECT conta..PHONE..." />
+            <marker date="1428012339481" expanded="true" signature="25758:25795" placeholder="SELECT conta..FAX..." />
+            <marker date="1428012339481" expanded="true" signature="26682:26723" placeholder="SELECT conta..EMAIL..." />
+            <marker date="1428012339481" expanded="true" signature="27624:27677" placeholder="SELECT id, n..CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="28662:28731" placeholder="SELECT conta..OTHER_CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="29619:29660" placeholder="SELECT phone..PHONE..." />
+            <marker date="1428012339481" expanded="true" signature="29944:29981" placeholder="SELECT fax F..FAX..." />
+            <marker date="1428012339481" expanded="true" signature="30261:30302" placeholder="SELECT email..EMAIL..." />
+            <marker date="1428012339481" expanded="true" signature="30586:30650" placeholder="SELECT conta..OTHER_CONTACT..." />
+            <marker date="1428012339481" expanded="true" signature="30973:31019" placeholder="SELECT group..GROUP_ID..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="64" column="48" selection-start-line="64" selection-start-column="48" selection-end-line="64" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="2227">
+          <caret line="61" column="46" selection-start-line="61" selection-start-column="46" selection-end-line="61" selection-end-column="46" />
           <folding>
-            <marker date="1427986003209" expanded="true" signature="1316:1344" placeholder="select group..groups..." />
-            <marker date="1427986003209" expanded="true" signature="2401:2448" placeholder="select GROUP..GROUPS..." />
+            <marker date="1428020044861" expanded="true" signature="1414:1460" placeholder="SELECT group..GROUP_ID..." />
+            <marker date="1428020044861" expanded="true" signature="1765:1804" placeholder="SELECT group..GROUPS..." />
+            <marker date="1428020044861" expanded="true" signature="2859:2887" placeholder="select group..groups..." />
+            <marker date="1428020044861" expanded="true" signature="3944:3991" placeholder="select GROUP..GROUPS..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.8305085">
-          <caret line="116" column="8" selection-start-line="116" selection-start-column="8" selection-end-line="116" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="257" max-vertical-offset="3332">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
-            <marker date="1427986225697" expanded="true" signature="5247:5265" placeholder="delete from ..." />
-            <marker date="1427986225697" expanded="true" signature="5384:5401" placeholder="delete from ..." />
-            <marker date="1427986225697" expanded="true" signature="5521:5536" placeholder="delete from ..." />
-            <marker date="1427986225697" expanded="true" signature="5656:5673" placeholder="delete from ..." />
-            <marker date="1427986225697" expanded="true" signature="5793:5818" placeholder="delete from ..." />
-            <marker date="1427986225697" expanded="true" signature="5938:5958" placeholder="delete from ..." />
-            <marker date="1427986225697" expanded="true" signature="6078:6097" placeholder="delete from ..." />
+            <marker date="1428018552199" expanded="true" signature="5223:5241" placeholder="delete from ..." />
+            <marker date="1428018552199" expanded="true" signature="5360:5377" placeholder="delete from ..." />
+            <marker date="1428018552199" expanded="true" signature="5497:5512" placeholder="delete from ..." />
+            <marker date="1428018552199" expanded="true" signature="5632:5649" placeholder="delete from ..." />
+            <marker date="1428018552199" expanded="true" signature="5769:5794" placeholder="delete from ..." />
+            <marker date="1428018552199" expanded="true" signature="5914:5934" placeholder="delete from ..." />
+            <marker date="1428018552199" expanded="true" signature="6054:6073" placeholder="delete from ..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5172" max-vertical-offset="6086">
+          <caret line="330" column="5" selection-start-line="315" selection-start-column="4" selection-end-line="330" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1428007467260" expanded="true" signature="9306:9324" placeholder="delete from ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/ContactManagerImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5376" max-vertical-offset="6749">
+          <caret line="388" column="5" selection-start-line="388" selection-start-column="5" selection-end-line="388" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1428017526127" expanded="true" signature="16705:16722" placeholder="DELETE FROM ..." />
+            <marker date="1428017526127" expanded="true" signature="16841:16856" placeholder="DELETE FROM ..." />
+            <marker date="1428017526127" expanded="true" signature="16975:16992" placeholder="DELETE FROM ..." />
+            <marker date="1428017526127" expanded="true" signature="17111:17136" placeholder="DELETE FROM ..." />
+            <marker date="1428017526127" expanded="true" signature="17255:17275" placeholder="DELETE FROM ..." />
+            <marker date="1428017526127" expanded="true" signature="17394:17413" placeholder="DELETE FROM ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9424342" vertical-offset="702" max-vertical-offset="1445">
+          <caret line="75" column="44" selection-start-line="75" selection-start-column="44" selection-end-line="75" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>

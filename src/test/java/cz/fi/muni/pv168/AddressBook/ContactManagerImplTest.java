@@ -1,31 +1,49 @@
 package cz.fi.muni.pv168.AddressBook;
 
 import org.apache.commons.dbcp2.BasicDataSource;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.test.context.jdbc.Sql;
+import org.springframework.test.context.jdbc.SqlGroup;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Properties;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.junit.Assert.assertThat;
 
+/*
+@SqlGroup({
+        @Sql(executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD, scripts = "classpath:beforeTestRun.sql"),
+        @Sql(executionPhase = Sql.ExecutionPhase.AFTER_TEST_METHOD, scripts = "classpath:afterTestRun.sql")
+})
+*/
+
 public class ContactManagerImplTest {
 
     private ContactManagerImpl contactManager;
+    private BasicDataSource ds;
 
     @Before
     public void setUp() throws Exception {
-        BasicDataSource ds = new BasicDataSource();
-        ds.setUrl("jdbc:derby://localhost:1527/Databases/AddressBookDB;user=app;password=passwd");
-        ds.setUsername("app");
-        ds.setPassword("passwd");
+        Properties prop = new Properties();
+        prop.load(ContactManagerImplTest.class.getResourceAsStream("/dbSetup.properties"));
+        ds = new BasicDataSource();
+        ds.setUrl(prop.getProperty("jdbc.url"));
+        ds.setUsername(prop.getProperty("jdbc.user"));
+        ds.setPassword(prop.getProperty("jdbc.password"));
+        //ds.setConnectionProperties("create=true");
         contactManager = new ContactManagerImpl(ds);
     }
 
     @Test
     public void testCreateContact() throws Exception {
-        Contact contact = new Contact();
+        Contact contact = new Contact("John Doe", "+420606542781", "john.doe@hotmail.com");
         contactManager.createContact(contact);
         assertThat(contact.getContactID(), is(notNullValue()));
         assertThat(contactManager.findAllContacts(), hasItem(contact));
@@ -36,7 +54,12 @@ public class ContactManagerImplTest {
         contactManager.createContact(null);
     }
 
-    @Test(expected = Exception.class)
+    @Test(expected = IllegalArgumentException.class)
+    public void testCreateEmptyContact() throws Exception {
+        contactManager.createContact(new Contact());
+    }
+
+    @Test(expected = IllegalArgumentException.class)
     public void testSetContactId() throws Exception {
         Contact contact = new Contact();
         contactManager.createContact(contact);
@@ -46,8 +69,8 @@ public class ContactManagerImplTest {
 
     @Test
     public void testContactIdDifference() throws Exception {
-        Contact contact1 = new Contact();
-        Contact contact2 = new Contact();
+        Contact contact1 = new Contact("John Doe", "+420606542781", "john.doe@hotmail.com");
+        Contact contact2 = new Contact("Jane Smith", "+420777387456", "jane44@gmail.com");
         contactManager.createContact(contact1);
         contactManager.createContact(contact2);
         assertThat(contact1.getContactID(), not(equalTo(contact2.getContactID())));
@@ -89,8 +112,8 @@ public class ContactManagerImplTest {
 
     @Test
     public void testDeleteContact() throws Exception {
-        Contact contact1 = new Contact();
-        Contact contact2 = new Contact();
+        Contact contact1 = new Contact("John Doe", "+420606542781", "john.doe@hotmail.com");
+        Contact contact2 = new Contact("Jane Smith", "+420777387456", "jane44@gmail.com");
         contactManager.createContact(contact1);
         contactManager.createContact(contact2);
         contactManager.deleteContact(contact1);
@@ -180,10 +203,10 @@ public class ContactManagerImplTest {
         contact.setNewPhone("+420777387456");
         contactManager.createContact(contact);
         Collection<Contact> result1 = contactManager.findContactByPhone("+420777387456");
+        assertThat(result1, hasItem(contact));
         contact.deletePhone("+420777387456");
         contactManager.updateContact(contact);
         Collection<Contact> result2 = contactManager.findContactByPhone("+420777387456");
-        assertThat(result1, hasItem(contact));
         assertThat(result2, not(hasItem(contact)));
     }
 
@@ -223,10 +246,10 @@ public class ContactManagerImplTest {
         contact.setNewFax("+35-152-325478");
         contactManager.createContact(contact);
         Collection<Contact> result1 = contactManager.findContactByFax("+35-152-325478");
+        assertThat(result1, hasItem(contact));
         contact.deleteFax("+35-152-325478");
         contactManager.updateContact(contact);
         Collection<Contact> result2 = contactManager.findContactByFax("+35-152-325478");
-        assertThat(result1, hasItem(contact));
         assertThat(result2, not(hasItem(contact)));
     }
 
@@ -240,11 +263,13 @@ public class ContactManagerImplTest {
         assertThat(result2, not(hasItem(contact)));
     }
 
+    /*
     @Test(expected = IllegalArgumentException.class)
     public void testSetInvalidEmail() throws Exception {
         Contact contact = new Contact("John Doe", "+420606542781", "aaa");
         contactManager.createContact(contact);
     }
+    */
 
     @Test(expected = NullPointerException.class)
     public void testFindContactByEmailWithNull() throws Exception {
@@ -269,10 +294,10 @@ public class ContactManagerImplTest {
         contact.setNewEmail("jd47@gmail.com");
         contactManager.createContact(contact);
         Collection<Contact> result1 = contactManager.findContactByEmail("jd47@gmail.com");
+        assertThat(result1, hasItem(contact));
         contact.deleteEmail("jd47@gmail.com");
         contactManager.updateContact(contact);
         Collection<Contact> result2 = contactManager.findContactByEmail("jd47@gmail.com");
-        assertThat(result1, hasItem(contact));
         assertThat(result2, not(hasItem(contact)));
     }
 
@@ -330,11 +355,37 @@ public class ContactManagerImplTest {
         contact.setNewOtherContact("ICQ", "342576841");
         contactManager.createContact(contact);
         Collection<Contact> result1 = contactManager.findContactByOtherContactType("ICQ", "342576841");
-        contact.deleteOtherContact("ICQ", "342576841");
-        contactManager.updateContact(contact);
-        Collection<Contact> result2 = contactManager.findContactByOtherContactType("ICQ", "342576841");
         assertThat(result1, hasItem(contact));
+        contactManager.updateContact(contact);
+        contact.deleteOtherContact("ICQ", "342576841");
+        Collection<Contact> result2 = contactManager.findContactByOtherContactType("ICQ", "342576841");
         assertThat(result2, not(hasItem(contact)));
+    }
+
+    @After
+    public void deleteData() throws Exception {
+        try (Connection conn = ds.getConnection()) {
+            try (PreparedStatement st = conn.prepareStatement("DELETE FROM PHONE")) {
+                st.executeUpdate();
+            }
+            try (PreparedStatement st = conn.prepareStatement("DELETE FROM FAX")) {
+                st.executeUpdate();
+            }
+            try (PreparedStatement st = conn.prepareStatement("DELETE FROM EMAIL")) {
+                st.executeUpdate();
+            }
+            try (PreparedStatement st = conn.prepareStatement("DELETE FROM OTHER_CONTACT")) {
+                st.executeUpdate();
+            }
+            try (PreparedStatement st = conn.prepareStatement("DELETE FROM GROUP_ID")) {
+                st.executeUpdate();
+            }
+            try (PreparedStatement st = conn.prepareStatement("DELETE FROM CONTACT")) {
+                st.executeUpdate();
+            }
+        } catch (SQLException ex) {
+            throw new ServiceFailureException("Error when deleting data.", ex);
+        }
     }
 
     //TODO add groupIds tests

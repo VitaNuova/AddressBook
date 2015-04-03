@@ -26,11 +26,40 @@ public class AddressBookManagerImpl implements AddressBookManager {
     }
 
     public List<Contact> listContactsByPerson() throws ServiceFailureException {
-        throw new UnsupportedOperationException("Not supported yet.");
+        ContactManager contactManager = new ContactManagerImpl(dataSource);
+        List<Contact> result = new ArrayList<>(contactManager.findAllContacts());
+        return (result.isEmpty()) ? null : result;
     }
 
-    public List<String> listGroupsByContact(Contact contact) throws ServiceFailureException {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public List<String> listGroupsByContact(Contact contact) throws ServiceFailureException, NullPointerException {
+        if(contact == null || contact.getContactID() == null) {
+            throw new NullPointerException("Nonexistent contact given.");
+        }
+        List<String> groupList = new ArrayList<>();
+        try(Connection conn = dataSource.getConnection()) {
+            try(PreparedStatement st1 = conn.prepareStatement("SELECT groupId FROM GROUP_ID WHERE contactId=?")) {
+                st1.setLong(1, contact.getContactID());
+                ResultSet rs1 = st1.executeQuery();
+                Long groupId;
+                while(rs1.next()) {
+                    groupId = rs1.getLong("groupId");
+                    try(PreparedStatement st2 = conn.prepareStatement("SELECT groupName FROM GROUPS WHERE id=?")) {
+                        st2.setLong(1, groupId);
+                        ResultSet rs2 = st2.executeQuery();
+                        if(rs2.next()) {
+                            groupList.add(rs2.getString("groupName"));
+                            if(rs2.next()) {
+                                throw new ServiceFailureException("Internal error: More entities with the same id found.");
+                            }
+                        }
+                    }
+                }
+            }
+        } catch (SQLException ex) {
+            log.error("Database select failed.", ex);
+            throw new ServiceFailureException("Database select failed.", ex);
+        }
+        return (groupList.isEmpty()) ? null : groupList;
     }
 
     public List<String> listGroupsByPerson() throws ServiceFailureException {

@@ -24,7 +24,7 @@ public class AddressBookManagerImplTest {
     @Before
     public void setUp() throws SQLException, IOException {
         Properties config = new Properties();
-        config.load(Main.class.getResourceAsStream("/config.properties"));
+        config.load(Main.class.getResourceAsStream("/dbSetup.properties"));
         BasicDataSource ds = new BasicDataSource();
         ds.setUrl(config.getProperty("jdbc.url"));
         ds.setUsername(config.getProperty("jdbc.user"));
@@ -41,9 +41,9 @@ public class AddressBookManagerImplTest {
         List<Contact> retrievedContacts = addressBookManager.listContactsByPerson();
         assertNull(retrievedContacts);
 
-        Contact contact1 = newContact("Mary", "London");
-        Contact contact2 = newContact("John", "Paris");
-        Contact contact3 = newContact("Paul", "Vienna");
+        Contact contact1 = new Contact("Mary");
+        Contact contact2 = new Contact("John");
+        Contact contact3 = new Contact("Paul");
         contactManager.createContact(contact1);
         contactManager.createContact(contact2);
 
@@ -145,7 +145,7 @@ public class AddressBookManagerImplTest {
     @After
     public void deleteDataFromDB() throws IOException {
         Properties config = new Properties();
-        config.load(Main.class.getResourceAsStream("/config.properties"));
+        config.load(Main.class.getResourceAsStream("/dbSetup.properties"));
         BasicDataSource ds = new BasicDataSource();
         ds.setUrl(config.getProperty("jdbc.url"));
         ds.setUsername(config.getProperty("jdbc.user"));

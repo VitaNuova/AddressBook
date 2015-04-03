@@ -5,10 +5,7 @@ import org.slf4j.LoggerFactory;
 
 import javax.sql.DataSource;
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created by Виктория on 12-Mar-15.
@@ -23,9 +20,9 @@ public class ContactManagerImpl implements ContactManager {
         this.dataSource = dataSource;
     }
 
-    public void createContact(Contact contact) throws ServiceFailureException {
+    public void createContact(Contact contact) throws ServiceFailureException, NullPointerException, IllegalArgumentException {
         if (contact == null) {
-            throw new IllegalArgumentException("Contact is null.");
+            throw new NullPointerException("Contact is null.");
         }
         if (contact.getContactID() != null) {
             throw new IllegalArgumentException("Contact ID was set manually.");
@@ -42,8 +39,8 @@ public class ContactManagerImpl implements ContactManager {
                     throw new ServiceFailureException("Internal Error: More rows inserted when trying to insert contact " + contact);
                 }
                 ResultSet keyRS = st1.getGeneratedKeys();
-
                 contact.setContactID(getKey(keyRS, contact));
+
                 if (contact.getPhone() != null) {
                     try (PreparedStatement st2 = conn.prepareStatement("INSERT INTO PHONE (contactId, phone) VALUES (?, ?)")) {
                         st2.setLong(1, contact.getContactID());
@@ -122,8 +119,204 @@ public class ContactManagerImpl implements ContactManager {
         }
     }
 
-    public void updateContact(Contact contact) throws ServiceFailureException {
+    public void updateContact(Contact contact) throws ServiceFailureException, NullPointerException, IllegalArgumentException {
+        if (contact == null) {
+            throw new NullPointerException("Contact is null.");
+        }
+        if (contact.getName() == null && contact.getAddress() == null && (contact.getPhone() == null || contact.getPhone().size() == 0) && (contact.getFax() == null || contact.getFax().size() == 0) && (contact.getEmail() == null || contact.getEmail().size() == 0) && (contact.getOtherContacts() == null || contact.getOtherContacts().size() == 0)) {
+            throw new IllegalArgumentException("Contact doesn't have filled any field.");
+        }
 
+        try(Connection conn = dataSource.getConnection()) {
+            try(PreparedStatement st1 = conn.prepareStatement("UPDATE CONTACT SET name=?, address=? WHERE id=?")) {
+                st1.setString(1, contact.getName());
+                st1.setString(2, contact.getAddress());
+                st1.setLong(3, contact.getContactID());
+                if (st1.executeUpdate() != 1) {
+                    throw new ServiceFailureException("Internal Error: Cannot update contact " + contact);
+                }
+
+                // Get the set of phone numbers contact currently has.
+                try(PreparedStatement st2 = conn.prepareStatement("SELECT phone FROM PHONE WHERE contactId=?")) {
+                    st2.setLong(1, contact.getContactID());
+                    ResultSet rs1 = st2.executeQuery();
+                    HashSet<String> phonesToAdd = new HashSet(contact.getPhone());
+                    HashSet<String> phonesToDelete = new HashSet<>();
+                    while (rs1.next()) {
+                        phonesToDelete.add(rs1.getString("phone"));
+                    }
+                    phonesToAdd.removeAll(phonesToDelete);
+                    phonesToDelete.removeAll(contact.getPhone());
+                    // Delete erased phone numbers.
+                    if(!phonesToDelete.isEmpty()) {
+                        try (PreparedStatement st3 = conn.prepareStatement("DELETE FROM PHONE WHERE contactId=? AND phone=?")) {
+                            st3.setLong(1, contact.getContactID());
+                            for(String phone : phonesToDelete) {
+                                st3.setString(2, phone);
+                                st3.executeUpdate();
+                            }
+                        }
+                    }
+                    // Add new phone numbers.
+                    if(!phonesToAdd.isEmpty()) {
+                        try (PreparedStatement st4 = conn.prepareStatement("INSERT INTO PHONE (contactId, phone) VALUES (?, ?)")) {
+                            st4.setLong(1, contact.getContactID());
+                            for(String phone : phonesToAdd) {
+                                st4.setString(2, phone);
+                                if (st4.executeUpdate() != 1) {
+                                    throw new ServiceFailureException("Internal Error: More rows inserted when trying to insert contact phone " + contact);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // Get the set of faxes contact currently has.
+                try(PreparedStatement st2 = conn.prepareStatement("SELECT fax FROM FAX WHERE contactId=?")) {
+                    st2.setLong(1, contact.getContactID());
+                    ResultSet rs1 = st2.executeQuery();
+                    HashSet<String> faxesToAdd = new HashSet(contact.getFax());
+                    HashSet<String> faxesToDelete = new HashSet<>();
+                    while (rs1.next()) {
+                        faxesToDelete.add(rs1.getString("fax"));
+                    }
+                    faxesToAdd.removeAll(faxesToDelete);
+                    faxesToDelete.removeAll(contact.getFax());
+                    // Delete erased fax.
+                    if(!faxesToDelete.isEmpty()) {
+                        try (PreparedStatement st3 = conn.prepareStatement("DELETE FROM FAX WHERE contactId=? AND fax=?")) {
+                            st3.setLong(1, contact.getContactID());
+                            for(String fax : faxesToDelete) {
+                                st3.setString(2, fax);
+                                st3.executeUpdate();
+                            }
+                        }
+                    }
+                    // Add new faxes.
+                    if(!faxesToAdd.isEmpty()) {
+                        try (PreparedStatement st4 = conn.prepareStatement("INSERT INTO FAX (contactId, fax) VALUES (?, ?)")) {
+                            st4.setLong(1, contact.getContactID());
+                            for(String fax : faxesToAdd) {
+                                st4.setString(2, fax);
+                                if (st4.executeUpdate() != 1) {
+                                    throw new ServiceFailureException("Internal Error: More rows inserted when trying to insert contact fax " + contact);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // Get the set of e-mails contact currently has.
+                try(PreparedStatement st2 = conn.prepareStatement("SELECT email FROM EMAIL WHERE contactId=?")) {
+                    st2.setLong(1, contact.getContactID());
+                    ResultSet rs1 = st2.executeQuery();
+                    HashSet<String> emailsToAdd = new HashSet(contact.getEmail());
+                    HashSet<String> emailsToDelete = new HashSet<>();
+                    while (rs1.next()) {
+                        emailsToDelete.add(rs1.getString("email"));
+                    }
+                    emailsToAdd.removeAll(emailsToDelete);
+                    emailsToDelete.removeAll(contact.getEmail());
+                    // Delete erased e-mails.
+                    if(!emailsToDelete.isEmpty()) {
+                        try (PreparedStatement st3 = conn.prepareStatement("DELETE FROM EMAIL WHERE contactId=? AND email=?")) {
+                            st3.setLong(1, contact.getContactID());
+                            for(String email : emailsToDelete) {
+                                st3.setString(2, email);
+                                st3.executeUpdate();
+                            }
+                        }
+                    }
+                    // Add new e-mails.
+                    if(!emailsToAdd.isEmpty()) {
+                        try (PreparedStatement st4 = conn.prepareStatement("INSERT INTO EMAIL (contactId, email) VALUES (?, ?)")) {
+                            st4.setLong(1, contact.getContactID());
+                            for(String email : emailsToAdd) {
+                                st4.setString(2, email);
+                                if (st4.executeUpdate() != 1) {
+                                    throw new ServiceFailureException("Internal Error: More rows inserted when trying to insert contact email " + contact);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // Get the set of other contacts contact currently has.
+                try(PreparedStatement st2 = conn.prepareStatement("SELECT contactType, contact FROM OTHER_CONTACT WHERE contactId=?")) {
+                    st2.setLong(1, contact.getContactID());
+                    ResultSet rs1 = st2.executeQuery();
+                    HashMap<String, String> otherContactsToAdd = new HashMap(contact.getOtherContacts());
+                    HashMap<String, String> otherContactsToDelete = new HashMap<>();
+                    while (rs1.next()) {
+                        otherContactsToDelete.put(rs1.getString("contactType"), rs1.getString("contact"));
+                    }
+                    otherContactsToAdd.keySet().removeAll(otherContactsToDelete.keySet());
+                    otherContactsToDelete.keySet().removeAll(contact.getOtherContacts().keySet());
+                    // Delete erased other contacts.
+                    if(!otherContactsToDelete.isEmpty()) {
+                        try (PreparedStatement st3 = conn.prepareStatement("DELETE FROM OTHER_CONTACT WHERE contactId=? AND contactType=? AND contact=?")) {
+                            st3.setLong(1, contact.getContactID());
+                            for(Map.Entry<String, String> entry : otherContactsToDelete.entrySet()) {
+                                st3.setString(2, entry.getKey());
+                                st3.setString(3, entry.getValue());
+                                st3.executeUpdate();
+                            }
+                        }
+                    }
+                    // Add new other contacts.
+                    if(!otherContactsToAdd.isEmpty()) {
+                        try (PreparedStatement st4 = conn.prepareStatement("INSERT INTO OTHER_CONTACT (contactId, contactType, contact) VALUES (?, ?, ?)")) {
+                            st4.setLong(1, contact.getContactID());
+                            for(Map.Entry<String, String> entry : otherContactsToAdd.entrySet()) {
+                                st4.setString(2, entry.getKey());
+                                st4.setString(3, entry.getValue());
+                                if (st4.executeUpdate() != 1) {
+                                    throw new ServiceFailureException("Internal Error: More rows inserted when trying to insert contact other contact " + contact);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // Get the set of group IDs contact currently has.
+                try(PreparedStatement st2 = conn.prepareStatement("SELECT groupId FROM GROUP_ID WHERE contactId=?")) {
+                    st2.setLong(1, contact.getContactID());
+                    ResultSet rs1 = st2.executeQuery();
+                    HashSet<Long> groupIdsToAdd = new HashSet(contact.getGroupIds());
+                    HashSet<Long> groupIdsToDelete = new HashSet<>();
+                    while (rs1.next()) {
+                        groupIdsToDelete.add(rs1.getLong("groupId"));
+                    }
+                    groupIdsToAdd.removeAll(groupIdsToDelete);
+                    groupIdsToDelete.removeAll(contact.getGroupIds());
+                    // Delete erased e-mails.
+                    if(!groupIdsToDelete.isEmpty()) {
+                        try (PreparedStatement st3 = conn.prepareStatement("DELETE FROM GROUP_ID WHERE contactId=? AND groupId=?")) {
+                            st3.setLong(1, contact.getContactID());
+                            for(Long groupId : groupIdsToDelete) {
+                                st3.setLong(2, groupId);
+                                st3.executeUpdate();
+                            }
+                        }
+                    }
+                    // Add new e-mails.
+                    if(!groupIdsToAdd.isEmpty()) {
+                        try (PreparedStatement st4 = conn.prepareStatement("INSERT INTO GROUP_ID (contactId, groupId) VALUES (?, ?)")) {
+                            st4.setLong(1, contact.getContactID());
+                            for(Long groupId : groupIdsToAdd) {
+                                st4.setLong(2, groupId);
+                                if (st4.executeUpdate() != 1) {
+                                    throw new ServiceFailureException("Internal Error: More rows inserted when trying to insert contact email " + contact);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } catch (SQLException ex) {
+            log.error("db connection problem", ex);
+            throw new ServiceFailureException("Error when retrieving all contacts.", ex);
+        }
     }
 
     public void deleteContact(Contact contact) throws ServiceFailureException {
@@ -181,6 +374,9 @@ public class ContactManagerImpl implements ContactManager {
     }
 
     public Contact findContactById(Long id) throws ServiceFailureException {
+        if(id == null) {
+            throw new NullPointerException("Find contact by id with null.");
+        }
         log.debug("finding contact with id " + id);
         try (Connection conn = dataSource.getConnection()) {
             try (PreparedStatement st = conn.prepareStatement("SELECT id, name, address FROM CONTACT WHERE id=?")) {
@@ -221,6 +417,9 @@ public class ContactManagerImpl implements ContactManager {
     }
 
     public Collection<Contact> findContactByName(String name) {
+        if(name == null) {
+            throw new NullPointerException("Find contact by name with null.");
+        }
         log.debug("finding contacts with name " + name);
         try (Connection conn = dataSource.getConnection()) {
             try (PreparedStatement st = conn.prepareStatement("SELECT id, name, address FROM CONTACT WHERE name=?")) {
@@ -239,6 +438,9 @@ public class ContactManagerImpl implements ContactManager {
     }
 
     public Collection<Contact> findContactByPhone(String phone) {
+        if(phone == null) {
+            throw new NullPointerException("Find contact by phone with null.");
+        }
         log.debug("finding contacts with phone " + phone);
         try (Connection conn = dataSource.getConnection()) {
             try (PreparedStatement st = conn.prepareStatement("SELECT contactId FROM PHONE WHERE phone=?")) {
@@ -257,6 +459,9 @@ public class ContactManagerImpl implements ContactManager {
     }
 
     public Collection<Contact> findContactByFax(String fax) {
+        if(fax == null) {
+            throw new NullPointerException("Find contact by fax with null.");
+        }
         log.debug("finding contacts with fax " + fax);
         try (Connection conn = dataSource.getConnection()) {
             try (PreparedStatement st = conn.prepareStatement("SELECT contactId FROM FAX WHERE fax=?")) {
@@ -275,6 +480,9 @@ public class ContactManagerImpl implements ContactManager {
     }
 
     public Collection<Contact> findContactByEmail(String email) {
+        if(email == null) {
+            throw new NullPointerException("Find contact by email with null.");
+        }
         log.debug("finding contacts with email " + email);
         try (Connection conn = dataSource.getConnection()) {
             try (PreparedStatement st = conn.prepareStatement("SELECT contactId FROM EMAIL WHERE email=?")) {
@@ -293,6 +501,9 @@ public class ContactManagerImpl implements ContactManager {
     }
 
     public Collection<Contact> findContactByAddress(String address) {
+        if(address == null) {
+            throw new NullPointerException("Find contact by address with null.");
+        }
         log.debug("finding contacts with address " + address);
         try (Connection conn = dataSource.getConnection()) {
             try (PreparedStatement st = conn.prepareStatement("SELECT id, name, address FROM CONTACT WHERE address=?")) {
@@ -311,6 +522,9 @@ public class ContactManagerImpl implements ContactManager {
     }
 
     public Collection<Contact> findContactByOtherContactType(String contactType, String contact) {
+        if(contactType == null || contact == null) {
+            throw new NullPointerException("Find contact by other contact type with null.");
+        }
         log.debug("finding contacts with other contact type " + contactType + ":" + contact);
         try (Connection conn = dataSource.getConnection()) {
             try (PreparedStatement st = conn.prepareStatement("SELECT contactId FROM OTHER_CONTACT WHERE contactType=? AND contact=?")) {
@@ -330,9 +544,8 @@ public class ContactManagerImpl implements ContactManager {
     }
 
     private Contact resultSetToContact(Connection conn, ResultSet rs1) throws SQLException {
-        Contact contact = new Contact();
+        Contact contact = new Contact(rs1.getString("name"));
         contact.setContactID(rs1.getLong("id"));
-        contact.setName(rs1.getString("name"));
         contact.setAddress(rs1.getString("address"));
         try (PreparedStatement st1 = conn.prepareStatement("SELECT phone FROM PHONE WHERE contactId=?")) {
             st1.setLong(1, contact.getContactID());

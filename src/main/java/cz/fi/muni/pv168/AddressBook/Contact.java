@@ -13,10 +13,15 @@ public class Contact {
     private Collection<String> fax;
     private Collection<String> email;
     private Map<String, String> otherContacts;  // Map allows only one contact for each other contact type (e.g. only one Skype etc.). Is it correct?
-    private Set<Long> groupIds;
+    private Collection<Long> groupIds;
+
 
     public Contact() {
-        // TODO proper ID setup
+        this.phone = new HashSet<>();
+        this.fax = new HashSet<>();
+        this.email = new HashSet<>();
+        this.otherContacts = new HashMap<>();
+        this.groupIds = new HashSet<>();
     }
 
     public Contact(String name) {
@@ -26,15 +31,11 @@ public class Contact {
 
     public Contact(String name, String phone) {
         this(name);
-        //this.phone = new HashSet<>();
-        this.phone = new ArrayList<>();
         this.phone.add(phone);
     }
 
     public Contact(String name, String phone, String email) {
         this(name, phone);
-        //this.email = new HashSet<>();
-        this.email = new ArrayList<>();
         this.email.add(email);
     }
 
@@ -63,76 +64,43 @@ public class Contact {
     }
 
     public void setNewPhone(String phone) {
-        if(this.phone == null) {
-            //this.phone = new HashSet<>();
-            this.phone = new ArrayList<>();
-        }
         this.phone.add(phone);
     }
 
     public void setNewFax(String fax) {
-        if(this.fax == null) {
-            //this.fax = new HashSet<>();
-            this.fax = new ArrayList<>();
-        }
         this.fax.add(fax);
     }
 
     public void setNewEmail(String email) {
-        if(this.email == null) {
-            //this.email = new HashSet<>();
-            this.email = new ArrayList<>();
-        }
         this.email.add(email);
     }
 
     public void setNewOtherContact(String contactType, String contact) {
-        if(this.otherContacts == null) {
-            this.otherContacts = new HashMap<>();
-        }
         this.otherContacts.put(contactType, contact);
     }
 
     public void setNewGroupId(Long id) {
-        if(this.groupIds == null) {
-            this.groupIds = new HashSet<>();
-        }
         this.groupIds.add(id);
     }
 
     public void deletePhone(String phone) {
         this.phone.remove(phone);
-        if(this.phone.isEmpty()) {
-            this.phone = null;
-        }
     }
 
     public void deleteFax(String fax) {
         this.fax.remove(fax);
-        if(this.fax.isEmpty()) {
-            this.fax = null;
-        }
     }
 
     public void deleteEmail(String email) {
         this.email.remove(email);
-        if(this.email.isEmpty()) {
-            this.email = null;
-        }
     }
 
     public void deleteOtherContact(String contactType, String contact) {
         this.otherContacts.remove(contactType, contact);
-        if(this.otherContacts.isEmpty()) {
-            this.otherContacts = null;
-        }
     }
 
     public void deleteGroupId(Long id) {
         this.groupIds.remove(id);
-        if(this.groupIds.isEmpty()) {
-            this.groupIds = null;
-        }
     }
 
     public Collection<String> getPhone() {
