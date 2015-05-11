@@ -2,6 +2,7 @@ package cz.fi.muni.pv168.AddressBook; /**
  * Created by Виктория on 10-Mar-15.
  */
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Group {
@@ -11,6 +12,11 @@ public class Group {
     List<Long> groupMemberList;
 
     public Group() {}
+
+    public Group(String groupName) {
+        this.groupName = groupName;
+        groupMemberList = new ArrayList<>();
+    }
 
     public Group(String groupName, List<Long> groupMemberList) {
         this.groupName = groupName;

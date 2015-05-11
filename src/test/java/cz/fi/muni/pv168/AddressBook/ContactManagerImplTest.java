@@ -4,8 +4,6 @@ import org.apache.commons.dbcp2.BasicDataSource;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.springframework.test.context.jdbc.Sql;
-import org.springframework.test.context.jdbc.SqlGroup;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -45,7 +43,7 @@ public class ContactManagerImplTest {
     public void testCreateContact() throws Exception {
         Contact contact = new Contact("John Doe", "+420606542781", "john.doe@hotmail.com");
         contactManager.createContact(contact);
-        assertThat(contact.getContactID(), is(notNullValue()));
+        assertThat(contact.getId(), is(notNullValue()));
         assertThat(contactManager.findAllContacts(), hasItem(contact));
     }
 
@@ -64,7 +62,7 @@ public class ContactManagerImplTest {
         Contact contact = new Contact();
         contactManager.createContact(contact);
         // Shouldn't allow ID change.
-        contact.setContactID(1L);
+        contact.setId(1L);
     }
 
     @Test
@@ -73,7 +71,7 @@ public class ContactManagerImplTest {
         Contact contact2 = new Contact("Jane Smith", "+420777387456", "jane44@gmail.com");
         contactManager.createContact(contact1);
         contactManager.createContact(contact2);
-        assertThat(contact1.getContactID(), not(equalTo(contact2.getContactID())));
+        assertThat(contact1.getId(), not(equalTo(contact2.getId())));
     }
 
     @Test
@@ -81,7 +79,7 @@ public class ContactManagerImplTest {
         Contact contact = new Contact("John Doe", "+420606542781", "john.doe@hotmail.com");
         contact.setAddress("Smetanova 44, 60200 Brno");
         contactManager.createContact(contact);
-        Long idBefore = contact.getContactID();
+        Long idBefore = contact.getId();
         Collection<Contact> resultNameOk1 = contactManager.findContactByName("John Doe");
         Collection<Contact> resultNameWrong1 = contactManager.findContactByName("James Smith");
         Collection<Contact> resultAddressOk1 = contactManager.findContactByAddress("Smetanova 44, 60200 Brno");
@@ -93,7 +91,7 @@ public class ContactManagerImplTest {
         contact.setName("James Smith");
         contact.setAddress("Anderleho 12, 19800 Praha");
         contactManager.updateContact(contact);
-        Long idAfter = contact.getContactID();
+        Long idAfter = contact.getId();
         Collection<Contact> resultNameWrong2 = contactManager.findContactByName("John Doe");
         Collection<Contact> resultNameOk2 = contactManager.findContactByName("James Smith");
         Collection<Contact> resultAddressWrong2 = contactManager.findContactByAddress("Smetanova 44, 60200 Brno");
@@ -130,7 +128,7 @@ public class ContactManagerImplTest {
     public void testFindContactById() throws Exception {
         Contact contact = new Contact("John Doe", "+420606542781", "john.doe@hotmail.com");
         contactManager.createContact(contact);
-        Contact contactById = contactManager.findContactById(contact.getContactID());
+        Contact contactById = contactManager.findContactById(contact.getId());
         assertThat(contact, equalTo(contactById));
     }
 

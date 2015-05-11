@@ -29,6 +29,12 @@ public class Contact {
         this.name = name;
     }
 
+    public Contact(Long id, String name, String address) {
+        this.id = id;
+        this.name = name;
+        this.address = address;
+    }
+
     public Contact(String name, String phone) {
         this(name);
         this.phone.add(phone);
@@ -39,11 +45,23 @@ public class Contact {
         this.email.add(email);
     }
 
-    public Long getContactID() {
+    public Contact(String name, String address, String phone, String email) {
+        this();
+        this.name = name;
+        this.address = address;
+        if(phone != null) {
+            this.phone.add(phone);
+        }
+        if(email != null) {
+            this.email.add(email);
+        }
+    }
+
+    public Long getId() {
         return id;
     }
 
-    public void setContactID(Long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

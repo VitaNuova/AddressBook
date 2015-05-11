@@ -24,7 +24,7 @@ public class ContactManagerImpl implements ContactManager {
         if (contact == null) {
             throw new NullPointerException("Contact is null.");
         }
-        if (contact.getContactID() != null) {
+        if (contact.getId() != null) {
             throw new IllegalArgumentException("Contact ID was set manually.");
         }
         if (contact.getName() == null && contact.getAddress() == null && (contact.getPhone() == null || contact.getPhone().size() == 0) && (contact.getFax() == null || contact.getFax().size() == 0) && (contact.getEmail() == null || contact.getEmail().size() == 0) && (contact.getOtherContacts() == null || contact.getOtherContacts().size() == 0)) {
@@ -39,11 +39,11 @@ public class ContactManagerImpl implements ContactManager {
                     throw new ServiceFailureException("Internal Error: More rows inserted when trying to insert contact " + contact);
                 }
                 ResultSet keyRS = st1.getGeneratedKeys();
-                contact.setContactID(getKey(keyRS, contact));
+                contact.setId(getKey(keyRS, contact));
 
                 if (contact.getPhone() != null) {
                     try (PreparedStatement st2 = conn.prepareStatement("INSERT INTO PHONE (contactId, phone) VALUES (?, ?)")) {
-                        st2.setLong(1, contact.getContactID());
+                        st2.setLong(1, contact.getId());
                         for (String phone : contact.getPhone()) {
                             st2.setString(2, phone);
                             if (st2.executeUpdate() != 1) {
@@ -54,7 +54,7 @@ public class ContactManagerImpl implements ContactManager {
                 }
                 if (contact.getFax() != null) {
                     try (PreparedStatement st3 = conn.prepareStatement("INSERT INTO FAX (contactId, fax) VALUES (?, ?)")) {
-                        st3.setLong(1, contact.getContactID());
+                        st3.setLong(1, contact.getId());
                         for (String fax : contact.getFax()) {
                             st3.setString(2, fax);
                             if (st3.executeUpdate() != 1) {
@@ -65,7 +65,7 @@ public class ContactManagerImpl implements ContactManager {
                 }
                 if (contact.getEmail() != null) {
                     try (PreparedStatement st4 = conn.prepareStatement("INSERT INTO EMAIL (contactId, email) VALUES (?, ?)")) {
-                        st4.setLong(1, contact.getContactID());
+                        st4.setLong(1, contact.getId());
                         for (String email : contact.getEmail()) {
                             st4.setString(2, email);
                             if (st4.executeUpdate() != 1) {
@@ -76,7 +76,7 @@ public class ContactManagerImpl implements ContactManager {
                 }
                 if (contact.getOtherContacts() != null) {
                     try (PreparedStatement st5 = conn.prepareStatement("INSERT INTO OTHER_CONTACT (contactId, contactType, contact) VALUES (?, ?, ?)")) {
-                        st5.setLong(1, contact.getContactID());
+                        st5.setLong(1, contact.getId());
                         for (Map.Entry<String, String> entry : contact.getOtherContacts().entrySet()) {
                             st5.setString(2, entry.getKey());
                             st5.setString(3, entry.getValue());
@@ -88,7 +88,7 @@ public class ContactManagerImpl implements ContactManager {
                 }
                 if (contact.getGroupIds() != null) {
                     try (PreparedStatement st6 = conn.prepareStatement("INSERT INTO GROUP_ID (contactId, groupId) VALUES (?, ?)")) {
-                        st6.setLong(1, contact.getContactID());
+                        st6.setLong(1, contact.getId());
                         for (Long id : contact.getGroupIds()) {
                             st6.setLong(2, id);
                             if (st6.executeUpdate() != 1) {
@@ -131,14 +131,14 @@ public class ContactManagerImpl implements ContactManager {
             try(PreparedStatement st1 = conn.prepareStatement("UPDATE CONTACT SET name=?, address=? WHERE id=?")) {
                 st1.setString(1, contact.getName());
                 st1.setString(2, contact.getAddress());
-                st1.setLong(3, contact.getContactID());
+                st1.setLong(3, contact.getId());
                 if (st1.executeUpdate() != 1) {
                     throw new ServiceFailureException("Internal Error: Cannot update contact " + contact);
                 }
 
                 // Get the set of phone numbers contact currently has.
                 try(PreparedStatement st2 = conn.prepareStatement("SELECT phone FROM PHONE WHERE contactId=?")) {
-                    st2.setLong(1, contact.getContactID());
+                    st2.setLong(1, contact.getId());
                     ResultSet rs1 = st2.executeQuery();
                     HashSet<String> phonesToAdd = new HashSet(contact.getPhone());
                     HashSet<String> phonesToDelete = new HashSet<>();
@@ -150,7 +150,7 @@ public class ContactManagerImpl implements ContactManager {
                     // Delete erased phone numbers.
                     if(!phonesToDelete.isEmpty()) {
                         try (PreparedStatement st3 = conn.prepareStatement("DELETE FROM PHONE WHERE contactId=? AND phone=?")) {
-                            st3.setLong(1, contact.getContactID());
+                            st3.setLong(1, contact.getId());
                             for(String phone : phonesToDelete) {
                                 st3.setString(2, phone);
                                 st3.executeUpdate();
@@ -160,7 +160,7 @@ public class ContactManagerImpl implements ContactManager {
                     // Add new phone numbers.
                     if(!phonesToAdd.isEmpty()) {
                         try (PreparedStatement st4 = conn.prepareStatement("INSERT INTO PHONE (contactId, phone) VALUES (?, ?)")) {
-                            st4.setLong(1, contact.getContactID());
+                            st4.setLong(1, contact.getId());
                             for(String phone : phonesToAdd) {
                                 st4.setString(2, phone);
                                 if (st4.executeUpdate() != 1) {
@@ -173,7 +173,7 @@ public class ContactManagerImpl implements ContactManager {
 
                 // Get the set of faxes contact currently has.
                 try(PreparedStatement st2 = conn.prepareStatement("SELECT fax FROM FAX WHERE contactId=?")) {
-                    st2.setLong(1, contact.getContactID());
+                    st2.setLong(1, contact.getId());
                     ResultSet rs1 = st2.executeQuery();
                     HashSet<String> faxesToAdd = new HashSet(contact.getFax());
                     HashSet<String> faxesToDelete = new HashSet<>();
@@ -185,7 +185,7 @@ public class ContactManagerImpl implements ContactManager {
                     // Delete erased fax.
                     if(!faxesToDelete.isEmpty()) {
                         try (PreparedStatement st3 = conn.prepareStatement("DELETE FROM FAX WHERE contactId=? AND fax=?")) {
-                            st3.setLong(1, contact.getContactID());
+                            st3.setLong(1, contact.getId());
                             for(String fax : faxesToDelete) {
                                 st3.setString(2, fax);
                                 st3.executeUpdate();
@@ -195,7 +195,7 @@ public class ContactManagerImpl implements ContactManager {
                     // Add new faxes.
                     if(!faxesToAdd.isEmpty()) {
                         try (PreparedStatement st4 = conn.prepareStatement("INSERT INTO FAX (contactId, fax) VALUES (?, ?)")) {
-                            st4.setLong(1, contact.getContactID());
+                            st4.setLong(1, contact.getId());
                             for(String fax : faxesToAdd) {
                                 st4.setString(2, fax);
                                 if (st4.executeUpdate() != 1) {
@@ -208,7 +208,7 @@ public class ContactManagerImpl implements ContactManager {
 
                 // Get the set of e-mails contact currently has.
                 try(PreparedStatement st2 = conn.prepareStatement("SELECT email FROM EMAIL WHERE contactId=?")) {
-                    st2.setLong(1, contact.getContactID());
+                    st2.setLong(1, contact.getId());
                     ResultSet rs1 = st2.executeQuery();
                     HashSet<String> emailsToAdd = new HashSet(contact.getEmail());
                     HashSet<String> emailsToDelete = new HashSet<>();
@@ -220,7 +220,7 @@ public class ContactManagerImpl implements ContactManager {
                     // Delete erased e-mails.
                     if(!emailsToDelete.isEmpty()) {
                         try (PreparedStatement st3 = conn.prepareStatement("DELETE FROM EMAIL WHERE contactId=? AND email=?")) {
-                            st3.setLong(1, contact.getContactID());
+                            st3.setLong(1, contact.getId());
                             for(String email : emailsToDelete) {
                                 st3.setString(2, email);
                                 st3.executeUpdate();
@@ -230,7 +230,7 @@ public class ContactManagerImpl implements ContactManager {
                     // Add new e-mails.
                     if(!emailsToAdd.isEmpty()) {
                         try (PreparedStatement st4 = conn.prepareStatement("INSERT INTO EMAIL (contactId, email) VALUES (?, ?)")) {
-                            st4.setLong(1, contact.getContactID());
+                            st4.setLong(1, contact.getId());
                             for(String email : emailsToAdd) {
                                 st4.setString(2, email);
                                 if (st4.executeUpdate() != 1) {
@@ -243,7 +243,7 @@ public class ContactManagerImpl implements ContactManager {
 
                 // Get the set of other contacts contact currently has.
                 try(PreparedStatement st2 = conn.prepareStatement("SELECT contactType, contact FROM OTHER_CONTACT WHERE contactId=?")) {
-                    st2.setLong(1, contact.getContactID());
+                    st2.setLong(1, contact.getId());
                     ResultSet rs1 = st2.executeQuery();
                     HashMap<String, String> otherContactsToAdd = new HashMap(contact.getOtherContacts());
                     HashMap<String, String> otherContactsToDelete = new HashMap<>();
@@ -255,7 +255,7 @@ public class ContactManagerImpl implements ContactManager {
                     // Delete erased other contacts.
                     if(!otherContactsToDelete.isEmpty()) {
                         try (PreparedStatement st3 = conn.prepareStatement("DELETE FROM OTHER_CONTACT WHERE contactId=? AND contactType=? AND contact=?")) {
-                            st3.setLong(1, contact.getContactID());
+                            st3.setLong(1, contact.getId());
                             for(Map.Entry<String, String> entry : otherContactsToDelete.entrySet()) {
                                 st3.setString(2, entry.getKey());
                                 st3.setString(3, entry.getValue());
@@ -266,7 +266,7 @@ public class ContactManagerImpl implements ContactManager {
                     // Add new other contacts.
                     if(!otherContactsToAdd.isEmpty()) {
                         try (PreparedStatement st4 = conn.prepareStatement("INSERT INTO OTHER_CONTACT (contactId, contactType, contact) VALUES (?, ?, ?)")) {
-                            st4.setLong(1, contact.getContactID());
+                            st4.setLong(1, contact.getId());
                             for(Map.Entry<String, String> entry : otherContactsToAdd.entrySet()) {
                                 st4.setString(2, entry.getKey());
                                 st4.setString(3, entry.getValue());
@@ -280,7 +280,7 @@ public class ContactManagerImpl implements ContactManager {
 
                 // Get the set of group IDs contact currently has.
                 try(PreparedStatement st2 = conn.prepareStatement("SELECT groupId FROM GROUP_ID WHERE contactId=?")) {
-                    st2.setLong(1, contact.getContactID());
+                    st2.setLong(1, contact.getId());
                     ResultSet rs1 = st2.executeQuery();
                     HashSet<Long> groupIdsToAdd = new HashSet(contact.getGroupIds());
                     HashSet<Long> groupIdsToDelete = new HashSet<>();
@@ -292,7 +292,7 @@ public class ContactManagerImpl implements ContactManager {
                     // Delete erased e-mails.
                     if(!groupIdsToDelete.isEmpty()) {
                         try (PreparedStatement st3 = conn.prepareStatement("DELETE FROM GROUP_ID WHERE contactId=? AND groupId=?")) {
-                            st3.setLong(1, contact.getContactID());
+                            st3.setLong(1, contact.getId());
                             for(Long groupId : groupIdsToDelete) {
                                 st3.setLong(2, groupId);
                                 st3.executeUpdate();
@@ -302,7 +302,7 @@ public class ContactManagerImpl implements ContactManager {
                     // Add new e-mails.
                     if(!groupIdsToAdd.isEmpty()) {
                         try (PreparedStatement st4 = conn.prepareStatement("INSERT INTO GROUP_ID (contactId, groupId) VALUES (?, ?)")) {
-                            st4.setLong(1, contact.getContactID());
+                            st4.setLong(1, contact.getId());
                             for(Long groupId : groupIdsToAdd) {
                                 st4.setLong(2, groupId);
                                 if (st4.executeUpdate() != 1) {
@@ -324,7 +324,7 @@ public class ContactManagerImpl implements ContactManager {
             try(PreparedStatement st1 = conn.prepareStatement("DELETE FROM CONTACT WHERE id=?")) {
                 if(contact.getPhone() != null) {
                     try(PreparedStatement st2 = conn.prepareStatement("DELETE FROM PHONE WHERE contactId=?")) {
-                        st2.setLong(1, contact.getContactID());
+                        st2.setLong(1, contact.getId());
                         if (st2.executeUpdate() != contact.getPhone().size()) {
                             throw new ServiceFailureException("Did not delete contact phones " + contact);
                         }
@@ -332,7 +332,7 @@ public class ContactManagerImpl implements ContactManager {
                 }
                 if(contact.getFax() != null) {
                     try(PreparedStatement st3 = conn.prepareStatement("DELETE FROM FAX WHERE contactId=?")) {
-                        st3.setLong(1, contact.getContactID());
+                        st3.setLong(1, contact.getId());
                         if (st3.executeUpdate() != contact.getFax().size()) {
                             throw new ServiceFailureException("Did not delete contact faxes " + contact);
                         }
@@ -340,7 +340,7 @@ public class ContactManagerImpl implements ContactManager {
                 }
                 if(contact.getEmail() != null) {
                     try(PreparedStatement st4 = conn.prepareStatement("DELETE FROM EMAIL WHERE contactId=?")) {
-                        st4.setLong(1, contact.getContactID());
+                        st4.setLong(1, contact.getId());
                         if (st4.executeUpdate() != contact.getEmail().size()) {
                             throw new ServiceFailureException("Did not delete contact emails " + contact);
                         }
@@ -348,7 +348,7 @@ public class ContactManagerImpl implements ContactManager {
                 }
                 if(contact.getOtherContacts() != null) {
                     try(PreparedStatement st5 = conn.prepareStatement("DELETE FROM OTHER_CONTACT WHERE contactId=?")) {
-                        st5.setLong(1, contact.getContactID());
+                        st5.setLong(1, contact.getId());
                         if (st5.executeUpdate() != contact.getOtherContacts().size()) {
                             throw new ServiceFailureException("Did not delete contact other contacts " + contact);
                         }
@@ -356,13 +356,13 @@ public class ContactManagerImpl implements ContactManager {
                 }
                 if(contact.getGroupIds() != null) {
                     try(PreparedStatement st6 = conn.prepareStatement("DELETE FROM GROUP_ID WHERE contactId=?")) {
-                        st6.setLong(1, contact.getContactID());
+                        st6.setLong(1, contact.getId());
                         if (st6.executeUpdate() != contact.getGroupIds().size()) {
                             throw new ServiceFailureException("Did not delete contact group list " + contact);
                         }
                     }
                 }
-                st1.setLong(1, contact.getContactID());
+                st1.setLong(1, contact.getId());
                 if (st1.executeUpdate() != 1) {
                     throw new ServiceFailureException("Did not delete contact " + contact);
                 }
@@ -545,38 +545,38 @@ public class ContactManagerImpl implements ContactManager {
 
     private Contact resultSetToContact(Connection conn, ResultSet rs1) throws SQLException {
         Contact contact = new Contact(rs1.getString("name"));
-        contact.setContactID(rs1.getLong("id"));
+        contact.setId(rs1.getLong("id"));
         contact.setAddress(rs1.getString("address"));
         try (PreparedStatement st1 = conn.prepareStatement("SELECT phone FROM PHONE WHERE contactId=?")) {
-            st1.setLong(1, contact.getContactID());
+            st1.setLong(1, contact.getId());
             ResultSet rs2 = st1.executeQuery();
             while (rs2.next()) {
                 contact.setNewPhone(rs2.getString("phone"));
             }
         }
         try (PreparedStatement st2 = conn.prepareStatement("SELECT fax FROM FAX WHERE contactId=?")) {
-            st2.setLong(1, contact.getContactID());
+            st2.setLong(1, contact.getId());
             ResultSet rs3 = st2.executeQuery();
             while (rs3.next()) {
                 contact.setNewFax(rs3.getString("fax"));
             }
         }
         try (PreparedStatement st3 = conn.prepareStatement("SELECT email FROM EMAIL WHERE contactId=?")) {
-            st3.setLong(1, contact.getContactID());
+            st3.setLong(1, contact.getId());
             ResultSet rs4 = st3.executeQuery();
             while (rs4.next()) {
                 contact.setNewEmail(rs4.getString("email"));
             }
         }
         try (PreparedStatement st4 = conn.prepareStatement("SELECT contactType, contact FROM OTHER_CONTACT WHERE contactId=?")) {
-            st4.setLong(1, contact.getContactID());
+            st4.setLong(1, contact.getId());
             ResultSet rs5 = st4.executeQuery();
             while (rs5.next()) {
                 contact.setNewOtherContact(rs5.getString("contactType"), rs5.getString("contact"));
             }
         }
         try (PreparedStatement st5 = conn.prepareStatement("SELECT groupId FROM GROUP_ID WHERE contactId=?")) {
-            st5.setLong(1, contact.getContactID());
+            st5.setLong(1, contact.getId());
             ResultSet rs6 = st5.executeQuery();
             while (rs6.next()) {
                 contact.setNewGroupId(rs6.getLong("groupId"));

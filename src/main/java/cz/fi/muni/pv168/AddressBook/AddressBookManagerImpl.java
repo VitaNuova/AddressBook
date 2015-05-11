@@ -26,19 +26,20 @@ public class AddressBookManagerImpl implements AddressBookManager {
     }
 
     public List<Contact> listContactsByPerson() throws ServiceFailureException {
+        log.debug("listing all contacts");
         ContactManager contactManager = new ContactManagerImpl(dataSource);
         List<Contact> result = new ArrayList<>(contactManager.findAllContacts());
         return (result.isEmpty()) ? null : result;
     }
 
     public List<String> listGroupsByContact(Contact contact) throws ServiceFailureException, NullPointerException {
-        if(contact == null || contact.getContactID() == null) {
+        if(contact == null || contact.getId() == null) {
             throw new NullPointerException("Nonexistent contact given.");
         }
         List<String> groupList = new ArrayList<>();
         try(Connection conn = dataSource.getConnection()) {
             try(PreparedStatement st1 = conn.prepareStatement("SELECT groupId FROM GROUP_ID WHERE contactId=?")) {
-                st1.setLong(1, contact.getContactID());
+                st1.setLong(1, contact.getId());
                 ResultSet rs1 = st1.executeQuery();
                 Long groupId;
                 while(rs1.next()) {

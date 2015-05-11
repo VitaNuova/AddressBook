@@ -6,7 +6,6 @@ import org.junit.Before;
 import org.junit.Test;
 import sun.tools.jar.Main;
 
-import javax.sql.DataSource;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -339,7 +338,7 @@ public class GroupManagerImplTest {
 
     private static Contact newContact(Long id) {
         Contact contact = new Contact();
-        contact.setContactID(id);
+        contact.setId(id);
         return contact;
     }
 

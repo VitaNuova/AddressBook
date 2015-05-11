@@ -99,7 +99,7 @@ public class AddressBookManagerImplTest {
         List<Long> contacts = new ArrayList<>();
         Contact contact = newContact("John", "Prague");
         contactManager.createContact(contact);
-        contacts.add(contact.getContactID());
+        contacts.add(contact.getId());
         Group group = newGroup("Family", contacts);
         groupManager.createGroup(group);
 
@@ -114,10 +114,10 @@ public class AddressBookManagerImplTest {
         assertNull(retrievedContacts);
 
         retrievedContacts = addressBookManager.listContactsByGroup(group);
-        
+
         List<Long> retrievedContactsID = new ArrayList<>();
         for(Contact cont : retrievedContacts) {
-            retrievedContactsID.add(cont.getContactID());
+            retrievedContactsID.add(cont.getId());
         }
 
         assertNotNull(retrievedContacts);
