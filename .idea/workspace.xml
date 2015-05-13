@@ -1,32 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78d19bfd-05c5-4da7-9199-b62aef3f8e48" name="Default" comment="Version passing all tests.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/CreateContactWorker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/CreateGroupWorker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/DeleteContactWorker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/DeleteGroupWorker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ListContactWorker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ListGroupWorker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ShowContactWorker.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ShowGroupWorker.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/AddressBook.iml" afterPath="" />
+    <list default="true" id="78d19bfd-05c5-4da7-9199-b62aef3f8e48" name="Default" comment="First part of GUI implementation">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/AddContactToGroupWorker.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/DeleteContactFromGroupWorker.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/UpdateContactWorker.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/UpdateGroupWorker.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/resourceBundles.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/texts_cs_CZ.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/texts_en_US.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/texts_uk_UA.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cz/fi/muni/pv168/AddressBook/AddressBookManagerImpl.class" afterPath="$PROJECT_DIR$/target/classes/cz/fi/muni/pv168/AddressBook/AddressBookManagerImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/cz/fi/muni/pv168/AddressBook/AddressBookManagerImplTest.class" afterPath="$PROJECT_DIR$/target/test-classes/cz/fi/muni/pv168/AddressBook/AddressBookManagerImplTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cz/fi/muni/pv168/AddressBook/Contact.class" afterPath="$PROJECT_DIR$/target/classes/cz/fi/muni/pv168/AddressBook/Contact.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cz/fi/muni/pv168/AddressBook/ContactManagerImpl.class" afterPath="$PROJECT_DIR$/target/classes/cz/fi/muni/pv168/AddressBook/ContactManagerImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cz/fi/muni/pv168/AddressBook/Group.class" afterPath="$PROJECT_DIR$/target/classes/cz/fi/muni/pv168/AddressBook/Group.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.class" afterPath="$PROJECT_DIR$/target/test-classes/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/cz/fi/muni/pv168/AddressBook/GroupManagerImpl.class" afterPath="$PROJECT_DIR$/target/classes/cz/fi/muni/pv168/AddressBook/GroupManagerImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImpl.java" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImplTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Application.java" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Application.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Contact.java" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Contact.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManagerImpl.java" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManagerImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/ContactManagerImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/ContactManagerImplTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Group.java" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Group.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.java" afterPath="$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/MANIFEST.MF" afterPath="$PROJECT_DIR$/target/MANIFEST.MF" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/beforeTestRun.sql" afterPath="$PROJECT_DIR$/src/main/resources/beforeTestRun.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/CreateContactWorker.java" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/CreateContactWorker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/CreateGroupWorker.java" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/CreateGroupWorker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/DeleteContactWorker.java" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/DeleteContactWorker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/DeleteGroupWorker.java" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/DeleteGroupWorker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/GroupManagerImpl.java" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/GroupManagerImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ListContactWorker.java" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ListContactWorker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ListGroupWorker.java" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ListGroupWorker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ShowContactWorker.java" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ShowContactWorker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ShowGroupWorker.java" afterPath="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ShowGroupWorker.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="AddressBook.iws" />
@@ -55,42 +52,6 @@
         <option name="myItemId" />
         <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
       </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="Derby - AddressBookDB@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="Derby - AddressBookDB@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="APP" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-    </PATH>
-    <PATH>
-      <PATH_ELEMENT>
-        <option name="myItemId" />
-        <option name="myItemType" value="com.intellij.database.view.DbRootNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="Derby - AddressBookDB@localhost" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="APP" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
-      <PATH_ELEMENT>
-        <option name="myItemId" value="CONTACT" />
-        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
-      </PATH_ELEMENT>
     </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
@@ -103,68 +64,12 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Application.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="111" column="50" selection-start-line="111" selection-start-column="50" selection-end-line="111" selection-end-column="50" />
+              <caret line="124" column="43" selection-start-line="124" selection-start-column="43" selection-end-line="124" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3663#3664#0" expanded="true" />
-                <element signature="e#3728#3729#0" expanded="true" />
-                <element signature="e#4380#4381#0" expanded="true" />
-                <element signature="e#4447#4448#0" expanded="true" />
-                <element signature="e#4603#4604#0" expanded="true" />
-                <element signature="e#4668#4669#0" expanded="true" />
+                <element signature="e#10603#10604#0" expanded="true" />
+                <element signature="e#10692#10693#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShowGroupWorker.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ShowGroupWorker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4245283">
-              <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#563#564#0" expanded="true" />
-                <element signature="e#591#592#0" expanded="true" />
-                <element signature="e#3974#3975#0" expanded="true" />
-                <element signature="e#4054#4055#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShowContactWorker.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ShowContactWorker.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.032258">
-              <caret line="112" column="48" selection-start-line="112" selection-start-column="48" selection-end-line="112" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#637#638#0" expanded="true" />
-                <element signature="e#665#666#0" expanded="true" />
-                <element signature="e#5042#5043#0" expanded="true" />
-                <element signature="e#5125#5126#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ContactManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="46" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="46" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Contact.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Contact.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="56" column="9" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -173,36 +78,45 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ListGroupWorker.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="83" column="50" selection-start-line="81" selection-start-column="13" selection-end-line="83" selection-end-column="50" />
+              <caret line="64" column="102" selection-start-line="64" selection-start-column="102" selection-end-line="64" selection-end-column="102" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#600#601#0" expanded="true" />
-                <element signature="e#628#629#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AddressBookManagerImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.580646">
-              <caret line="116" column="25" selection-start-line="116" selection-start-column="25" selection-end-line="116" selection-end-column="25" />
-              <folding>
-                <marker date="1429788548571" expanded="true" signature="1450:1496" placeholder="SELECT group..GROUP_ID..." />
-                <marker date="1429788548571" expanded="true" signature="1794:1833" placeholder="SELECT group..GROUPS..." />
-                <marker date="1429788548571" expanded="true" signature="2888:2916" placeholder="select group..groups..." />
-                <marker date="1429788548571" expanded="true" signature="3973:4020" placeholder="select GROUP..GROUPS..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DeleteGroupWorker.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/DeleteGroupWorker.java">
+      <file leaf-file-name="GroupManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/GroupManager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="43" column="54" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GroupManagerImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/GroupManagerImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="95" column="67" selection-start-line="95" selection-start-column="67" selection-end-line="95" selection-end-column="67" />
+              <folding>
+                <marker date="1431474456557" expanded="true" signature="1519:1579" placeholder="insert into ..." />
+                <marker date="1431474456557" expanded="true" signature="3536:3601" placeholder="update GROUP..." />
+                <marker date="1431474456557" expanded="true" signature="4900:4931" placeholder="delete from ..." />
+                <marker date="1431474456557" expanded="true" signature="5633:5666" placeholder="select * fro..GROUPS..." />
+                <marker date="1431474456557" expanded="true" signature="6591:6631" placeholder="select * fro..GROUPS..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShowGroupWorker.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ShowGroupWorker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -210,63 +124,60 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ContactManagerImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManagerImpl.java">
+      <file leaf-file-name="UpdateGroupWorker.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/UpdateGroupWorker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.870968">
-              <caret line="401" column="36" selection-start-line="401" selection-start-column="31" selection-end-line="401" selection-end-column="36" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="49" column="108" selection-start-line="49" selection-start-column="108" selection-end-line="49" selection-end-column="108" />
               <folding>
-                <marker date="1429788548603" expanded="true" signature="1431:1480" placeholder="INSERT INTO ..." />
-                <marker date="1429788548603" expanded="true" signature="2064:2114" placeholder="INSERT INTO ..." />
-                <marker date="1429788548603" expanded="true" signature="2724:2770" placeholder="INSERT INTO ..." />
-                <marker date="1429788548603" expanded="true" signature="3374:3424" placeholder="INSERT INTO ..." />
-                <marker date="1429788548603" expanded="true" signature="4044:4120" placeholder="INSERT INTO ..." />
-                <marker date="1429788548603" expanded="true" signature="4854:4909" placeholder="INSERT INTO ..." />
-                <marker date="1429788548603" expanded="true" signature="7304:7351" placeholder="UPDATE CONTA..." />
-                <marker date="1429788548603" expanded="true" signature="7827:7868" placeholder="SELECT phone..PHONE..." />
-                <marker date="1429788548603" expanded="true" signature="8572:8619" placeholder="DELETE FROM ..." />
-                <marker date="1429788548603" expanded="true" signature="9110:9160" placeholder="INSERT INTO ..." />
-                <marker date="1429788548603" expanded="true" signature="9827:9864" placeholder="SELECT fax F..FAX..." />
-                <marker date="1429788548603" expanded="true" signature="10545:10588" placeholder="DELETE FROM ..." />
-                <marker date="1429788548603" expanded="true" signature="11065:11111" placeholder="INSERT INTO ..." />
-                <marker date="1429788548603" expanded="true" signature="11773:11814" placeholder="SELECT email..EMAIL..." />
-                <marker date="1429788548603" expanded="true" signature="12512:12559" placeholder="DELETE FROM ..." />
-                <marker date="1429788548603" expanded="true" signature="13044:13094" placeholder="INSERT INTO ..." />
-                <marker date="1429788548603" expanded="true" signature="13770:13834" placeholder="SELECT conta..OTHER_CONTACT..." />
-                <marker date="1429788548603" expanded="true" signature="14688:14763" placeholder="DELETE FROM ..." />
-                <marker date="1429788548603" expanded="true" signature="15376:15452" placeholder="INSERT INTO ..." />
-                <marker date="1429788548603" expanded="true" signature="16245:16291" placeholder="SELECT group..GROUP_ID..." />
-                <marker date="1429788548603" expanded="true" signature="17005:17057" placeholder="DELETE FROM ..." />
-                <marker date="1429788548603" expanded="true" signature="17546:17601" placeholder="INSERT INTO ..." />
-                <marker date="1429788548603" expanded="true" signature="18551:18581" placeholder="DELETE FROM ..." />
-                <marker date="1429788548603" expanded="true" signature="18707:18742" placeholder="DELETE FROM ..." />
-                <marker date="1429788548603" expanded="true" signature="19176:19209" placeholder="DELETE FROM ..." />
-                <marker date="1429788548603" expanded="true" signature="19642:19677" placeholder="DELETE FROM ..." />
-                <marker date="1429788548603" expanded="true" signature="20121:20164" placeholder="DELETE FROM ..." />
-                <marker date="1429788548603" expanded="true" signature="20619:20657" placeholder="DELETE FROM ..." />
-                <marker date="1429788548603" expanded="true" signature="21761:21809" placeholder="SELECT id, n..CONTACT..." />
-                <marker date="1429788548603" expanded="true" signature="22843:22880" placeholder="SELECT id, n..CONTACT..." />
-                <marker date="1429788548603" expanded="true" signature="23711:23761" placeholder="SELECT id, n..CONTACT..." />
-                <marker date="1429788548603" expanded="true" signature="24637:24678" placeholder="SELECT conta..PHONE..." />
-                <marker date="1429788548603" expanded="true" signature="25555:25592" placeholder="SELECT conta..FAX..." />
-                <marker date="1429788548603" expanded="true" signature="26479:26520" placeholder="SELECT conta..EMAIL..." />
-                <marker date="1429788548603" expanded="true" signature="27421:27474" placeholder="SELECT id, n..CONTACT..." />
-                <marker date="1429788548603" expanded="true" signature="28459:28528" placeholder="SELECT conta..OTHER_CONTACT..." />
-                <marker date="1429788548603" expanded="true" signature="29409:29450" placeholder="SELECT phone..PHONE..." />
-                <marker date="1429788548603" expanded="true" signature="29727:29764" placeholder="SELECT fax F..FAX..." />
-                <marker date="1429788548603" expanded="true" signature="30037:30078" placeholder="SELECT email..EMAIL..." />
-                <marker date="1429788548603" expanded="true" signature="30355:30419" placeholder="SELECT conta..OTHER_CONTACT..." />
-                <marker date="1429788548603" expanded="true" signature="30735:30781" placeholder="SELECT group..GROUP_ID..." />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/605cb6ce-d251-42d4-a21f-6c34583af988/console.sql">
+      <file leaf-file-name="ListContactWorker.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ListContactWorker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.6">
-              <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="78" column="81" selection-start-line="78" selection-start-column="81" selection-end-line="78" selection-end-column="81" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="texts_uk_UA.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/texts_uk_UA.properties">
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="ResourceBundle">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShowContactWorker.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ShowContactWorker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="218" column="101" selection-start-line="218" selection-start-column="101" selection-end-line="218" selection-end-column="101" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpdateContactWorker.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/UpdateContactWorker.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="74" column="102" selection-start-line="74" selection-start-column="102" selection-end-line="74" selection-end-column="102" />
               <folding />
             </state>
           </provider>
@@ -300,14 +211,12 @@
         <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/GroupManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/AddressBookManager.java" />
         <option value="$PROJECT_DIR$/src/main/resources/config.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/GroupManagerImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManagerImpl.java" />
         <option value="$PROJECT_DIR$/src/main/resources/afterTestRun.sql" />
         <option value="$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/ContactManagerImplTest.java" />
         <option value="db-console:/5ed2af46/1cde4029-f084-4c5f-adfe-aa669e7b8a6c/" />
         <option value="$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImpl.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/beforeTestRun.sql" />
         <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/AddressBookForm.form" />
@@ -323,10 +232,26 @@
         <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ListGroupWorker.java" />
         <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/DeleteGroupWorker.java" />
         <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ShowContactWorker.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Application.java" />
-        <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ShowContactWorker.java" />
         <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ShowGroupWorker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ListUpdateContactWorker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/UpdateContactWorker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/AddContactWorker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/AddContactToGroupWorker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/CreateContactWorker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/CreateGroupWorker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/DeleteContactFromGroupWorker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/DeleteContactWorker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/DeleteGroupWorker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ShowContactWorker.java" />
         <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ShowGroupWorker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/UpdateContactWorker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/UpdateGroupWorker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Application.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ListContactWorker.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/texts_uk_UA.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ListGroupWorker.java" />
+        <option value="$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/GroupManagerImpl.java" />
       </list>
     </option>
   </component>
@@ -350,10 +275,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="418" />
-    <option name="y" value="52" />
-    <option name="width" value="948" />
-    <option name="height" value="686" />
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="1301" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -380,8 +305,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -516,7 +439,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -537,8 +462,9 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.editor" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -556,6 +482,26 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Application">
+    <configuration default="false" name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="cz.fi.muni.pv168.AddressBook.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="cz.fi.muni.pv168.AddressBook.Application" />
+      <option name="VM_PARAMETERS" value="-Duser.language=uk -Duser.country=UA" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="AddressBook" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="false" name="ContactManagerImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -674,24 +620,15 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="cz.fi.muni.pv168.AddressBook.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="cz.fi.muni.pv168.AddressBook.Application" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="AddressBook" />
-      <envs />
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings />
+      <predefined_log_file id="Tomcat" enabled="true" />
+      <predefined_log_file id="Tomcat Catalina" enabled="true" />
+      <predefined_log_file id="Tomcat Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
+      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -940,11 +877,11 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.ContactManagerImplTest" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.ContactManagerImplTest.testFindAllContacts" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.cz.fi.muni.pv168.AddressBook in AddressBook" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.AddressBookManagerImplTest" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Application" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Application" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ContactManagerImplTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ContactManagerImplTest.testFindAllContacts" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.cz.fi.muni.pv168.AddressBook in AddressBook" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.AddressBookManagerImplTest" />
     </list>
     <recent_temporary>
       <list size="5">
@@ -989,7 +926,11 @@
       <workItem from="1431246946078" duration="57000" />
       <workItem from="1431284455484" duration="1997000" />
       <workItem from="1431335091875" duration="24083000" />
-      <workItem from="1431366194558" duration="11130000" />
+      <workItem from="1431366194558" duration="15788000" />
+      <workItem from="1431423370331" duration="163000" />
+      <workItem from="1431429685173" duration="9757000" />
+      <workItem from="1431448850400" duration="23377000" />
+      <workItem from="1431504610114" duration="610000" />
     </task>
     <task id="LOCAL-00001" summary="First batch of ContactManager unit tests.">
       <created>1426209796347</created>
@@ -1051,11 +992,17 @@
       <option name="project" value="LOCAL" />
       <updated>1427979788504</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="First part of GUI implementation">
+      <created>1431377397973</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1431377397973</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159446000" />
+    <option name="totallyTimeSpent" value="198011000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1067,36 +1014,36 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="418" y="52" width="948" height="686" extended-state="0" />
+    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946146" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32384342" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284055" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20591341" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19217081" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3419355" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4390244" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24462152" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39681274" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23346613" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3983871" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3983871" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946146" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="92" y="91" width="1736" height="856" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32253087" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" x="92" y="91" width="1736" height="856" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4212963" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3287037" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1119,28 +1066,35 @@
     <MESSAGE value="Database operations for Group - with logging" />
     <MESSAGE value="Current version - still just 1 of 3 tests for AddressBookManagerImpl run successfully" />
     <MESSAGE value="Version passing all tests." />
-    <option name="LAST_COMMIT_MESSAGE" value="Version passing all tests." />
+    <MESSAGE value="First part of GUI implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="First part of GUI implementation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/CreateContactWorker.java</url>
-          <line>22</line>
+          <line>23</line>
           <properties />
           <option name="timeStamp" value="20" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/CreateContactWorker.java</url>
-          <line>33</line>
+          <line>34</line>
           <properties />
           <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImpl.java</url>
+          <line>105</line>
+          <properties />
+          <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="24" />
+      <option name="time" value="27" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1149,37 +1103,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/ContactManagerImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ServiceFailureException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1205,47 +1128,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="46" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Contact.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/GroupManagerImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/cz/fi/muni/pv168/AddressBook/ContactManagerImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1359,16 +1241,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="388" column="5" selection-start-line="388" selection-start-column="5" selection-end-line="388" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/dbSetup.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1383,13 +1255,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1408,105 +1273,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/CreateContactWorker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/GroupManagerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="9" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
-          <folding>
-            <marker date="1427449193330" expanded="true" signature="-1:-1" placeholder="insert into ..." />
-            <marker date="1427449193330" expanded="true" signature="-1:-1" placeholder="update GROUP..." />
-            <marker date="1427449193330" expanded="true" signature="-1:-1" placeholder="delete from ..." />
-            <marker date="1427449193330" expanded="true" signature="-1:-1" placeholder="select * fro..GROUPS..." />
-            <marker date="1427449193330" expanded="true" signature="-1:-1" placeholder="select * fro..GROUPS..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Group.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/CreateGroupWorker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ListContactWorker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="100" column="5" selection-start-line="46" selection-start-column="6" selection-end-line="100" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/DeleteContactWorker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="5" selection-start-line="25" selection-start-column="4" selection-end-line="50" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/DeleteGroupWorker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="54" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ListGroupWorker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="83" column="50" selection-start-line="81" selection-start-column="13" selection-end-line="83" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#600#601#0" expanded="true" />
-            <element signature="e#628#629#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/605cb6ce-d251-42d4-a21f-6c34583af988/console.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.6">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="46" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1514,113 +1284,224 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="56" column="9" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="111" column="50" selection-start-line="111" selection-start-column="50" selection-end-line="111" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3663#3664#0" expanded="true" />
-            <element signature="e#3728#3729#0" expanded="true" />
-            <element signature="e#4380#4381#0" expanded="true" />
-            <element signature="e#4447#4448#0" expanded="true" />
-            <element signature="e#4603#4604#0" expanded="true" />
-            <element signature="e#4668#4669#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/ContactManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.870968">
+        <state vertical-scroll-proportion="0.0">
           <caret line="401" column="36" selection-start-line="401" selection-start-column="31" selection-end-line="401" selection-end-column="36" />
-          <folding>
-            <marker date="1429788548603" expanded="true" signature="1431:1480" placeholder="INSERT INTO ..." />
-            <marker date="1429788548603" expanded="true" signature="2064:2114" placeholder="INSERT INTO ..." />
-            <marker date="1429788548603" expanded="true" signature="2724:2770" placeholder="INSERT INTO ..." />
-            <marker date="1429788548603" expanded="true" signature="3374:3424" placeholder="INSERT INTO ..." />
-            <marker date="1429788548603" expanded="true" signature="4044:4120" placeholder="INSERT INTO ..." />
-            <marker date="1429788548603" expanded="true" signature="4854:4909" placeholder="INSERT INTO ..." />
-            <marker date="1429788548603" expanded="true" signature="7304:7351" placeholder="UPDATE CONTA..." />
-            <marker date="1429788548603" expanded="true" signature="7827:7868" placeholder="SELECT phone..PHONE..." />
-            <marker date="1429788548603" expanded="true" signature="8572:8619" placeholder="DELETE FROM ..." />
-            <marker date="1429788548603" expanded="true" signature="9110:9160" placeholder="INSERT INTO ..." />
-            <marker date="1429788548603" expanded="true" signature="9827:9864" placeholder="SELECT fax F..FAX..." />
-            <marker date="1429788548603" expanded="true" signature="10545:10588" placeholder="DELETE FROM ..." />
-            <marker date="1429788548603" expanded="true" signature="11065:11111" placeholder="INSERT INTO ..." />
-            <marker date="1429788548603" expanded="true" signature="11773:11814" placeholder="SELECT email..EMAIL..." />
-            <marker date="1429788548603" expanded="true" signature="12512:12559" placeholder="DELETE FROM ..." />
-            <marker date="1429788548603" expanded="true" signature="13044:13094" placeholder="INSERT INTO ..." />
-            <marker date="1429788548603" expanded="true" signature="13770:13834" placeholder="SELECT conta..OTHER_CONTACT..." />
-            <marker date="1429788548603" expanded="true" signature="14688:14763" placeholder="DELETE FROM ..." />
-            <marker date="1429788548603" expanded="true" signature="15376:15452" placeholder="INSERT INTO ..." />
-            <marker date="1429788548603" expanded="true" signature="16245:16291" placeholder="SELECT group..GROUP_ID..." />
-            <marker date="1429788548603" expanded="true" signature="17005:17057" placeholder="DELETE FROM ..." />
-            <marker date="1429788548603" expanded="true" signature="17546:17601" placeholder="INSERT INTO ..." />
-            <marker date="1429788548603" expanded="true" signature="18551:18581" placeholder="DELETE FROM ..." />
-            <marker date="1429788548603" expanded="true" signature="18707:18742" placeholder="DELETE FROM ..." />
-            <marker date="1429788548603" expanded="true" signature="19176:19209" placeholder="DELETE FROM ..." />
-            <marker date="1429788548603" expanded="true" signature="19642:19677" placeholder="DELETE FROM ..." />
-            <marker date="1429788548603" expanded="true" signature="20121:20164" placeholder="DELETE FROM ..." />
-            <marker date="1429788548603" expanded="true" signature="20619:20657" placeholder="DELETE FROM ..." />
-            <marker date="1429788548603" expanded="true" signature="21761:21809" placeholder="SELECT id, n..CONTACT..." />
-            <marker date="1429788548603" expanded="true" signature="22843:22880" placeholder="SELECT id, n..CONTACT..." />
-            <marker date="1429788548603" expanded="true" signature="23711:23761" placeholder="SELECT id, n..CONTACT..." />
-            <marker date="1429788548603" expanded="true" signature="24637:24678" placeholder="SELECT conta..PHONE..." />
-            <marker date="1429788548603" expanded="true" signature="25555:25592" placeholder="SELECT conta..FAX..." />
-            <marker date="1429788548603" expanded="true" signature="26479:26520" placeholder="SELECT conta..EMAIL..." />
-            <marker date="1429788548603" expanded="true" signature="27421:27474" placeholder="SELECT id, n..CONTACT..." />
-            <marker date="1429788548603" expanded="true" signature="28459:28528" placeholder="SELECT conta..OTHER_CONTACT..." />
-            <marker date="1429788548603" expanded="true" signature="29409:29450" placeholder="SELECT phone..PHONE..." />
-            <marker date="1429788548603" expanded="true" signature="29727:29764" placeholder="SELECT fax F..FAX..." />
-            <marker date="1429788548603" expanded="true" signature="30037:30078" placeholder="SELECT email..EMAIL..." />
-            <marker date="1429788548603" expanded="true" signature="30355:30419" placeholder="SELECT conta..OTHER_CONTACT..." />
-            <marker date="1429788548603" expanded="true" signature="30735:30781" placeholder="SELECT group..GROUP_ID..." />
-          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Group.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="42" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/605cb6ce-d251-42d4-a21f-6c34583af988/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.4">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/AddressBookManagerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.580646">
-          <caret line="116" column="25" selection-start-line="116" selection-start-column="25" selection-end-line="116" selection-end-column="25" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="139" column="5" selection-start-line="127" selection-start-column="3" selection-end-line="139" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/texts_en_US.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/texts_cs_CZ.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/config.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/src.zip!/java/util/ResourceBundle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="772" column="0" selection-start-line="772" selection-start-column="0" selection-end-line="772" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/CreateGroupWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="111" selection-start-line="41" selection-start-column="111" selection-end-line="41" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/CreateContactWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="116" selection-start-line="46" selection-start-column="116" selection-end-line="46" selection-end-column="116" />
           <folding>
-            <marker date="1429788548571" expanded="true" signature="1450:1496" placeholder="SELECT group..GROUP_ID..." />
-            <marker date="1429788548571" expanded="true" signature="1794:1833" placeholder="SELECT group..GROUPS..." />
-            <marker date="1429788548571" expanded="true" signature="2888:2916" placeholder="select group..groups..." />
-            <marker date="1429788548571" expanded="true" signature="3973:4020" placeholder="select GROUP..GROUPS..." />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/AddContactToGroupWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="110" selection-start-line="47" selection-start-column="110" selection-end-line="47" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/DeleteContactFromGroupWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="110" selection-start-line="45" selection-start-column="110" selection-end-line="45" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/DeleteContactWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="113" selection-start-line="46" selection-start-column="113" selection-end-line="46" selection-end-column="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/DeleteGroupWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="59" selection-start-line="47" selection-start-column="59" selection-end-line="47" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/dbSetup.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="20" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ShowContactWorker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.032258">
-          <caret line="112" column="48" selection-start-line="112" selection-start-column="48" selection-end-line="112" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="218" column="101" selection-start-line="218" selection-start-column="101" selection-end-line="218" selection-end-column="101" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#637#638#0" expanded="true" />
-            <element signature="e#665#666#0" expanded="true" />
-            <element signature="e#5042#5043#0" expanded="true" />
-            <element signature="e#5125#5126#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ShowGroupWorker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4245283">
-          <caret line="82" column="16" selection-start-line="82" selection-start-column="16" selection-end-line="82" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#563#564#0" expanded="true" />
-            <element signature="e#591#592#0" expanded="true" />
-            <element signature="e#3974#3975#0" expanded="true" />
-            <element signature="e#4054#4055#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/UpdateContactWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="74" column="102" selection-start-line="74" selection-start-column="102" selection-end-line="74" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/UpdateGroupWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="49" column="108" selection-start-line="49" selection-start-column="108" selection-end-line="49" selection-end-column="108" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="124" column="43" selection-start-line="124" selection-start-column="43" selection-end-line="124" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#10603#10604#0" expanded="true" />
+            <element signature="e#10692#10693#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ListContactWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="78" column="81" selection-start-line="78" selection-start-column="81" selection-end-line="78" selection-end-column="81" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/texts_uk_UA.properties">
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="17" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="ResourceBundle">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/workers/ListGroupWorker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="102" selection-start-line="64" selection-start-column="102" selection-end-line="64" selection-end-column="102" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/GroupManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/cz/fi/muni/pv168/AddressBook/GroupManagerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="95" column="67" selection-start-line="95" selection-start-column="67" selection-end-line="95" selection-end-column="67" />
+          <folding>
+            <marker date="1431474456557" expanded="true" signature="1519:1579" placeholder="insert into ..." />
+            <marker date="1431474456557" expanded="true" signature="3536:3601" placeholder="update GROUP..." />
+            <marker date="1431474456557" expanded="true" signature="4900:4931" placeholder="delete from ..." />
+            <marker date="1431474456557" expanded="true" signature="5633:5666" placeholder="select * fro..GROUPS..." />
+            <marker date="1431474456557" expanded="true" signature="6591:6631" placeholder="select * fro..GROUPS..." />
           </folding>
         </state>
       </provider>

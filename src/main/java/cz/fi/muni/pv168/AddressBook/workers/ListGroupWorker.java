@@ -2,13 +2,13 @@ package cz.fi.muni.pv168.AddressBook.workers;
 
 import cz.fi.muni.pv168.AddressBook.AddressBookManager;
 import cz.fi.muni.pv168.AddressBook.AddressBookManagerImpl;
-import cz.fi.muni.pv168.AddressBook.workers.DeleteGroupWorker;
 
 import javax.sql.DataSource;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
+import java.util.ResourceBundle;
 import java.util.concurrent.ExecutionException;
 
 /**
@@ -42,14 +42,14 @@ public class ListGroupWorker extends SwingWorker<Object[], Void> {
             deleteGroupPanel.setLayout(new BoxLayout(deleteGroupPanel, BoxLayout.Y_AXIS));
 
             JPanel topPanel = new JPanel();
-            JLabel deleteContactLabel = new JLabel("Select group to delete: ");
+            JLabel deleteContactLabel = new JLabel(ResourceBundle.getBundle("texts").getString("select_groups"));
 
             JPanel listPanel = new JPanel();
             JPanel buttonPanel = new JPanel();
 
             Object[] groupNames = get();
             if(groupNames == null) {
-                JOptionPane.showMessageDialog(null, "No groups in address book");
+                JOptionPane.showMessageDialog(null, ResourceBundle.getBundle("texts").getString("no groups"));
                 deleteGroupFrame.setVisible(false);
             }
             else {
@@ -62,7 +62,7 @@ public class ListGroupWorker extends SwingWorker<Object[], Void> {
                 optionList.setVisibleRowCount(-1);
 
 
-                JButton submitButton = new JButton("Delete selected");
+                JButton submitButton = new JButton(ResourceBundle.getBundle("texts").getString("delete"));
                 submitButton.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
@@ -79,7 +79,7 @@ public class ListGroupWorker extends SwingWorker<Object[], Void> {
                 deleteGroupPanel.add(listPanel);
                 deleteGroupPanel.add(buttonPanel);
                 deleteGroupFrame.add(deleteGroupPanel);
-                deleteGroupFrame.setTitle("Delete group");
+                deleteGroupFrame.setTitle(ResourceBundle.getBundle("texts").getString("delete_group"));
                 deleteGroupFrame.setSize(250, 300);
                 deleteGroupFrame.setVisible(true);
             }

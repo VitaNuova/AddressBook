@@ -6,6 +6,7 @@ import cz.fi.muni.pv168.AddressBook.GroupManagerImpl;
 
 import javax.sql.DataSource;
 import javax.swing.*;
+import java.util.ResourceBundle;
 import java.util.concurrent.ExecutionException;
 
 /**
@@ -34,11 +35,11 @@ public class CreateGroupWorker extends SwingWorker<Void, Void> {
     public void done() {
         try {
             get();
-            JOptionPane.showMessageDialog(null, "Group successfully created");
+            JOptionPane.showMessageDialog(null, ResourceBundle.getBundle("texts").getString("group_created"));
         }
         catch(ExecutionException ex) {
             ex.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Group creation failed");
+            JOptionPane.showMessageDialog(null, ResourceBundle.getBundle("texts").getString("group_created_fail"));
         }
         catch(InterruptedException ex) {
             throw new RuntimeException("Operation interrupted", ex);

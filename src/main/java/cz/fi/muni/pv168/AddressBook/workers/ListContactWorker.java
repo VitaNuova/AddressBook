@@ -3,7 +3,6 @@ package cz.fi.muni.pv168.AddressBook.workers;
 import cz.fi.muni.pv168.AddressBook.AddressBookManager;
 import cz.fi.muni.pv168.AddressBook.AddressBookManagerImpl;
 import cz.fi.muni.pv168.AddressBook.Contact;
-import cz.fi.muni.pv168.AddressBook.workers.DeleteContactWorker;
 
 import javax.sql.DataSource;
 import javax.swing.*;
@@ -11,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ResourceBundle;
 import java.util.concurrent.ExecutionException;
 
 /**
@@ -19,9 +19,15 @@ import java.util.concurrent.ExecutionException;
 public class ListContactWorker extends SwingWorker<Object[], Void> {
 
     private DataSource ds;
+    private String option;
+    private String groupName;
+    private JFrame frame;
 
-    public ListContactWorker(DataSource ds) {
+    public ListContactWorker(JFrame frame, DataSource ds, String option, String groupName) {
         this.ds = ds;
+        this.option = option;
+        this.groupName = groupName;
+        this.frame = frame;
     }
 
     @Override
@@ -50,14 +56,14 @@ public class ListContactWorker extends SwingWorker<Object[], Void> {
            deleteContactPanel.setLayout(new BoxLayout(deleteContactPanel, BoxLayout.Y_AXIS));
 
            JPanel topPanel = new JPanel();
-           JLabel deleteContactLabel = new JLabel("Select contact to delete: ");
+           JLabel deleteContactLabel = new JLabel(ResourceBundle.getBundle("texts").getString("select_contact"));
 
            JPanel listPanel = new JPanel();
            JPanel buttonPanel = new JPanel();
 
            Object[] contactNames = get();
            if(contactNames == null) {
-               JOptionPane.showMessageDialog(null, "No contacts in address book");
+               JOptionPane.showMessageDialog(null, ResourceBundle.getBundle("texts").getString("no_contacts"));
                deleteContactFrame.setVisible(false);
            }
            else {
@@ -70,12 +76,16 @@ public class ListContactWorker extends SwingWorker<Object[], Void> {
                optionList.setVisibleRowCount(-1);
 
 
-               JButton submitButton = new JButton("Delete selected");
+               JButton submitButton = new JButton(ResourceBundle.getBundle("texts").getString("do"));
                submitButton.addActionListener(new ActionListener() {
                    @Override
                    public void actionPerformed(ActionEvent e) {
                        List<String> names = optionList.getSelectedValuesList();
-                       new DeleteContactWorker(ds, names).execute();
+                       if (option.equals("delete")) {
+                           new DeleteContactWorker(ds, names).execute();
+                       } else if (option.equals("add")) {
+                           new AddContactToGroupWorker(frame, ds, names, groupName).execute();
+                       }
                        deleteContactFrame.setVisible(false);
                    }
                });
@@ -87,7 +97,12 @@ public class ListContactWorker extends SwingWorker<Object[], Void> {
                deleteContactPanel.add(listPanel);
                deleteContactPanel.add(buttonPanel);
                deleteContactFrame.add(deleteContactPanel);
-               deleteContactFrame.setTitle("Delete contact");
+               if(option.equals("delete")) {
+                   deleteContactFrame.setTitle(ResourceBundle.getBundle("texts").getString("delete") + "contact");
+               }
+               else {
+                   deleteContactFrame.setTitle(ResourceBundle.getBundle("texts").getString("add"));
+               }
                deleteContactFrame.setSize(250, 300);
                deleteContactFrame.setVisible(true);
            }

@@ -8,6 +8,7 @@ import javax.sql.DataSource;
 import javax.swing.*;
 import java.util.Collection;
 import java.util.List;
+import java.util.ResourceBundle;
 import java.util.concurrent.ExecutionException;
 
 /**
@@ -40,10 +41,10 @@ public class DeleteContactWorker extends SwingWorker<Void, Void> {
     public void done() {
         try {
             get();
-            JOptionPane.showMessageDialog(null, "Contact deletion successful");
+            JOptionPane.showMessageDialog(null, ResourceBundle.getBundle("texts").getString("contact_deleted"));
         }
         catch(ExecutionException ex) {
-            JOptionPane.showMessageDialog(null, "Contact deletion failed");
+            JOptionPane.showMessageDialog(null, ResourceBundle.getBundle("texts").getString("contact_deleted_fail"));
         }
         catch(InterruptedException ex) {
             throw new RuntimeException("Operation interrupred", ex);

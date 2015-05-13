@@ -6,6 +6,7 @@ import cz.fi.muni.pv168.AddressBook.ContactManagerImpl;
 
 import javax.sql.DataSource;
 import javax.swing.*;
+import java.util.ResourceBundle;
 import java.util.concurrent.ExecutionException;
 
 /**
@@ -40,10 +41,10 @@ public class CreateContactWorker extends SwingWorker<Void, Void> {
     protected void done() {
         try {
             get();
-            JOptionPane.showMessageDialog(null, "Contact successfully created");
+            JOptionPane.showMessageDialog(null, ResourceBundle.getBundle("texts").getString("contact_created"));
         }
         catch(ExecutionException ex) {
-            JOptionPane.showMessageDialog(null, "Contact creation failed");
+            JOptionPane.showMessageDialog(null, ResourceBundle.getBundle("texts").getString("contact_created_fail"));
         }
         catch(InterruptedException ex) {
             throw new RuntimeException("Operation interrupted ", ex);

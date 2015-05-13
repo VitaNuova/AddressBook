@@ -92,6 +92,7 @@ public class AddressBookManagerImpl implements AddressBookManager {
 
     public List<Contact> listContactsByGroup(Group group) throws ServiceFailureException {
 
+        log.debug("listContactsByGroup()");
         List<Long> contacts = new ArrayList<>();
         if(group == null) {
             throw new IllegalArgumentException("Group is null");
@@ -125,12 +126,15 @@ public class AddressBookManagerImpl implements AddressBookManager {
     }
 
     private List<Long> parseString(String members) {
+        log.debug("parseString() " + members);
         List<Long> memberList = new ArrayList<>();
         String membersWithoutBrackets = members.substring(1, members.length() - 1);
-        StringTokenizer tokens = new StringTokenizer(membersWithoutBrackets, ",");
-        for(int i = 0; i < tokens.countTokens(); i++) {
-            String trimmed = tokens.nextToken().trim();
-            memberList.add(Long.parseLong(trimmed));
+        if(membersWithoutBrackets.length() > 0) {
+            String[] tokens = membersWithoutBrackets.split(",");
+            for (int i = 0; i < tokens.length; i++) {
+                String trimmed = tokens[i].trim();
+                memberList.add(Long.parseLong(trimmed));
+            }
         }
         return memberList;
     }

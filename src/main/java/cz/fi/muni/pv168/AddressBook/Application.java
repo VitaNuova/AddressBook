@@ -7,7 +7,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.Properties;
+import java.util.*;
 
 /**
  * Created by viki on 25.3.15.
@@ -16,7 +16,6 @@ public class Application extends JFrame {
 
     public Application() {
         try {
-            //Class.forName("org.apache.derby.jdbc.ClientDriver");
             Properties conf = new Properties();
             conf.load(Application.class.getResourceAsStream("/config.properties"));
             BasicDataSource ds = new BasicDataSource();
@@ -27,7 +26,6 @@ public class Application extends JFrame {
         }
         catch(Exception ex) {
             ex.printStackTrace();
-            System.out.println("Unable to connect to db");
             System.exit(1);
         }
     }
@@ -39,106 +37,38 @@ public class Application extends JFrame {
 
         JPanel top = new JPanel();
         top.setBackground(Color.RED);
-        JLabel title = new JLabel("Choose the action ");
+        JLabel title = new JLabel(ResourceBundle.getBundle("texts").getString("action"));
         title.setFont(new Font("Serif", Font.BOLD, 20));
         top.add(title);
 
-        JPanel createButtons = new JPanel();
-        createButtons.setLayout(new BoxLayout(createButtons, BoxLayout.X_AXIS));
-        JButton createContactButton = new JButton("Create contact");
-        JButton createGroupButton = new JButton("Create group");
-        createButtons.add(Box.createHorizontalGlue());
-        createButtons.add(createContactButton);
-        createButtons.add(Box.createHorizontalGlue());
-        createButtons.add(createGroupButton);
-        createButtons.add(Box.createHorizontalGlue());
+        JPanel createButtons = addCreateButtons(ds);
+        JPanel deleteButtons  = addDeleteButtons(ds);
+        JPanel showButtons = addShowButtons(ds);
 
-        ActionListener createContactListener = createListenerForCreateContactButton(ds);
-        createContactButton.addActionListener(createContactListener);
-        ActionListener createGroupListener = createListenerForCreateGroupButton(ds);
-        createGroupButton.addActionListener(createGroupListener);
-
-        JPanel changeButtons = new JPanel();
-        changeButtons.setLayout(new BoxLayout(changeButtons, BoxLayout.X_AXIS));
-        JButton changeContactButton = new JButton("Update contact");
-        JButton changeGroupButton = new JButton("Update group");
-        changeButtons.add(Box.createHorizontalGlue());
-        changeButtons.add(changeContactButton);
-        changeButtons.add(Box.createHorizontalGlue());
-        changeButtons.add(changeGroupButton);
-        changeButtons.add(Box.createHorizontalGlue());
-
-        JPanel deleteButtons = new JPanel();
-        deleteButtons.setLayout(new BoxLayout(deleteButtons, BoxLayout.X_AXIS));
-        JButton deleteContactButton = new JButton("Delete contact");
-        JButton deleteGroupButton = new JButton("Delete group");
-        deleteButtons.add(Box.createHorizontalGlue());
-        deleteButtons.add(deleteContactButton);
-        deleteButtons.add(Box.createHorizontalGlue());
-        deleteButtons.add(deleteGroupButton);
-        deleteButtons.add(Box.createHorizontalGlue());
-
-        deleteContactButton.addActionListener(new ActionListener() {
+        JPanel exitButtonPanel = new JPanel();
+        JButton exitButton = new JButton(ResourceBundle.getBundle("texts").getString("exit"));
+        exitButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                new ListContactWorker(ds).execute();
+                System.exit(0);
             }
         });
-        deleteGroupButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new ListGroupWorker(ds).execute();
-            }
-        });
-
-        JPanel showButtons = new JPanel();
-        showButtons.setLayout(new BoxLayout(showButtons, BoxLayout.X_AXIS));
-        JButton showContactButton = new JButton("Show contacts");
-        JButton showGroupButton = new JButton("Show groups");
-        showButtons.add(Box.createHorizontalGlue());
-        showButtons.add(showContactButton);
-        showButtons.add(Box.createHorizontalGlue());
-        showButtons.add(showGroupButton);
-        showButtons.add(Box.createHorizontalGlue());
-        showContactButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new ShowContactWorker(ds).execute();
-            }
-        });
-        showGroupButton.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                new ShowGroupWorker(ds).execute();
-            }
-        });
-
-        JPanel findButtons = new JPanel();
-        findButtons.setLayout(new BoxLayout(findButtons, BoxLayout.X_AXIS));
-        JButton findContactButton = new JButton("Find contact");
-        JButton findGroupButton = new JButton("Find group");
-        findButtons.add(Box.createHorizontalGlue());
-        findButtons.add(findContactButton);
-        findButtons.add(Box.createHorizontalGlue());
-        findButtons.add(findGroupButton);
-        findButtons.add(Box.createHorizontalGlue());
+        exitButtonPanel.add(exitButton);
 
         basic.add(top);
         basic.add(Box.createVerticalGlue());
         basic.add(createButtons);
         basic.add(Box.createVerticalGlue());
-        basic.add(changeButtons);
-        basic.add(Box.createVerticalGlue());
         basic.add(deleteButtons);
         basic.add(Box.createVerticalGlue());
         basic.add(showButtons);
         basic.add(Box.createVerticalGlue());
-        basic.add(findButtons);
+        basic.add(exitButtonPanel);
         basic.add(Box.createVerticalGlue());
 
         add(basic);
-        setTitle("Address Book");
-        setSize(450, 300);
+        setTitle(ResourceBundle.getBundle("texts").getString("address_book"));
+        setSize(550, 300);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
@@ -157,7 +87,7 @@ public class Application extends JFrame {
         ActionListener addContact = new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame createContactFrame = new JFrame("Create contact");
+                JFrame createContactFrame = new JFrame(ResourceBundle.getBundle("texts").getString("create_contact"));
 
                 JPanel createContactPanel = new JPanel();
                 createContactPanel.setLayout(new BoxLayout(createContactPanel, BoxLayout.Y_AXIS));
@@ -172,17 +102,17 @@ public class Application extends JFrame {
                 addPhonePanel.setLayout(new BoxLayout(addPhonePanel, BoxLayout.X_AXIS));
                 addEmailPanel.setLayout(new BoxLayout(addEmailPanel, BoxLayout.X_AXIS));
 
-                JLabel addNameLabel = new JLabel("Enter name:");
-                JLabel addAddressLabel = new JLabel("Enter address: ");
-                JLabel addPhoneLabel = new JLabel("Enter phone: ");
-                JLabel addEmailLabel = new JLabel("Enter email: ");
+                JLabel addNameLabel = new JLabel(ResourceBundle.getBundle("texts").getString("enter_name"));
+                JLabel addAddressLabel = new JLabel(ResourceBundle.getBundle("texts").getString("enter_address"));
+                JLabel addPhoneLabel = new JLabel(ResourceBundle.getBundle("texts").getString("enter_phone"));
+                JLabel addEmailLabel = new JLabel(ResourceBundle.getBundle("texts").getString("enter_email"));
 
                 JTextField addNameArea = new JTextField();
                 JTextField addAddressArea = new JTextField();
                 JTextField addPhoneArea = new JTextField();
                 JTextField addEmailArea = new JTextField();
 
-                JButton submitButton = new JButton("Submit ");
+                JButton submitButton = new JButton(ResourceBundle.getBundle("texts").getString("submit"));
                 submitButton.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
@@ -223,7 +153,7 @@ public class Application extends JFrame {
                 createContactPanel.add(submitButton);
 
                 createContactFrame.add(createContactPanel);
-                createContactFrame.setTitle("Add contact");
+                createContactFrame.setTitle(ResourceBundle.getBundle("texts").getString("add_contact"));
                 createContactFrame.setSize(450, 300);
                 createContactFrame.setVisible(true);
             }
@@ -248,10 +178,10 @@ public class Application extends JFrame {
                 JPanel buttonsPanel = new JPanel();
                 buttonsPanel.setLayout(new BoxLayout(buttonsPanel, BoxLayout.X_AXIS));
 
-                JLabel groupNameLabel = new JLabel("Enter group name: ");
+                JLabel groupNameLabel = new JLabel(ResourceBundle.getBundle("texts").getString("enter_group_name"));
                 JTextField groupNameField = new JTextField();
 
-                JButton createGroupButton = new JButton("Create group");
+                JButton createGroupButton = new JButton(ResourceBundle.getBundle("texts").getString("create_group"));
                 createGroupButton.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
@@ -272,11 +202,82 @@ public class Application extends JFrame {
                 createGroupPanel.add(buttonsPanel);
 
                 createGroupFrame.add(createGroupPanel);
-                createGroupFrame.setTitle("Add group");
+                createGroupFrame.setTitle(ResourceBundle.getBundle("texts").getString("add_group"));
                 createGroupFrame.setSize(450, 100);
                 createGroupFrame.setVisible(true);
             }
         };
         return addGroup;
     }
+
+    private JPanel addCreateButtons(DataSource ds) {
+
+        JPanel createButtons = new JPanel();
+        createButtons.setLayout(new BoxLayout(createButtons, BoxLayout.X_AXIS));
+        JButton createContactButton = new JButton(ResourceBundle.getBundle("texts").getString("create_contact"));
+        JButton createGroupButton = new JButton(ResourceBundle.getBundle("texts").getString("create_group"));
+        createButtons.add(Box.createHorizontalGlue());
+        createButtons.add(createContactButton);
+        createButtons.add(Box.createHorizontalGlue());
+        createButtons.add(createGroupButton);
+        createButtons.add(Box.createHorizontalGlue());
+        ActionListener createContactListener = createListenerForCreateContactButton(ds);
+        createContactButton.addActionListener(createContactListener);
+        ActionListener createGroupListener = createListenerForCreateGroupButton(ds);
+        createGroupButton.addActionListener(createGroupListener);
+
+        return createButtons;
+    }
+
+    private JPanel addDeleteButtons(DataSource ds) {
+        JPanel deleteButtons = new JPanel();
+        deleteButtons.setLayout(new BoxLayout(deleteButtons, BoxLayout.X_AXIS));
+        JButton deleteContactButton = new JButton(ResourceBundle.getBundle("texts").getString("delete_contact"));
+        JButton deleteGroupButton = new JButton(ResourceBundle.getBundle("texts").getString("delete_group"));
+        deleteButtons.add(Box.createHorizontalGlue());
+        deleteButtons.add(deleteContactButton);
+        deleteButtons.add(Box.createHorizontalGlue());
+        deleteButtons.add(deleteGroupButton);
+        deleteButtons.add(Box.createHorizontalGlue());
+
+        deleteContactButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new ListContactWorker(null, ds, "delete", null).execute();
+            }
+        });
+        deleteGroupButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new ListGroupWorker(ds).execute();
+            }
+        });
+        return deleteButtons;
+    }
+
+    private JPanel addShowButtons(DataSource ds) {
+        JPanel showButtons = new JPanel();
+        showButtons.setLayout(new BoxLayout(showButtons, BoxLayout.X_AXIS));
+        JButton showContactButton = new JButton(ResourceBundle.getBundle("texts").getString("show_contacts"));
+        JButton showGroupButton = new JButton(ResourceBundle.getBundle("texts").getString("show_groups"));
+        showButtons.add(Box.createHorizontalGlue());
+        showButtons.add(showContactButton);
+        showButtons.add(Box.createHorizontalGlue());
+        showButtons.add(showGroupButton);
+        showButtons.add(Box.createHorizontalGlue());
+        showContactButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new ShowContactWorker(ds).execute();
+            }
+        });
+        showGroupButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new ShowGroupWorker(ds).execute();
+            }
+        });
+        return showButtons;
+    }
+
 }
